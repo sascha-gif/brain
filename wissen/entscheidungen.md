@@ -6,6 +6,21 @@ Eine Entscheidung ohne verworfene Alternative ist keine. Der verworfene Weg ist 
 eigentliche Wert des Eintrags: ein halbes Jahr später schlägt sonst jemand genau den Weg
 vor, den wir aus gutem Grund verworfen haben.
 
+## 2026-09-11 — Eigene Firmen liegen in `30_Areas/firmen/`, nicht unter `clients/`
+
+**Entschieden:** `30_Areas/` bekommt zwei Unterordner: `firmen/` für eigene Firmen und
+Beteiligungen, `clients/` für Kunden. Eigene Vorlage `templates/firma-steckbrief.md`.
+**Grund:** Sechs eigene Firmen und Beteiligungen (Coldewey Holding, helpingbrands,
+lykkeandyou, CGT, Fastable, PaSa Ventures) sind keine Kunden und keine Projekte — sie laufen
+dauerhaft, genau das ist eine Area. Die Kundenvorlage passt inhaltlich nicht: „seit wann,
+worüber gekommen" ergibt bei der eigenen Firma keinen Sinn, dafür fehlen Rolle, Beteiligung
+und Mitgesellschafter.
+**Verworfen:** Firmen unter `clients/` mitführen. Spart einen Ordner, vermischt aber die
+beiden Rollen — beim Suchen und beim Einsortieren muss man dann jedes Mal wissen, ob eine
+Zeile „Kunde" oder „meine Firma" meint. Ebenfalls verworfen: je Firma ein Projektordner in
+`20_Projects/` — Projekte haben ein Ende, Firmen nicht.
+**Quelle:** Gespräch vom 11.09.2026 (nicht im Repo), `CLAUDE.md` Abschnitt „Wer ich bin".
+
 ## 2026-09-11 — Altbestand wird einsortiert, nicht importiert
 
 **Entschieden:** Alles, was schon existiert (Repos, Chat-Exporte, verstreute Notizen), kommt

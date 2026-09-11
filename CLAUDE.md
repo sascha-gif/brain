@@ -15,8 +15,6 @@ nächsten Mal nachgelesen statt neu hergeleitet.
 
 ## Wer ich bin
 
-_(Entwurf aus dem, was mir vorlag — bitte korrigieren und ergänzen.)_
-
 - Sascha, Managing Director der Coldewey Holding. 47 Jahre aus Mainz
 - Gründer , CEO helpingbrands.de mit Patrick Birkicht zusammen
 - Inhaber, CEO, lykkeandyou.de
@@ -26,15 +24,12 @@ _(Entwurf aus dem, was mir vorlag — bitte korrigieren und ergänzen.)_
 
 ## Wobei du mir helfen sollst
 
-_(Entwurf — streichen, umsortieren, ergänzen.)_
-
-1. 
-2. **Einsortieren** — Transkripte, Exporte und Notizen aus `00_RAW/` zu sauberen Notizen
+1. **Einsortieren** — Transkripte, Exporte und Notizen aus `00_RAW/` zu sauberen Notizen
    machen und die betroffenen Seiten aktualisieren.
-3. **Entscheidungen festhalten** — mit Grund und verworfener Alternative, damit sie in
+2. **Entscheidungen festhalten** — mit Grund und verworfener Alternative, damit sie in
    sechs Monaten noch nachlesbar sind.
-4. **Ergebnisse schreiben** — Angebote, Analysen, Reports nach `10_Output/`.
-5. **Stände pflegen** — damit ich vor einem Termin eine Seite lese statt zehn Chats.
+3. **Ergebnisse schreiben** — Angebote, Analysen, Reports nach `10_Output/`.
+4. **Stände pflegen** — damit ich vor einem Termin eine Seite lese statt zehn Chats.
 
 ## Wie du arbeiten sollst
 
@@ -68,18 +63,20 @@ _(Entwurf — streichen, umsortieren, ergänzen.)_
 | `00_RAW/` | Posteingang für Rohes. Wird leer gehalten, ist gitignored. |
 | `10_Output/` | Fertige Ergebnisse. Dateinamen `JJJJ-MM-TT-titel.md`. |
 | `20_Projects/<slug>/` | Laufende Arbeit: `uebersicht.md` (Status), `notizen/`, bei Bedarf `CLAUDE.md` (Technik). |
+| `30_Areas/firmen/<slug>/` | Je eigene Firma/Beteiligung `steckbrief.md` (+ `notizen.md`). |
 | `30_Areas/clients/<kunde>/` | Je Kunde `steckbrief.md` + `notizen.md`. |
 | `40_Resources/` | Nachschlagen: Server, Zugänge (nur *wo*, nie *was*), Setup-Anleitungen. |
 | `90_Archive/` | Abgeschlossen. |
 | `wissen/` | Das eigentliche Wiki: destilliertes, projektübergreifendes Wissen. |
-| `templates/` | Vorlagen für neue Projekte und Kunden. |
+| `templates/` | Vorlagen für neue Projekte, Firmen und Kunden. |
 
 Regeln:
 
 - Status lebt nur in `uebersicht.md`, nie doppelt in zwei Dateien. Ein Sachverhalt, eine Liste.
 - `uebersicht.md` bleibt kurz — höchstens ein Bildschirm, 4–6 nächste Schritte. Alles Lange
   gehört in die Tagesnotiz. Nie löschen, nur verschieben.
-- Neue Projekte und Kunden aus `templates/` anlegen.
+- Neue Projekte, Firmen und Kunden aus `templates/` anlegen.
+- `30_Areas/firmen/` sind eigene Firmen, `30_Areas/clients/` sind Kunden. Nicht mischen.
 
 ## Die drei Abläufe
 
