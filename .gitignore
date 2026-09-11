@@ -1,0 +1,10 @@
+CLAUDE.local.md
+**/CLAUDE.local.md
+00_RAW/*
+!00_RAW/README.md
+**/quellen/
+.env
+.env.*
+.obsidian/
+node_modules/
+.DS_Store
