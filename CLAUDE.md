@@ -17,19 +17,18 @@ nächsten Mal nachgelesen statt neu hergeleitet.
 
 _(Entwurf aus dem, was mir vorlag — bitte korrigieren und ergänzen.)_
 
-- Sascha, Managing Director der Coldewey Holding.
-- Produkt- und Ops-Steuerung bei **#BCD** (Better Call Dominik) — kuratiertes
-  Premium-Netzwerk, Portal `app.bcd.net`. Voller Kontext im Skill `bcd-gitlab-dev`.
-- Weitere Firmen/Rollen (u. a. helpingbrands.de): _(offen)_
-- Branche: _(offen)_
+- Sascha, Managing Director der Coldewey Holding. 47 Jahre aus Mainz
+- Gründer , CEO helpingbrands.de mit Patrick Birkicht zusammen
+- Inhaber, CEO, lykkeandyou.de
+- Inhaber und CEO, CGT mit Thomas Goetz zusammen
+- Gründer Fastable GmbH COE, Inhaber - Aggregator für Marken auf Zalando
+- Gründer , CEO PaSa Ventures mit Patrick Birkicht zusammen - ecommerce wie Räuberellla.de 
 
 ## Wobei du mir helfen sollst
 
 _(Entwurf — streichen, umsortieren, ergänzen.)_
 
-1. **#BCD-Portal** — Entwicklung und Ops begleiten: Backend (FastAPI), Frontend (Vue 3),
-   AWS/Hetzner, HubSpot, Whapi. Technik steht im Skill `bcd-gitlab-dev`, hier steht nur,
-   was darüber hinaus gilt.
+1. 
 2. **Einsortieren** — Transkripte, Exporte und Notizen aus `00_RAW/` zu sauberen Notizen
    machen und die betroffenen Seiten aktualisieren.
 3. **Entscheidungen festhalten** — mit Grund und verworfener Alternative, damit sie in
@@ -46,7 +45,7 @@ _(Entwurf — streichen, umsortieren, ergänzen.)_
 - Nur eintragen, was stimmt. Offenes als _(offen)_ markieren, nicht ausschmücken.
 - Vor heiklen Aktionen bestätigen lassen: Deploy, Versand, Löschen, alles nach außen.
 - **Nie** Passwörter, API-Keys oder Zugangsdaten ins Repo. Die gehören in den
-  Passwort-Manager oder GitHub-Secrets; im Repo steht höchstens, *wo* sie liegen.
+  GitHub-Secrets; im Repo steht höchstens, *wo* sie liegen.
 - Nach Änderungen committen und pushen.
 
 ## Wissen
