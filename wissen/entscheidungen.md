@@ -6,6 +6,26 @@ Eine Entscheidung ohne verworfene Alternative ist keine. Der verworfene Weg ist 
 eigentliche Wert des Eintrags: ein halbes Jahr später schlägt sonst jemand genau den Weg
 vor, den wir aus gutem Grund verworfen haben.
 
+## 2026-09-11 — Altbestand wird einsortiert, nicht importiert
+
+**Entschieden:** Alles, was schon existiert (Repos, Chat-Exporte, verstreute Notizen), kommt
+als Serie einzelner Ingests ins Brain, nie als Massen-Import. Filter ist das Gedächtnis: was
+mir nicht aus dem Kopf einfällt, wird nicht gesucht. Reihenfolge ist Skelett zuerst (Kunden,
+Projekte), Inhalt danach. Chat-Archive und Repos werden **indiziert statt einsortiert** — je
+eine Seite in `40_Resources/` mit Pfad, Datum und Umfang, der Inhalt bleibt draußen.
+**Grund:** Ein Brain, das nach einem Wochenende voll aussieht, ist trotzdem wertlos — der Wert
+entsteht beim Destillieren, nicht beim Kopieren. Bei großen Stapeln lässt sich außerdem nicht
+mehr prüfen, was verzerrt oder dazuerfunden wurde, und dann glaubt man den eigenen Einträgen
+nicht mehr. Chat-Exporte sind zu 95 Prozent Wegwerf; einzeln durchgehen kostet Tage und bringt
+nichts.
+**Verworfen:** Den Altbestand komplett durcharbeiten und einsortieren. Fühlt sich gründlich an,
+wird aber nach zwei Abenden abgebrochen und hinterlässt ein halb migriertes Repo, dem niemand
+traut. Ebenfalls verworfen: Chat-Exporte ins Repo legen — sie enthalten alles, auch Sensibles,
+und stünden dauerhaft in der Git-Historie.
+**Folge:** Der operative Ablauf steht als Projekt in
+[`20_Projects/brain-migration/uebersicht.md`](../20_Projects/brain-migration/uebersicht.md).
+**Quelle:** Gespräch vom 11.09.2026 (nicht im Repo).
+
 ## 2026-09-11 — `main` ist der einzige Arbeits-Branch
 
 **Entschieden:** Alle Sessions committen und pushen direkt auf `main`. Keine Feature-Branches,
