@@ -29,6 +29,7 @@ import json
 import os
 import re
 import sys
+import time
 
 SHEET_ID_STANDARD = '1p9_9S8D4GiQFz2dKggup7cqoMscewW7p86glvi5k3sA'  # CGT – Themenplanung
 API = 'https://sheets.googleapis.com/v4/spreadsheets'
@@ -37,6 +38,16 @@ SCOPE = 'https://www.googleapis.com/auth/spreadsheets'
 
 def fehlt(text):
     sys.exit(text + '\nDetails: 40_Resources/google-sheets-zugang.md')
+
+
+def knapp(text):
+    """Fehlerseiten von Google sind seitenlanges HTML. Nur das Nutzbare zeigen."""
+    text = (text or '').strip()
+    if text.lstrip().lower().startswith(('<!doctype', '<html')):
+        titel = re.search(r'<title[^>]*>(.*?)</title>', text, re.I | re.S)
+        return f'HTML-Fehlerseite von Google ({titel.group(1).strip()})' if titel \
+            else 'HTML-Fehlerseite von Google statt einer Antwort'
+    return text[:300]
 
 
 def bereich_zerlegen(angabe):
@@ -57,27 +68,49 @@ class Bruecke:
     def __init__(self, url, secret, sheet_id):
         self.url, self.secret, self.sheet_id = url, secret, sheet_id
 
+    # Google laesst Apps-Script-Web-Apps unter Last mit 404 oder 5xx antworten,
+    # obwohl die Bereitstellung steht — eine Sekunde spaeter geht derselbe Aufruf
+    # durch. Fuer die stuendliche Routine (kontakte-routine.md) darf das den Lauf
+    # nicht beenden, also wird wiederholt statt abgebrochen.
+    WIEDERHOLBAR = (404, 429, 500, 502, 503, 504)
+
     def ruf(self, **nutzlast):
         import requests
         nutzlast['secret'] = self.secret
-        antwort = requests.post(self.url, json=nutzlast, timeout=120,
-                                headers={'Content-Type': 'application/json'})
-        if not antwort.ok:
-            sys.exit(f'HTTP {antwort.status_code} von der Bruecke: {antwort.text[:300]}')
-        try:
-            daten = antwort.json()
-        except ValueError:
-            sys.exit('Die Bruecke hat kein JSON geliefert. Ist die Web-App auf '
-                     '"Zugriff: Jeder" bereitgestellt?\n' + antwort.text[:300])
-        if 'error' in daten:
-            sys.exit('Fehler aus der Bruecke: ' + str(daten['error']))
-        return daten
+        letzte = ''
+        for versuch in range(4):
+            if versuch:
+                time.sleep(2 ** versuch)          # 2 s, 4 s, 8 s
+            try:
+                antwort = requests.post(self.url, json=nutzlast, timeout=120,
+                                        headers={'Content-Type': 'application/json'})
+            except requests.RequestException as e:
+                letzte = f'Verbindung zur Bruecke fehlgeschlagen: {e}'
+                continue
+            if antwort.status_code in self.WIEDERHOLBAR:
+                letzte = f'HTTP {antwort.status_code} von der Bruecke'
+                continue
+            if not antwort.ok:
+                sys.exit(f'HTTP {antwort.status_code} von der Bruecke: '
+                         + knapp(antwort.text))
+            try:
+                daten = antwort.json()
+            except ValueError:
+                sys.exit('Die Bruecke hat kein JSON geliefert. Ist die Web-App auf '
+                         '"Zugriff: Jeder" bereitgestellt?\n' + knapp(antwort.text))
+            if 'error' in daten:
+                sys.exit('Fehler aus der Bruecke: ' + str(daten['error']))
+            return daten
+        sys.exit(f'{letzte} — auch nach vier Versuchen. Steht die Bereitstellung noch? '
+                 'Siehe 40_Resources/google-sheets-zugang.md')
 
     def tabs(self):
         return self.ruf(action='tabs')['tabs']
 
     def read(self, blatt, zellen):
-        return self.ruf(action='read', tab=blatt, range=zellen)['values']
+        # Ein Bereich ohne Inhalt liefert kein 'values' — das ist eine leere
+        # Antwort, kein Fehler.
+        return self.ruf(action='read', tab=blatt, range=zellen).get('values', [])
 
     def append(self, blatt, zeilen):
         d = self.ruf(action='append', tab=blatt, rows=zeilen)

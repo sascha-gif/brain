@@ -50,6 +50,11 @@ wie `00_RAW/` auch nicht.
 Zeile 1 ist die Kopfzeile. Die letzte belegte Zeile ist zugleich die Zahl der Datensätze plus
 eins; `append` hängt von allein an der richtigen Stelle an.
 
+Die Brücke antwortet unter Last gelegentlich mit HTTP 404 oder 5xx, obwohl die Bereitstellung
+steht. `gsheets.py` wiederholt das seit dem 14.09.2026 dreimal mit wachsendem Abstand. Bricht
+es trotzdem ab, ist etwas echt kaputt — dann den Lauf abbrechen und **nicht** teilweise
+schreiben.
+
 ### 3. Kontakte erkennen
 
 Jede Nachricht durchgehen. Bildanhänge mit dem Read-Werkzeug ansehen — Visitenkarten und
@@ -121,10 +126,20 @@ Nur wenn etwas geschrieben wurde:
 - Notiz in `30_Areas/firmen/cgt/notizen.md`, neueste oben: was neu ist, was Dublette war, was
   auffiel.
 - Zeile in `wissen/log.md`, unten angehängt.
-- Committen und nach `main` pushen.
+- Committen und nach `main` pushen — davor `git pull --rebase origin main`. Es kann eine
+  zweite Session am selben Repo arbeiten; am 14.09.2026 war das beim ersten Testlauf der Fall.
+  Bei einem Konflikt in `notizen.md` oder `wissen/log.md` gilt: **beide** Einträge behalten,
+  keinen verwerfen. Das sind Tagebücher, kein Code.
 
 Wurde **nichts** geschrieben, wird auch nichts committet und keine Meldung abgesetzt. Ein
 stiller Lauf ist der Normalfall.
+
+### Was die Routine nicht tut
+
+Sie hat einen Auftrag: neue Kontakte eintragen. Nicht dazu gehören Lint-Läufe, Aufräumen in
+anderen Dateien, Nachbessern bestehender Zeilen oder das Prüfen anderer Laschen. Fällt beim
+Arbeiten etwas auf, kommt es in die Notiz — erledigt wird es auf Zuruf, nicht nebenbei von
+einem unbeaufsichtigten Lauf.
 
 ## Grenzen
 
