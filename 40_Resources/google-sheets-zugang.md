@@ -86,6 +86,13 @@ Bearbeiter freigeben. Die Aufrufe unten bleiben gleich.
 `--dry-run` bei `append` und `update` zeigt nur an, was geschrieben würde — funktioniert
 auch ohne Zugangsdaten. Mit `--sheet-id` eine andere Tabelle ansprechen.
 
+## Grenzen der Brücke
+
+Sie schreibt Werte und Formeln, keine Formatierung: keine Kopfzeilen-Farbe, keine fixierte
+Zeile, kein Autofilter. Das setzt man im Sheet mit zwei Klicks nach (Ansicht → Fixieren,
+Daten → Filter erstellen) oder erweitert `sheets_bruecke.gs` um eine `format`-Aktion; dann
+muss die Web-App aber neu bereitgestellt werden.
+
 ## Bekannte Tabellen
 
 | Tabelle | ID | Eigentümer | Laschen |
