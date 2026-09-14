@@ -1,65 +1,90 @@
-# Google-Sheets-Zugang (Service Account)
+# Google-Sheets-Zugang
 
 Damit Claude in Google Sheets **schreiben** kann. Lesen geht ohne das hier — dafür reicht
-der Google-Drive-Connector in Claude. Der kann aber nur lesen, suchen und neue Dateien
-anlegen; einzelne Zellen in einer bestehenden Tabelle ändern kann er nicht. Dafür braucht es
-den Weg über die Sheets API.
+der Google-Drive-Connector. Der kann aber nur lesen, suchen und neue Dateien anlegen;
+einzelne Zellen in einer bestehenden Tabelle ändern kann er nicht.
 
-**Stand:** noch nicht eingerichtet — der Key fehlt. Das Skript liegt bereit,
-`40_Resources/tools/gsheets.py`.
+**Stand 14.09.2026:** noch nicht eingerichtet. Werkzeuge liegen bereit:
+`40_Resources/tools/gsheets.py` (Aufrufe) und `40_Resources/tools/sheets_bruecke.gs`
+(die Web-App).
 
-## Wo der Key liegt
+## Warum nicht der Standardweg
 
-Nicht im Repo. Der Service-Account-Key ist eine JSON-Datei und gehört:
+Der übliche Weg wäre ein Google-Dienstkonto mit JSON-Schlüssel. Der ist bei uns gesperrt:
 
-| Wo gearbeitet wird | Wo der Key liegt |
+> Das Erstellen von Dienstkontoschlüsseln ist deaktiviert.
+> Organisationsrichtlinie: `iam.disableServiceAccountKeyCreation`
+
+Die Richtlinie wird in Google-Organisationen automatisch erzwungen („Erzwingungen zur
+standardmäßigen Sicherheit"). Aufheben kann sie nur, wer die Rolle
+`roles/orgpolicy.policyAdmin` auf der Organisation hat. Das Dienstkonto selbst lässt sich
+anlegen — nur eben kein Schlüssel dafür.
+
+## Der Weg, den wir gehen: Apps-Script-Brücke
+
+Ein eigenständiges Apps Script in Saschas Drive, bereitgestellt als Web-App. Es läuft unter
+Saschas Google-Konto und braucht keinen Schlüssel — damit greift die Richtlinie nicht.
+
+Einrichten:
+
+1. [script.google.com](https://script.google.com) → **Neues Projekt**, Name z. B.
+   „Brain Sheets-Brücke".
+2. Inhalt von `40_Resources/tools/sheets_bruecke.gs` komplett einfügen.
+3. Oben im Code setzen:
+   - `SHEET_ID` — aus der Sheet-URL zwischen `/d/` und `/edit`
+   - `SECRET` — lange Zufallskette, z. B. aus `openssl rand -hex 24`
+4. **Bereitstellen** → **Neue Bereitstellung** → Typ **Web-App**
+   - Ausführen als: **Ich**
+   - Zugriff: **Jeder**
+   - Bereitstellen, beim Rechtedialog bestätigen. Google warnt bei ungeprüften Skripten —
+     „Erweitert" → „Weiter zu …" ist hier richtig, es ist das eigene Skript.
+5. Die `/exec`-URL kopieren.
+
+Zugangsdaten ablegen — nie ins Repo, nie in den Chat:
+
+| Wo gearbeitet wird | Wie |
 |---|---|
-| Lokal (CLI) | `~/.config/gcloud/brain-sheets.json`, Pfad in `GOOGLE_APPLICATION_CREDENTIALS` |
-| Cloud-Session (claude.ai/code) | Umgebungsvariable `GOOGLE_SERVICE_ACCOUNT_JSON` im Environment, Inhalt = kompletter JSON-Text |
+| Cloud-Session (claude.ai/code) | Umgebungsvariablen im Environment: `CGT_SHEETS_URL`, `CGT_SHEETS_SECRET` |
+| Lokal (CLI) | dieselben zwei Variablen in der Shell-Konfiguration |
 
-Der Key ist ein Passwort-Äquivalent: Wer ihn hat, kann alles, was der Service Account darf.
-Nie in eine Datei im Repo, nie in einen Chat, nie in eine E-Mail.
+Zurückziehen: im Apps-Script-Projekt **Bereitstellungen verwalten** → archivieren. Damit ist
+der Zugang sofort tot, ohne dass an der Tabelle etwas geändert werden muss.
 
-## Einrichten (einmalig, ca. 15 Minuten)
+Grenzen: Das Skript kann genau das, was Saschas Konto auch von Hand könnte, und nur auf der
+Tabelle, deren ID oben eingetragen ist. Die Web-App-URL ist öffentlich erreichbar; geschützt
+wird sie durch das Secret, das bei jedem Aufruf mitgeschickt wird.
 
-1. [console.cloud.google.com](https://console.cloud.google.com) → Projekt anlegen,
-   z. B. `brain-sheets`.
-2. „APIs & Dienste" → Bibliothek → **Google Sheets API** aktivieren.
-3. „APIs & Dienste" → Anmeldedaten → Anmeldedaten erstellen → **Dienstkonto**.
-   Name z. B. `brain-writer`. Rollen kann man überspringen — die Rechte kommen vom Sheet,
-   nicht vom Cloud-Projekt.
-4. Im angelegten Dienstkonto → Tab „Schlüssel" → Schlüssel hinzufügen → **JSON**.
-   Die Datei lädt einmalig herunter; Google zeigt sie nie wieder.
-5. Die E-Mail-Adresse des Dienstkontos (`brain-writer@<projekt>.iam.gserviceaccount.com`)
-   im Ziel-Sheet als **Bearbeiter** freigeben.
-6. Key ablegen wie in der Tabelle oben.
+## Falls die Richtlinie doch aufgehoben wird
 
-Ohne Schritt 5 sieht der Service Account die Datei nicht — er hat ein eigenes Google-Konto
-und ist nicht identisch mit dem eigenen. Eine Freigabe „Jeder mit Link: Bearbeiter" deckt ihn
-zwar mit ab, öffnet die Datei aber für jeden, der den Link kennt oder weitergeleitet bekommt.
-Gezielte Freigabe ist der bessere Weg.
+`gsheets.py` kann beide Wege. Liegt `GOOGLE_SERVICE_ACCOUNT_JSON` (oder
+`GOOGLE_APPLICATION_CREDENTIALS`) in der Umgebung und keine Brücke, läuft es über die
+Sheets API. Dann zusätzlich: Sheets API im Cloud-Projekt aktivieren, Dienstkonto anlegen,
+Schlüssel als JSON ziehen, und die `…iam.gserviceaccount.com`-Adresse im Sheet als
+Bearbeiter freigeben. Die Aufrufe unten bleiben gleich.
 
 ## Benutzen
 
-    pip install google-auth requests   # einmalig
+    pip install requests               # einmalig; für den Dienstkonto-Weg zusätzlich google-auth
 
-    python3 40_Resources/tools/gsheets.py tabs   <sheet-id>
-    python3 40_Resources/tools/gsheets.py read   <sheet-id> --range "Tabelle1!A1:I200"
-    python3 40_Resources/tools/gsheets.py append <sheet-id> --range "Tabelle1!A:I" --row "Thema" "DELTEX" "" "Sascha"
-    python3 40_Resources/tools/gsheets.py update <sheet-id> --range "Tabelle1!G12" --row "In Arbeit"
+    python3 40_Resources/tools/gsheets.py tabs
+    python3 40_Resources/tools/gsheets.py read   --range "Kontakte!A1:O50"
+    python3 40_Resources/tools/gsheets.py append --range "Kontakte" --from-csv kontakte.csv
+    python3 40_Resources/tools/gsheets.py append --range "Themen" --row "Thema" "DELTEX" "" "Sascha"
+    python3 40_Resources/tools/gsheets.py update --range "Themen!G12" --row "In Arbeit"
 
-`--dry-run` bei `append` und `update` zeigt nur an, was geschrieben würde.
-Die Sheet-ID steht in der URL zwischen `/d/` und `/edit`.
+`--dry-run` bei `append` und `update` zeigt nur an, was geschrieben würde — funktioniert
+auch ohne Zugangsdaten. Mit `--sheet-id` eine andere Tabelle ansprechen.
 
 ## Bekannte Tabellen
 
-| Tabelle | ID | Eigentümer | Zweck |
+| Tabelle | ID | Eigentümer | Laschen |
 |---|---|---|---|
-| CGT – Themenplanung | `1p9_9S8D4GiQFz2dKggup7cqoMscewW7p86glvi5k3sA` | thomas.goetz@cg-trade.de | Themen, Fristen, Verantwortliche; zweites Blatt: Handels-Matrix |
+| CGT – Themenplanung | `1p9_9S8D4GiQFz2dKggup7cqoMscewW7p86glvi5k3sA` | thomas.goetz@cg-trade.de | Monats Plan, Themen, Sales Status, Kontakte |
 
-Die Themenplanung stand am 14.09.2026 auf „Jeder mit Link: Bearbeiter". Für eine Datei mit
-Kundenkontakten, Einkaufspreisen und Lieferantennamen ist das zu weit offen — nach dem
-Einrichten des Dienstkontos wieder auf gezielte Freigabe zurückstellen.
+Freigabe am 14.09.2026: Thomas (Eigentümer), Sascha (beide Adressen) und Martin Lindegger
+als Bearbeiter — dazu „Jeder mit Link: Bearbeiter". Letzteres ist für eine Datei mit
+Einkaufspreisen, Lieferanten und Kundenkontakten zu weit offen und wird nicht gebraucht,
+weil alle Beteiligten namentlich eingetragen sind. Sollte auf „Eingeschränkt".
 
 ## Nebenbefund: Slack-Workspaces
 

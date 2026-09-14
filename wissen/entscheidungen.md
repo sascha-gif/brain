@@ -6,11 +6,31 @@ Eine Entscheidung ohne verworfene Alternative ist keine. Der verworfene Weg ist 
 eigentliche Wert des Eintrags: ein halbes Jahr später schlägt sonst jemand genau den Weg
 vor, den wir aus gutem Grund verworfen haben.
 
-## 2026-09-14 — Schreibzugriff auf Google Sheets über einen Service Account
+## 2026-09-14 — Schreibzugriff auf Google Sheets über eine Apps-Script-Brücke
 
-**Entschieden:** Schreiben in fremde Google Sheets läuft über ein eigenes Dienstkonto
-(Service Account) und die Sheets API, angesprochen über `40_Resources/tools/gsheets.py`.
-Der Key liegt außerhalb des Repos, siehe `40_Resources/google-sheets-zugang.md`.
+**Entschieden:** Schreiben in Google Sheets läuft über ein eigenständiges Apps Script in
+Saschas Drive, bereitgestellt als Web-App (`40_Resources/tools/sheets_bruecke.gs`),
+angesprochen von `40_Resources/tools/gsheets.py` über URL und Secret aus der Umgebung.
+**Grund:** Der geplante Weg über ein Dienstkonto scheitert an einer Organisationsrichtlinie:
+`iam.disableServiceAccountKeyCreation` blockiert das Erzeugen von Dienstkontoschlüsseln,
+aufheben kann das nur ein Organization Policy Administrator. Das Apps Script läuft unter
+Saschas eigenem Konto, braucht keinen Schlüssel und ist damit von der Richtlinie nicht
+betroffen. Es kann genau das, was das Konto auch von Hand könnte, und nur auf der einen
+eingetragenen Tabelle; Zurückziehen heißt Bereitstellung archivieren.
+**Verworfen:** Die Richtlinie für ein Projekt ausnehmen — geht nur mit Org-Admin-Rechten und
+schwächt eine Sicherheitsvorgabe für einen Einzelfall. Verworfen auch: das Skript an die
+fremde Tabelle binden (Code in Thomas' Datei), OAuth mit Refresh-Token (Browser-Flow, Token
+läuft bei Test-Apps nach sieben Tagen ab), Workload Identity Federation (braucht einen
+Identitätsanbieter, den es hier nicht gibt).
+**Quelle:** Gespräch vom 14.09.2026, `40_Resources/google-sheets-zugang.md`.
+
+## 2026-09-14 — Verworfen: Schreibzugriff über einen Service Account
+
+**Hinfällig seit demselben Tag** — die Richtlinie oben macht diesen Weg unmöglich. Steht
+hier, damit ihn niemand ein zweites Mal vorschlägt. `gsheets.py` kann ihn weiterhin, falls
+die Sperre je fällt.
+
+**Entschieden war:** Schreiben über ein eigenes Dienstkonto und die Sheets API.
 **Grund:** Der Google-Drive-Connector in Claude kann lesen, suchen und Dateien anlegen, aber
 keine Zellen in einer bestehenden Tabelle ändern — im Connector-Verzeichnis gibt es auch
 keinen Google-Sheets-Connector, der das könnte. Die Sheets API verlangt für jeden Aufruf eine

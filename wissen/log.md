@@ -43,3 +43,12 @@ Lasche „Kontakte" in „CGT – Themenplanung"; direkt hineinschreiben geht er
 Service-Account-Key. Skript `40_Resources/tools/pipedrive_kontakte.py`, Befunde in
 `30_Areas/firmen/cgt/notizen.md`. Die Kontaktdaten selbst bleiben draußen.
 Quelle: zwei hochgeladene Pipedrive-Exporte vom 14.09.2026 (nicht im Repo).
+
+## [2026-09-14] setup | Sheets-Schreibzugriff auf Apps-Script-Brücke umgestellt
+
+Der Dienstkonto-Weg ist tot: Google blockiert das Erzeugen von Dienstkontoschlüsseln per
+Organisationsrichtlinie (`iam.disableServiceAccountKeyCreation`). Ersatz ist ein
+eigenständiges Apps Script als Web-App unter Saschas Konto. `gsheets.py` kann beide Wege
+und wählt den, der konfiguriert ist; neu sind `--from-csv` und ein `--dry-run`, der ohne
+Zugangsdaten läuft. Brücken-Code in `40_Resources/tools/sheets_bruecke.gs`.
+Quelle: Gespräch vom 14.09.2026 (nicht im Repo).
