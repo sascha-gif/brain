@@ -6,6 +6,23 @@ Eine Entscheidung ohne verworfene Alternative ist keine. Der verworfene Weg ist 
 eigentliche Wert des Eintrags: ein halbes Jahr später schlägt sonst jemand genau den Weg
 vor, den wir aus gutem Grund verworfen haben.
 
+## 2026-09-14 — Schreibzugriff auf Google Sheets über einen Service Account
+
+**Entschieden:** Schreiben in fremde Google Sheets läuft über ein eigenes Dienstkonto
+(Service Account) und die Sheets API, angesprochen über `40_Resources/tools/gsheets.py`.
+Der Key liegt außerhalb des Repos, siehe `40_Resources/google-sheets-zugang.md`.
+**Grund:** Der Google-Drive-Connector in Claude kann lesen, suchen und Dateien anlegen, aber
+keine Zellen in einer bestehenden Tabelle ändern — im Connector-Verzeichnis gibt es auch
+keinen Google-Sheets-Connector, der das könnte. Die Sheets API verlangt für jeden Aufruf eine
+Identität; eine offene Link-Freigabe allein reicht nicht (geprüft: HTTP 403,
+„Method doesn't allow unregistered callers"). Ein Dienstkonto braucht keinen Browser-Flow,
+läuft unbeaufsichtigt und kann einzeln wieder entzogen werden.
+**Verworfen:** OAuth mit dem eigenen Google-Konto — braucht einen Browser zum Anmelden, das
+Token läuft ab, in Cloud-Sessions unbrauchbar. Ebenfalls verworfen: ein Apps Script im Sheet
+mit Web-App-Endpunkt — funktioniert, aber der Eigentümer der Tabelle müsste fremden Code in
+seiner Datei anlegen und pflegen.
+**Quelle:** Gespräch vom 14.09.2026 (nicht im Repo), `40_Resources/google-sheets-zugang.md`.
+
 ## 2026-09-11 — Eigene Firmen liegen in `30_Areas/firmen/`, nicht unter `clients/`
 
 **Entschieden:** `30_Areas/` bekommt zwei Unterordner: `firmen/` für eigene Firmen und

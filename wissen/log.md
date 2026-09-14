@@ -25,3 +25,21 @@ Quelle: Gespräch vom 11.09.2026 (nicht im Repo).
 lykkeandyou, CGT, Fastable, PaSa Ventures), Vorlage `templates/firma-steckbrief.md`.
 `CLAUDE.md` aufgeräumt: Entwurfs-Marker raus, leerer Listenpunkt raus, Struktur ergänzt.
 Quelle: Gespräch vom 11.09.2026 (nicht im Repo).
+
+## [2026-09-14] setup | Schreibzugriff auf Google Sheets vorbereitet
+
+Geprüft, warum Claude nicht in die CGT-Themenplanung schreiben kann: Der Drive-Connector kann
+keine Zellen ändern, einen Sheets-Connector gibt es nicht, und die Sheets API verlangt auch
+bei offener Link-Freigabe eine Identität. Skript `40_Resources/tools/gsheets.py` (lesen,
+anhängen, überschreiben) und Anleitung `40_Resources/google-sheets-zugang.md` angelegt.
+Offen: Service-Account-Key fehlt noch, ungetestet bis dahin.
+Quelle: Gespräch vom 14.09.2026 (nicht im Repo).
+
+## [2026-09-14] ingest | Pipedrive-Kontakte für CGT aufbereitet
+
+224 Kontakte aus dem Pipedrive-Personenexport zu einer Tabelle gemacht (sortiert nach Firma,
+Filter, Firmenübersicht, abgeleitetes Land) und an Sascha geliefert. Ziel ist die leere
+Lasche „Kontakte" in „CGT – Themenplanung"; direkt hineinschreiben geht erst mit dem
+Service-Account-Key. Skript `40_Resources/tools/pipedrive_kontakte.py`, Befunde in
+`30_Areas/firmen/cgt/notizen.md`. Die Kontaktdaten selbst bleiben draußen.
+Quelle: zwei hochgeladene Pipedrive-Exporte vom 14.09.2026 (nicht im Repo).

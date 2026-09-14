@@ -1,6 +1,6 @@
 # CGT
 
-**Stand:** 2026-09-11
+**Stand:** 2026-09-14
 
 ## Kurz
 
@@ -28,7 +28,13 @@ Inhaber und CEO, gemeinsam mit Thomas Goetz.
 
 ## Systeme und Zugänge
 
-Nur *wo* sie liegen (Passwort-Manager, Eintragsname), **nie** *was* sie sind. _(offen)_
+Nur *wo* sie liegen (Passwort-Manager, Eintragsname), **nie** *was* sie sind.
+
+- **Themenplanung** — Google Sheet „CGT – Themenplanung", Eigentümer Thomas Goetz.
+  Laschen: Monats Plan, Themen, Sales Status, Kontakte.
+  ID und Freigabestand in `40_Resources/google-sheets-zugang.md`.
+- **CRM** — Pipedrive. Personenexport vom 14.09.2026: 224 Kontakte, 157 Firmen.
+  Zugang _(offen)_ — bisher nur über Exporte gearbeitet.
 
 ---
 
