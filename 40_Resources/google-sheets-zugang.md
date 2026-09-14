@@ -47,6 +47,17 @@ Zugangsdaten ablegen — nie ins Repo, nie in den Chat:
 | Cloud-Session (claude.ai/code) | Umgebungsvariablen im Environment: `CGT_SHEETS_URL`, `CGT_SHEETS_SECRET` |
 | Lokal (CLI) | dieselben zwei Variablen in der Shell-Konfiguration |
 
+Der Weg zum Environment: auf [claude.ai/code](https://claude.ai/code) das **Wolken-Symbol**
+in der Zeile über dem Eingabefeld anklicken (es zeigt den Namen des Environments, meist
+„Default"). Eine Einstellungsseite oder direkte URL dafür gibt es nicht. Im Menü über das
+Environment fahren, rechts das **Zahnrad** anklicken. Im Dialog das Feld
+**Environment variables**, Format `.env`, eine Zuweisung pro Zeile, ohne Anführungszeichen.
+
+**Wichtig:** Jede Session kopiert die Variablen einmal beim Start. Eine bereits laufende
+Session sieht neue Variablen nicht — nach dem Eintragen also eine **neue Session** starten.
+Weil Uploads und Scratchpad-Dateien eine Session nicht überleben, gehört die aufbereitete
+Kontaktdatei dort erneut hochgeladen.
+
 Zurückziehen: im Apps-Script-Projekt **Bereitstellungen verwalten** → archivieren. Damit ist
 der Zugang sofort tot, ohne dass an der Tabelle etwas geändert werden muss.
 
