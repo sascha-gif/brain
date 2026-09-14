@@ -3,7 +3,8 @@
 **Stand 14.09.2026:** eingerichtet und geprüft. `SLACK_CGT_TOKEN` liegt im Environment
 (Bot-Token, `xoxb-…`), das Token ist gültig, und der Kanal `#kontakte` ließ sich **aus einer
 Cloud-Session heraus** lesen. Die frühere Sperre ist weg, siehe „Netzzugang" unten.
-Werkzeug: `40_Resources/tools/slack.py`.
+Werkzeug: `40_Resources/tools/slack.py`. Was aus dem Kanal wird, steht in
+[`kontakte-routine.md`](kontakte-routine.md) — seit dem 14.09.2026 läuft das stündlich.
 
 ## Warum eine eigene App
 
@@ -20,7 +21,9 @@ sie eingeladen wurde.
 1. [api.slack.com/apps](https://api.slack.com/apps) → **Create New App** → **From scratch**,
    Workspace **CG TRADE**.
 2. **OAuth & Permissions** → *Bot Token Scopes*: `channels:history`, `channels:read`,
-   `users:read`. Bei privaten Kanälen zusätzlich `groups:history`, `groups:read`.
+   `users:read`, `files:read` (letzteres für Visitenkarten-Bilder). Bei privaten Kanälen
+   zusätzlich `groups:history`, `groups:read`. Was das Token tatsächlich hat, zeigt
+   `slack.py scopes`.
 3. **Install to Workspace**. Danach steht dort das **Bot User OAuth Token** (`xoxb-…`).
    Scopes später nachtragen heißt: App neu installieren, sonst greifen sie nicht.
 4. In Slack im Zielkanal `/invite @NameDerApp` — ohne das sieht der Bot nichts
@@ -65,12 +68,21 @@ Quelle: [Configure cloud environments → Access levels](https://code.claude.com
 
 ## Benutzen
 
+    python3 40_Resources/tools/slack.py scopes
     python3 40_Resources/tools/slack.py channels
     python3 40_Resources/tools/slack.py read --since 2026-09-01
-    python3 40_Resources/tools/slack.py read --channel C0A7M1Y1JTC --limit 50
+    python3 40_Resources/tools/slack.py read --channel C0A7M1Y1JTC --limit 50 --json
+    python3 40_Resources/tools/slack.py holen --ziel /tmp/kontakte
 
-`channels` zeigt auch, in welchen Kanälen der Bot drin ist — der erste Test nach der
-Einrichtung. `read` gibt Nachrichten älteste zuerst aus, mit Zeit, Absender und Anhängen.
+`scopes` sagt, was das Token darf — der erste Griff, wenn etwas mit `missing_scope` abbricht.
+`channels` zeigt, in welchen Kanälen der Bot drin ist. `read` gibt Nachrichten älteste zuerst
+aus, mit Zeit, Absender und Anhängen. `holen` ist die Maschinenfassung für die Routine: es
+schreibt `nachrichten.json` und lädt Bildanhänge in einen Unterordner `bilder/`.
+
+Slack verpackt jede Nummer und Adresse als Link `<tel:URL|Anzeige>`. `read --json` und `holen`
+packen das aus — bei `tel:` gewinnt die Anzeige (die URL ist zu Ziffernbrei normalisiert), bei
+`http:` die URL (die Anzeige ist oft gekürzt). Widersprechen sich bei einer Adresse Anzeige und
+Link, steht beides da: `jacksam@haddad.com (Link: jacksh@haddad.com)`.
 
 ## Bekannte Kanäle
 
@@ -90,10 +102,10 @@ Liste, lesen kann er sie nicht (`not_in_channel`) — dafür bräuchte es je ein
 - Der Free-Plan von Slack schneidet die Kanalhistorie nach 90 Tagen ab. Am 14.09.2026 reichte
   sie bis zum 29.06.2026 zurück — zehn Nachrichten. Für laufend neue Kontakte egal, für
   Altbestand nicht.
-- Kontakte kommen als Text, nicht als Foto — Visitenkarten-Bilder muss niemand auslesen.
-  Sollte das später doch vorkommen, braucht die App zusätzlich `files:read`.
-- Takt noch nicht entschieden: Routine einmal täglich oder auf Zuruf. Technisch geht beides,
-  seit der Kanal aus Cloud-Sessions lesbar ist.
+- Bilder sind vorbereitet, aber ungetestet: `files:read` liegt seit dem 14.09.2026 vor und
+  `slack.py holen` lädt Anhänge herunter — im Kanal lag bis dahin nur Text. Der erste Lauf
+  mit einer echten Visitenkarte gehört angesehen.
+- Takt entschieden: stündlich, siehe [`kontakte-routine.md`](kontakte-routine.md).
 - Ziel noch nicht entschieden: Pipedrive (dort ist das CRM, braucht einen API-Token) oder
   die Lasche „Kontakte" in der Themenplanung. Am 14.09.2026 wurde der Slack-Abgleich in die
   Lasche geschrieben, weil es für Pipedrive keinen Zugang gibt — das ist ein Behelf, keine
