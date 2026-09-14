@@ -34,6 +34,11 @@ niemandem weh; niemand wartet vor der Tabelle.
 **Verworfen:** Ein Events-API-Endpunkt (zu viel Apparat für die Menge) und ein Lauf einmal
 täglich (billiger, aber dann ist ein am Vormittag geposteter Kontakt erst am nächsten Tag da —
 und genau dann fragt jemand danach).
+**Nachtrag vom selben Tag:** Der erste Testlauf kostete 0,45 $, stündlich also rund 320 $ im
+Monat — für sechs Kontakte im vorangegangenen Vierteljahr. Sascha wurde die Rechnung samt
+billigerer Takte vorgelegt (4× werktags ≈ 36 $, 2× werktags ≈ 18 $, täglich ≈ 9 $) und hat
+sich bewusst für stündlich entschieden. Die Bereitschaft ist ihm den Posten wert. Wer das
+später kippen will, braucht ein neues Argument, nicht dieses.
 
 ## 2026-09-14 — Schreibzugriff auf Google Sheets über eine Apps-Script-Brücke
 

@@ -9,12 +9,23 @@ einem echten Bild gelaufen — im Kanal lag bis dahin keins.
 
 ## Takt
 
-Stündlich, jeweils zur vollen Stunde, über eine Routine (Trigger `trig_…`, siehe unten).
-Jeder Lauf startet eine frische Session, es gibt kein Gedächtnis zwischen den Läufen.
+Stündlich, über die Routine „Kontakte aus Slack anlegen"
+(`trig_012tHxtWTqGz3yqxmhm5AmCK`, jeweils zur Minute 35). Jeder Lauf startet eine frische
+Session, es gibt kein Gedächtnis zwischen den Läufen.
 
 Echtzeit („in dem Moment, in dem gepostet wird") ginge nur mit einem Server, der dauerhaft an
 Slacks Events-API hängt. Den gibt es nicht und er wäre für ein paar Kontakte im Monat zu viel
 Apparat. Eine Stunde Verzug ist der Preis dafür.
+
+**Was ein Lauf kostet:** rund 0,45 $, gemessen am ersten Testlauf am 14.09.2026 — auch wenn er
+nichts findet, denn er liest jedes Mal Kanal und Lasche komplett. Stündlich sind das etwa
+320 $ im Monat. Sascha hat das am 14.09.2026 so entschieden, mit der Zahl vor Augen; die
+billigeren Takte stehen in `wissen/entscheidungen.md`. Wer den Takt ändert, ändert ihn in der
+Routinenliste des Kontos, nicht hier.
+
+Der Posten sinkt spürbar, wenn ein Vorfilter dazukommt, der den Abgleich mechanisch macht und
+die Session nur startet, wenn wirklich ein unbekannter Name im Kanal steht. Gebaut ist das
+nicht — _(offen)_.
 
 ## Kein Merkzettel, sondern Abgleich
 
