@@ -5,13 +5,14 @@ Braucht ein Bot-Token aus einer eigenen Slack-App:
 
     SLACK_CGT_TOKEN     Bot User OAuth Token, beginnt mit xoxb-
 
-Die App braucht die Scopes channels:history, channels:read, users:read
-(bei privaten Kanaelen zusaetzlich groups:history, groups:read) und muss im
-Kanal eingeladen sein: /invite @NameDerApp
+Die App braucht die Scopes channels:history, channels:read, users:read,
+files:read (bei privaten Kanaelen zusaetzlich groups:history, groups:read) und
+muss im Kanal eingeladen sein: /invite @NameDerApp
 
 Aufrufe:
     slack.py channels
     slack.py read --channel C0A7M1Y1JTC [--limit 100] [--since 2026-09-01]
+    slack.py read --files-to ./anhaenge      # Anhaenge mit herunterladen
 
 Einrichtung: 40_Resources/slack-zugang.md
 """
@@ -71,6 +72,30 @@ def namen(s):
             return tabelle
 
 
+def sicherer_name(name):
+    """Dateinamen auf Unverfaengliches reduzieren."""
+    behalten = ''.join(c if (c.isalnum() or c in '._- ') else '_' for c in name)
+    return behalten.strip().replace(' ', '_')[:80] or 'datei'
+
+
+def datei_laden(s, datei, ordner):
+    """Einen Slack-Anhang herunterladen. Gibt den Pfad zurueck oder None."""
+    url = datei.get('url_private_download') or datei.get('url_private')
+    if not url:
+        return None
+    antwort = s.get(url, timeout=180)
+    if not antwort.ok:
+        return None
+    # Ohne files:read liefert Slack eine HTML-Anmeldeseite statt der Datei.
+    if antwort.headers.get('Content-Type', '').startswith('text/html'):
+        return None
+    os.makedirs(ordner, exist_ok=True)
+    pfad = os.path.join(ordner, f"{datei.get('id', 'F')}_{sicherer_name(datei.get('name', 'datei'))}")
+    with open(pfad, 'wb') as f:
+        f.write(antwort.content)
+    return pfad
+
+
 def cmd_channels(s, args):
     cursor = None
     while True:
@@ -109,7 +134,16 @@ def cmd_read(s, args):
         print(f'--- {zeit} | {wer} | ts={m["ts"]}')
         print(m.get('text', '').strip())
         for datei in m.get('files', []):
-            print(f'    [Anhang: {datei.get("name", "?")} ({datei.get("mimetype", "?")})]')
+            beschreibung = f'{datei.get("name", "?")} ({datei.get("mimetype", "?")})'
+            if args.files_to:
+                pfad = datei_laden(s, datei, args.files_to)
+                if pfad:
+                    print(f'    [Anhang: {beschreibung} -> {pfad}]')
+                else:
+                    print(f'    [Anhang: {beschreibung} — Download fehlgeschlagen. '
+                          f'Scope files:read gesetzt und App danach neu installiert?]')
+            else:
+                print(f'    [Anhang: {beschreibung} — mit --files-to VERZEICHNIS herunterladen]')
         print()
 
 
@@ -122,6 +156,8 @@ def main():
     r.add_argument('--channel', default=KANAL_KONTAKTE, help=f'Standard: {KANAL_KONTAKTE} (#kontakte)')
     r.add_argument('--limit', type=int, default=100, help='Anzahl Nachrichten (Standard 100)')
     r.add_argument('--since', metavar='JJJJ-MM-TT', help='nur ab diesem Tag')
+    r.add_argument('--files-to', metavar='VERZEICHNIS',
+                   help='Anhaenge dorthin herunterladen (braucht den Scope files:read)')
 
     args = p.parse_args()
     {'channels': cmd_channels, 'read': cmd_read}[args.befehl](sitzung(), args)
