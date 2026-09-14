@@ -60,3 +60,11 @@ Die Sheet-ID steht in der URL zwischen `/d/` und `/edit`.
 Die Themenplanung stand am 14.09.2026 auf „Jeder mit Link: Bearbeiter". Für eine Datei mit
 Kundenkontakten, Einkaufspreisen und Lieferantennamen ist das zu weit offen — nach dem
 Einrichten des Dienstkontos wieder auf gezielte Freigabe zurückstellen.
+
+## Nebenbefund: Slack-Workspaces
+
+Der Slack-Connector hängt an **einem** Workspace. Erreichbar ist der mit `#cubcoats`,
+`#bcd_intern`, `#digital-roots`. Der Workspace **CG TRADE** (`#deltex`, `#hard-rock`,
+`#kontakte`, `#pets`) ist ein anderer — Kanal `C0A7M1Y1JTC` antwortet mit
+`channel_not_found`. Damit Claude dort lesen kann, muss die Slack-App auch für CG TRADE
+autorisiert werden (claude.ai → Einstellungen → Connectors → Slack).
