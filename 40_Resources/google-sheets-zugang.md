@@ -97,10 +97,7 @@ als Bearbeiter — dazu „Jeder mit Link: Bearbeiter". Letzteres ist für eine 
 Einkaufspreisen, Lieferanten und Kundenkontakten zu weit offen und wird nicht gebraucht,
 weil alle Beteiligten namentlich eingetragen sind. Sollte auf „Eingeschränkt".
 
-## Nebenbefund: Slack-Workspaces
+## Slack
 
-Der Slack-Connector hängt an **einem** Workspace. Erreichbar ist der mit `#cubcoats`,
-`#bcd_intern`, `#digital-roots`. Der Workspace **CG TRADE** (`#deltex`, `#hard-rock`,
-`#kontakte`, `#pets`) ist ein anderer — Kanal `C0A7M1Y1JTC` antwortet mit
-`channel_not_found`. Damit Claude dort lesen kann, muss die Slack-App auch für CG TRADE
-autorisiert werden (claude.ai → Einstellungen → Connectors → Slack).
+Steht in `slack-zugang.md` — CG TRADE ist ein eigener Workspace, den der Claude-Connector
+nicht erreicht.

@@ -52,3 +52,11 @@ eigenständiges Apps Script als Web-App unter Saschas Konto. `gsheets.py` kann b
 und wählt den, der konfiguriert ist; neu sind `--from-csv` und ein `--dry-run`, der ohne
 Zugangsdaten läuft. Brücken-Code in `40_Resources/tools/sheets_bruecke.gs`.
 Quelle: Gespräch vom 14.09.2026 (nicht im Repo).
+
+## [2026-09-14] setup | Slack-Zugang für CG TRADE vorbereitet
+
+Der Claude-Connector kann nur einen Workspace; CG TRADE ist ein zweiter und damit außer
+Reichweite. Ersatz ist eine eigene Slack-App mit Bot-Token. Lesewerkzeug
+`40_Resources/tools/slack.py` (channels, read), Anleitung `40_Resources/slack-zugang.md`.
+Offen: Token ins Environment, Takt und Ziel der Kontakt-Ablage.
+Quelle: Gespräch vom 14.09.2026 (nicht im Repo).
