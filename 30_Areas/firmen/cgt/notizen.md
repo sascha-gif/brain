@@ -2,6 +2,33 @@
 
 Neueste oben.
 
+## 2026-09-14 — Lasche „Kontakte" geprüft: Inhalt steht, Aufbereitung fehlt
+
+Unabhängige Kontrolle des Ergebnisses über den Drive-Zugang (Export der Tabelle, nicht über
+die Brücke gelesen). Stand der Lasche:
+
+- **226 Zeilen**, also Kopfzeile plus 225 Kontakte. Alexandra Ochsenkiel steht in Zeile 226.
+- **Autofilter gesetzt** (A1:Z226).
+- 157 verschiedene Firmen.
+
+Was gegenüber der ursprünglichen Absprache („gute Struktur mit Filter und
+Firmenzugehörigkeit") noch fehlt — die Lasche trägt die **Pipedrive-Rohstruktur**:
+
+- Spaltennamen sind die Exportnamen („Person - Organisation", „Person - Telefon - Büro").
+- **Vier Spalten sind in allen 225 Zeilen leer**: Telefon privat, Telefon sonstige,
+  E-Mail privat, E-Mail sonstige.
+- **Nicht nach Firma sortiert** — es gilt die Pipedrive-Reihenfolge (Zeile 2 PowerHouse,
+  Zeile 3 bearaby.com). Kontakte derselben Firma stehen dadurch verstreut.
+- **Keine Spalte „Kontakte i. Firma"**, die zeigt, wo mehrere Ansprechpartner sitzen
+  (32 Firmen haben mehr als einen).
+- **Kein Land** — weder aus der Adresse noch aus der Vorwahl abgeleitet.
+- **Kopfzeile nicht fixiert**, beim Scrollen verschwindet sie.
+
+Die aufbereitete Fassung mit all dem existiert und wurde an Sascha geliefert; sie entsteht
+neu mit `40_Resources/tools/pipedrive_kontakte.py`. Ob die Lasche darauf umgestellt wird,
+ist offen — es hieße, 225 Zeilen zu ersetzen statt zu ergänzen, und die Routine schreibt
+gegen die jetzige Spaltenfolge.
+
 ## 2026-09-14 — Kontakte aus Slack laufen jetzt automatisch in die Lasche
 
 Der Abgleich von heute Vormittag ist eine Routine geworden: stündlich liest eine frische

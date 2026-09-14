@@ -99,3 +99,11 @@ Der Abgleich von heute Vormittag läuft jetzt stündlich als Routine. `slack.py`
 festgehalten: Abgleich statt Merkzettel, stündlich statt Echtzeit.
 Quelle: `30_Areas/firmen/cgt/notizen.md`.
 
+
+## [2026-09-14] lint | Lasche „Kontakte" gegen die Absprache geprüft
+
+Inhalt stimmt: 225 Kontakte, Ochsenkiel in Zeile 226, Autofilter gesetzt. Die Lasche trägt
+aber die Pipedrive-Rohstruktur — vier durchgehend leere Spalten, nicht nach Firma sortiert,
+ohne Firmen-Zähler, ohne Land, Kopfzeile nicht fixiert. Befund in
+`30_Areas/firmen/cgt/notizen.md`, Entscheidung über eine Umstellung offen.
+Quelle: Export der Tabelle über den Drive-Zugang, 14.09.2026.
