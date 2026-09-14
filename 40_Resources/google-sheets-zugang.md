@@ -4,7 +4,9 @@ Damit Claude in Google Sheets **schreiben** kann. Lesen geht ohne das hier — d
 der Google-Drive-Connector. Der kann aber nur lesen, suchen und neue Dateien anlegen;
 einzelne Zellen in einer bestehenden Tabelle ändern kann er nicht.
 
-**Stand 14.09.2026:** noch nicht eingerichtet. Werkzeuge liegen bereit:
+**Stand 14.09.2026:** eingerichtet und geprüft. `CGT_SHEETS_URL` und
+`CGT_SHEETS_SECRET` liegen im Environment, die Brücke antwortet; Lesen und Schreiben in
+der Themenplanung laufen aus einer Cloud-Session heraus. Werkzeuge:
 `40_Resources/tools/gsheets.py` (Aufrufe) und `40_Resources/tools/sheets_bruecke.gs`
 (die Web-App).
 
@@ -99,6 +101,15 @@ muss die Web-App aber neu bereitgestellt werden.
 |---|---|---|---|
 | CGT – Themenplanung | `1p9_9S8D4GiQFz2dKggup7cqoMscewW7p86glvi5k3sA` | thomas.goetz@cg-trade.de | Monats Plan, Themen, Sales Status, Kontakte |
 
+Die Lasche **Kontakte** trägt seit dem 14.09.2026 den Pipedrive-Personenexport:
+Kopfzeile plus 224 Datensätze in den 17 Spalten des Exports, ab Zeile 1. Vorher war sie
+leer. Zur Aufbereitung des Exports siehe [`wissen/pipedrive-export.md`](../wissen/pipedrive-export.md).
+
+In Zeile 226 kam am selben Tag ein Kontakt aus dem Slack-Kanal `#kontakte` dazu
+(Alexandra Ochsenkiel, Deichmann SE) — Stand jetzt 225 Datensätze. Die Lasche ist damit
+nicht mehr nur eine Abbildung des Exports: Wer sie gegen Pipedrive vergleicht, muss mit
+Zeilen rechnen, die dort noch fehlen.
+
 Freigabe am 14.09.2026: Thomas (Eigentümer), Sascha (beide Adressen) und Martin Lindegger
 als Bearbeiter — dazu „Jeder mit Link: Bearbeiter". Letzteres ist für eine Datei mit
 Einkaufspreisen, Lieferanten und Kundenkontakten zu weit offen und wird nicht gebraucht,
@@ -107,4 +118,5 @@ weil alle Beteiligten namentlich eingetragen sind. Sollte auf „Eingeschränkt"
 ## Slack
 
 Steht in `slack-zugang.md` — CG TRADE ist ein eigener Workspace, den der Claude-Connector
-nicht erreicht.
+nicht erreicht. Gelesen wird er über eine eigene Slack-App; seit dem 14.09.2026 geht das
+auch aus einer Cloud-Session.

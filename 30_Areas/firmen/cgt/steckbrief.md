@@ -35,6 +35,9 @@ Nur *wo* sie liegen (Passwort-Manager, Eintragsname), **nie** *was* sie sind.
   ID und Freigabestand in `40_Resources/google-sheets-zugang.md`.
 - **CRM** — Pipedrive. Personenexport vom 14.09.2026: 224 Kontakte, 157 Firmen.
   Zugang _(offen)_ — bisher nur über Exporte gearbeitet.
+- **Slack** — eigener Workspace CG TRADE, nicht über den Claude-Connector erreichbar.
+  Gelesen über eine eigene Slack-App; Kanal `#kontakte` (bis 14.09.2026 `#pipdrive`) sammelt
+  Kontaktdaten als Text. Token und Kanalliste in `40_Resources/slack-zugang.md`.
 
 ---
 
