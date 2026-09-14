@@ -2,6 +2,30 @@
 
 Neueste oben.
 
+## 2026-09-14 — Kontakte aus Slack laufen jetzt automatisch in die Lasche
+
+Der Abgleich von heute Vormittag ist eine Routine geworden: stündlich liest eine frische
+Session den Kanal `#kontakte`, prüft gegen die Lasche „Kontakte" und hängt an, was neu ist.
+Anleitung, Dublettenregeln und Spaltenzuordnung in
+[`40_Resources/kontakte-routine.md`](../../../40_Resources/kontakte-routine.md).
+
+Was dafür dazukam:
+
+- `slack.py` bekam `scopes`, `holen` und eine JSON-Ausgabe. `holen` legt `nachrichten.json` ab
+  und lädt Bildanhänge herunter.
+- Thomas hat den Scope `files:read` nachgetragen — damit kann der Bot Visitenkarten-Bilder
+  holen. Die Bilder bleiben im Scratchpad, nie im Repo.
+- Beim Auspacken der Slack-Links gewinnt jetzt je nach Typ die richtige Hälfte. Slack
+  normalisiert `tel:`-Links zu Ziffernbrei (`2126305440`), die lesbare Schreibweise steht nur
+  im Anzeigetext — den nimmt das Skript jetzt. Bei `http:` ist es umgekehrt.
+
+Zwei Dinge sind noch ungedeckt:
+
+- **Bilderkennung ist ungetestet.** Der Weg steht, aber im Kanal lag noch nie ein Bild. Die
+  erste echte Visitenkarte gehört angesehen, bevor man sich darauf verlässt.
+- **Pipedrive bleibt außen vor.** Die Routine schreibt in die Lasche, nicht ins CRM. Damit
+  laufen beide weiter auseinander. Das löst erst ein Pipedrive-API-Token.
+
 ## 2026-09-14 — Slack-Kanal `#kontakte` abgeglichen, ein Kontakt neu
 
 Erster Durchlauf des Kanals `#kontakte` (CG TRADE) gegen die Lasche „Kontakte" in der

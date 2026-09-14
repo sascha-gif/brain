@@ -6,6 +6,35 @@ Eine Entscheidung ohne verworfene Alternative ist keine. Der verworfene Weg ist 
 eigentliche Wert des Eintrags: ein halbes Jahr später schlägt sonst jemand genau den Weg
 vor, den wir aus gutem Grund verworfen haben.
 
+## 2026-09-14 — Wiederkehrende Übernahmen gleichen gegen das Ziel ab, statt sich zu merken
+
+**Entschieden:** Eine Routine, die regelmäßig Daten von A nach B schaufelt, führt keinen
+Merkzettel über das zuletzt Verarbeitete. Sie liest jedes Mal die Quelle und prüft gegen den
+Zielbestand, was schon da ist. Erstmals gebaut für Slack `#kontakte` → Lasche „Kontakte"
+(`40_Resources/kontakte-routine.md`).
+**Grund:** Der Abgleich ist selbstheilend. Ein Merkzettel hat drei Wege zu versagen — er
+veraltet, er geht verloren, oder ein Lauf bricht nach dem Schreiben des Merkzettels und vor
+dem Schreiben der Daten ab; danach fehlt ein Datensatz, ohne dass es jemand merkt. Der
+Zielbestand dagegen ist die Wahrheit: Was drinsteht, steht drin, egal welcher Lauf es
+geschrieben hat. Nachträglich bearbeitete oder spät entdeckte Quellsätze werden mitgenommen.
+**Verworfen:** Zeitstempel des letzten Laufs in einer Zustandsdatei — der übliche Weg und bei
+großen Mengen der richtige, weil er nicht jedes Mal alles liest. Der Preis des Abgleichs ist
+genau das: volle Quelle bei jedem Lauf. Vertretbar, solange die Quelle klein bleibt (bei Slack
+sorgt der Free-Plan mit seinen 90 Tagen selbst dafür). Wird sie groß, kippt die Rechnung und
+der Merkzettel gehört nachgerüstet.
+
+## 2026-09-14 — Automatische Übernahmen laufen als stündliche Routine, nicht in Echtzeit
+
+**Entschieden:** „Sobald etwas gepostet wird" heißt bei uns: zur nächsten vollen Stunde. Die
+Kontakte-Routine läuft stündlich als Trigger, der eine frische Session startet.
+**Grund:** Echtzeit bräuchte einen Dienst, der dauerhaft an Slacks Events-API hängt, also
+einen Server mit öffentlicher URL, Zertifikat, Überwachung und jemandem, der ihn im Blick
+behält. Für ein paar Kontakte im Monat steht das in keinem Verhältnis. Eine Stunde Verzug tut
+niemandem weh; niemand wartet vor der Tabelle.
+**Verworfen:** Ein Events-API-Endpunkt (zu viel Apparat für die Menge) und ein Lauf einmal
+täglich (billiger, aber dann ist ein am Vormittag geposteter Kontakt erst am nächsten Tag da —
+und genau dann fragt jemand danach).
+
 ## 2026-09-14 — Schreibzugriff auf Google Sheets über eine Apps-Script-Brücke
 
 **Entschieden:** Schreiben in Google Sheets läuft über ein eigenständiges Apps Script in

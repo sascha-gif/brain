@@ -91,3 +91,11 @@ verändert. Cloud-Sessions erreichen slack.com jetzt — `40_Resources/slack-zug
 entsprechend korrigiert.
 Quelle: `30_Areas/firmen/cgt/notizen.md`.
 
+## [2026-09-14] gebaut | Kontakte-Routine Slack → Lasche
+
+Der Abgleich von heute Vormittag läuft jetzt stündlich als Routine. `slack.py` um `scopes`,
+`holen` (JSON plus Bilddownload) und typrichtiges Auspacken der Slack-Links erweitert,
+`files:read` liegt vor. Anleitung in `40_Resources/kontakte-routine.md`. Zwei Entscheidungen
+festgehalten: Abgleich statt Merkzettel, stündlich statt Echtzeit.
+Quelle: `30_Areas/firmen/cgt/notizen.md`.
+
