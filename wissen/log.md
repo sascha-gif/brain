@@ -60,3 +60,24 @@ Reichweite. Ersatz ist eine eigene Slack-App mit Bot-Token. Lesewerkzeug
 `40_Resources/tools/slack.py` (channels, read), Anleitung `40_Resources/slack-zugang.md`.
 Offen: Token ins Environment, Takt und Ziel der Kontakt-Ablage.
 Quelle: Gespräch vom 14.09.2026 (nicht im Repo).
+
+## [2026-09-14] setup | Sheets-Brücke geprüft, Kontakte geschrieben, Slack blockiert
+
+Beide Zugänge gegengeprüft. **Sheets:** `CGT_SHEETS_URL` und `CGT_SHEETS_SECRET` im
+Environment, Brücke antwortet, Laschen der Themenplanung gelesen. Den Pipedrive-Personenexport
+aufbereitet (224 Datensätze) und in die bis dahin leere Lasche „Kontakte" geschrieben,
+Kopfzeile plus Daten ab Zeile 1. **Slack:** `SLACK_CGT_TOKEN` liegt im Environment, ist aus
+einer Cloud-Session aber nicht nutzbar — der Egress-Proxy weist `slack.com:443` mit 403 ab
+(Organisationsrichtlinie). Gegenprobe: der Claude-Connector erreicht CG TRADE weiterhin nicht
+(`channel_not_found`). #kontakte konnte deshalb nicht gelesen werden. Behebungsweg in
+`40_Resources/slack-zugang.md` festgehalten: Netzwerkzugriff des Environments von „Trusted"
+auf „Custom" mit `slack.com` in den Allowed domains. Bis dahin läuft `slack.py` lokal.
+Quelle: Session vom 14.09.2026, Exportdateien nicht im Repo.
+
+## [2026-09-14] kompiliert | Pipedrive-CSV-Export verliert Datensätze
+
+Neuer Eintrag `wissen/pipedrive-export.md`: Nur die erste Spalte des Exports ist unmaskiert,
+daraus folgen drei Fehler — kaputte Umlaute, an Zeilenumbrüchen zerrissene Firmennamen und
+ein unmaskiertes Komma, das eine Spalte zu viel erzeugt. Mit Reparaturregeln und der
+Gegenprobe. Merksatz: wenn möglich den XLSX-Export nehmen.
+Quelle: Aufbereitung des Personenexports am 14.09.2026.
