@@ -105,6 +105,11 @@ Die Lasche **Kontakte** trägt seit dem 14.09.2026 den Pipedrive-Personenexport:
 Kopfzeile plus 224 Datensätze in den 17 Spalten des Exports, ab Zeile 1. Vorher war sie
 leer. Zur Aufbereitung des Exports siehe [`wissen/pipedrive-export.md`](../wissen/pipedrive-export.md).
 
+In Zeile 226 kam am selben Tag ein Kontakt aus dem Slack-Kanal `#kontakte` dazu
+(Alexandra Ochsenkiel, Deichmann SE) — Stand jetzt 225 Datensätze. Die Lasche ist damit
+nicht mehr nur eine Abbildung des Exports: Wer sie gegen Pipedrive vergleicht, muss mit
+Zeilen rechnen, die dort noch fehlen.
+
 Freigabe am 14.09.2026: Thomas (Eigentümer), Sascha (beide Adressen) und Martin Lindegger
 als Bearbeiter — dazu „Jeder mit Link: Bearbeiter". Letzteres ist für eine Datei mit
 Einkaufspreisen, Lieferanten und Kundenkontakten zu weit offen und wird nicht gebraucht,
@@ -113,4 +118,5 @@ weil alle Beteiligten namentlich eingetragen sind. Sollte auf „Eingeschränkt"
 ## Slack
 
 Steht in `slack-zugang.md` — CG TRADE ist ein eigener Workspace, den der Claude-Connector
-nicht erreicht.
+nicht erreicht. Gelesen wird er über eine eigene Slack-App; seit dem 14.09.2026 geht das
+auch aus einer Cloud-Session.

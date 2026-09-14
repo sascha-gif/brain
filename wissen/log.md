@@ -81,3 +81,13 @@ daraus folgen drei Fehler — kaputte Umlaute, an Zeilenumbrüchen zerrissene Fi
 ein unmaskiertes Komma, das eine Spalte zu viel erzeugt. Mit Reparaturregeln und der
 Gegenprobe. Merksatz: wenn möglich den XLSX-Export nehmen.
 Quelle: Aufbereitung des Personenexports am 14.09.2026.
+
+## [2026-09-14] eingesortiert | Slack `#kontakte` gegen die Kontakte-Lasche
+
+Sechs Kontaktposts aus dem CG-TRADE-Kanal gelesen, fünf waren Dubletten zum
+Pipedrive-Export. Alexandra Ochsenkiel (Deichmann SE) nach Zeile 226 der Lasche
+„Kontakte" geschrieben. Vier Abweichungen zwischen Signatur und Lasche notiert, nicht
+verändert. Cloud-Sessions erreichen slack.com jetzt — `40_Resources/slack-zugang.md`
+entsprechend korrigiert.
+Quelle: `30_Areas/firmen/cgt/notizen.md`.
+

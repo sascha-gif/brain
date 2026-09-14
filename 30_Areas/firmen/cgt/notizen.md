@@ -2,6 +2,43 @@
 
 Neueste oben.
 
+## 2026-09-14 — Slack-Kanal `#kontakte` abgeglichen, ein Kontakt neu
+
+Erster Durchlauf des Kanals `#kontakte` (CG TRADE) gegen die Lasche „Kontakte" in der
+Themenplanung. Ertrag: **ein** neuer Kontakt.
+
+Im Kanal liegen zehn Nachrichten (Historie reicht bis 29.06.2026, Free-Plan schneidet nach
+90 Tagen ab), darunter sechs Kontaktposts von Thomas. Fünf davon standen schon im
+Pipedrive-Export und damit in der Lasche: Jack Sam Haddad, Hank Shapiro, Joseph Favuzza,
+Danielle Manna, Lidia van Dijk. Neu nach Zeile 226 geschrieben:
+
+- **Alexandra Ochsenkiel**, Category Manager Purchasing & International Sourcing
+  Accessories, Deichmann SE. Firmenadresse und PLZ aus dem bestehenden Deichmann-Eintrag
+  der Lasche übernommen, alles andere aus dem Slack-Post.
+
+Der Kanal hieß bis heute `#pipdrive` und wurde von Thomas in `#kontakte` umbenannt.
+
+Beim Abgleich gefundene Abweichungen zwischen Slack und Lasche — **nicht** geändert,
+gehören in Pipedrive korrigiert, nicht in der Tabelle nachgebessert:
+
+- **Joseph Favuzza**: Position steht als „Chief Strategy Officer & President", die
+  Signatur sagt „Chief Strategy Officer & President, Business Development".
+- **Danielle Manna**: Die Nummer 631-220-6853 steht in der Spalte Telefon Büro, die
+  Signatur weist sie als Mobilnummer aus. Ihre zweite Zugehörigkeit „Legacy Licensing
+  Group" fehlt ganz.
+- **Jack Sam Haddad**: Der Slack-Post widerspricht sich selbst — der Mailto-Link zeigt auf
+  `jacksh@haddad.com`, der Anzeigetext auf `jacksam@haddad.com`. Die Lasche führt
+  `jacksam@`. Welche stimmt, ist _(offen)_.
+- **Hank Shapiro**: Mobilnummer in der Lasche ohne Pluszeichen („1 908.568.3103").
+
+Zwei Nachrichten ohne Kontakt: ein Platzhalter aus X-en und die nackte Adresse
+saborn-trading.com — die Firma steht als Saborn Trading mit Hein Holleman ohnehin in der
+Lasche.
+
+Nebenbefund: `slack.com` ist aus Cloud-Sessions inzwischen erreichbar, die im Repo
+festgehaltene 403-Sperre gilt nicht mehr. Damit könnte der Abgleich als Routine laufen.
+Siehe `40_Resources/slack-zugang.md`.
+
 ## 2026-09-14 — Pipedrive-Kontakte aufbereitet
 
 224 Kontakte aus einem Pipedrive-Personenexport in eine Tabelle gebracht: sortiert nach

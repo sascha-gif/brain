@@ -1,8 +1,9 @@
 # Slack-Zugang
 
-**Stand 14.09.2026:** `SLACK_CGT_TOKEN` liegt im Environment (Bot-Token, `xoxb-…`).
-**Aus Cloud-Sessions trotzdem nicht nutzbar** — siehe „Grenze" unten; ob das Token gültig
-ist, konnte dort deshalb nicht geprüft werden. Werkzeug: `40_Resources/tools/slack.py`.
+**Stand 14.09.2026:** eingerichtet und geprüft. `SLACK_CGT_TOKEN` liegt im Environment
+(Bot-Token, `xoxb-…`), das Token ist gültig, und der Kanal `#kontakte` ließ sich **aus einer
+Cloud-Session heraus** lesen. Die frühere Sperre ist weg, siehe „Netzzugang" unten.
+Werkzeug: `40_Resources/tools/slack.py`.
 
 ## Warum eine eigene App
 
@@ -34,23 +35,15 @@ sie eingeladen wurde.
 Falls die App-Installation im Workspace auf Admins beschränkt ist, muss Thomas sie
 freigeben; statt „Install" erscheint dann eine Anfrage-Maske.
 
-## Grenze: Cloud-Sessions erreichen slack.com nicht
+## Netzzugang aus Cloud-Sessions
 
-Der Egress-Proxy von claude.ai/code lässt nur Hosts durch, die die Organisationsrichtlinie
-erlaubt. `slack.com` ist nicht darunter: Der Aufruf endet mit
-`Tunnel connection failed: 403 Forbidden`, der Proxy protokolliert
-`connect_rejected … gateway answered 403 to CONNECT` für `slack.com:443`. Das ist eine
-Richtlinienentscheidung, kein Fehler im Werkzeug und nichts, was sich umgehen ließe.
+Anfangs war `slack.com` aus claude.ai/code nicht erreichbar: Der Aufruf endete mit
+`Tunnel connection failed: 403 Forbidden`, weil das Environment auf Netzwerkzugriff
+**Trusted** stand — eine feste Liste (Paketregister, GitHub, Cloud-SDKs) ohne Slack.
 
-Damit gilt: **`slack.py` läuft lokal über die CLI**, nicht in einer Cloud-Session. Der
-Claude-Slack-Connector ist auch kein Ersatz — er hängt an einem anderen Workspace und
-antwortet für `C0A7M1Y1JTC` weiterhin mit `channel_not_found` (am 14.09.2026 gegengeprüft).
-
-### Beheben: Netzwerkzugriff des Environments auf „Custom" stellen
-
-Das Environment steht auf Netzwerkzugriff **Trusted** — eine feste Liste (Paketregister,
-GitHub, Cloud-SDKs), in der Slack nicht vorkommt. Ergänzen kann man diese Liste nicht; man
-wechselt auf **Custom** und gibt eine eigene Liste an:
+Seit dem 14.09.2026 steht das Environment auf **Custom** mit `slack.com` in der Liste;
+`slack.py` läuft damit auch aus einer Cloud-Session. Falls die Sperre wiederkommt
+(403 auf `slack.com:443`), so war sie eingestellt:
 
 1. Auf [claude.ai/code](https://claude.ai/code) das **Wolken-Symbol** über dem Eingabefeld
    anklicken, im Menü über das Environment fahren, rechts das **Zahnrad**.
@@ -64,9 +57,9 @@ wechselt auf **Custom** und gibt eine eigene Liste an:
    gelten *nur* die beiden Zeilen oben, und npm, pip und Konsorten fallen aus.
 5. Speichern und eine **neue Session** starten — eine laufende behält ihre alte Richtlinie.
 
-Danach erreicht `slack.py` den Workspace auch aus der Cloud, und eine Routine kann
-unbeaufsichtigt laufen. GitHub bleibt davon unberührt: der Git-Verkehr läuft über einen
-eigenen Proxy, nicht über diese Liste.
+Der Claude-Slack-Connector bleibt trotzdem kein Ersatz: Er hängt am Workspace
+`srpgruppe.slack.com` und antwortet für `C0A7M1Y1JTC` weiterhin mit `channel_not_found`.
+GitHub ist von der Domainliste unberührt — der Git-Verkehr läuft über einen eigenen Proxy.
 
 Quelle: [Configure cloud environments → Access levels](https://code.claude.com/docs/en/cloud-environments#access-levels).
 
@@ -85,17 +78,26 @@ Einrichtung. `read` gibt Nachrichten älteste zuerst aus, mit Zeit, Absender und
 |---|---|---|---|
 | `#kontakte` | `C0A7M1Y1JTC` | CG TRADE | Kontaktdaten als Text, von Thomas und Sascha gepostet |
 
-Weitere Kanäle in CG TRADE: `#deltex`, `#hard-rock`, `#pets`.
+`#kontakte` hieß bis zum 14.09.2026 `#pipdrive`; die ID ist dieselbe geblieben.
+
+Der Bot ist **nur** in `#kontakte`. Die übrigen Kanäle in CG TRADE sieht er zwar in der
+Liste, lesen kann er sie nicht (`not_in_channel`) — dafür bräuchte es je ein
+`/invite @Brain Reader`: `#fandom`, `#ktn`, `#herzbach`, `#deltex`, `#deals`, `#to_do`,
+`#fressnapf`, `#miloy`, `#pets`, `#epsilon`, `#tracker`, `#pmt`, `#hard-rock`.
 
 ## Was noch offen ist
 
-- Der Free-Plan von Slack schneidet die Kanalhistorie nach 90 Tagen ab. Für laufend neue
-  Kontakte egal, für Altbestand nicht.
+- Der Free-Plan von Slack schneidet die Kanalhistorie nach 90 Tagen ab. Am 14.09.2026 reichte
+  sie bis zum 29.06.2026 zurück — zehn Nachrichten. Für laufend neue Kontakte egal, für
+  Altbestand nicht.
 - Kontakte kommen als Text, nicht als Foto — Visitenkarten-Bilder muss niemand auslesen.
   Sollte das später doch vorkommen, braucht die App zusätzlich `files:read`.
-- Takt noch nicht entschieden: Routine einmal täglich oder auf Zuruf.
+- Takt noch nicht entschieden: Routine einmal täglich oder auf Zuruf. Technisch geht beides,
+  seit der Kanal aus Cloud-Sessions lesbar ist.
 - Ziel noch nicht entschieden: Pipedrive (dort ist das CRM, braucht einen API-Token) oder
-  die Lasche „Kontakte" in der Themenplanung. In der Lasche liegt seit dem 14.09.2026 der
-  Pipedrive-Personenexport — das war eine einmalige Befüllung auf Zuruf und legt die
-  Richtung für den laufenden Betrieb noch nicht fest.
-- Erst recht offen, solange der Kanal aus Cloud-Sessions nicht lesbar ist (siehe „Grenze").
+  die Lasche „Kontakte" in der Themenplanung. Am 14.09.2026 wurde der Slack-Abgleich in die
+  Lasche geschrieben, weil es für Pipedrive keinen Zugang gibt — das ist ein Behelf, keine
+  Entscheidung.
+- Ohne Zugang zu Pipedrive laufen Slack und CRM auseinander: Fünf der sechs Kontakte im
+  Kanal standen bereits im Personenexport. Ein Abgleich gegen die Lasche fängt Dubletten ab,
+  aber nur, solange die Lasche aktuell ist.
