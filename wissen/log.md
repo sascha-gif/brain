@@ -107,3 +107,13 @@ aber die Pipedrive-Rohstruktur — vier durchgehend leere Spalten, nicht nach Fi
 ohne Firmen-Zähler, ohne Land, Kopfzeile nicht fixiert. Befund in
 `30_Areas/firmen/cgt/notizen.md`, Entscheidung über eine Umstellung offen.
 Quelle: Export der Tabelle über den Drive-Zugang, 14.09.2026.
+
+## [2026-09-14] umgebaut | Lasche „Kontakte" auf die aufbereitete Struktur
+
+17 Pipedrive-Rohspalten zu 15 gepflegten: vier durchgehend leere raus, Firmen-Zähler und
+abgeleitetes Land rein, sortiert nach Firma. 225 Zeilen rein, 225 raus. Werkzeug
+`40_Resources/tools/kontakte_umbau.py`, Länderlogik nach `laender.py` herausgezogen und mit
+`pipedrive_kontakte.py` geteilt. Routine-Runbook auf die neuen Spalten umgestellt. Gelernt:
+deutsche Locale braucht Semikolons in Formeln, wachsende Bereiche müssen offen sein.
+Quelle: `30_Areas/firmen/cgt/notizen.md`.
+

@@ -95,20 +95,39 @@ Zeile, kein Autofilter. Das setzt man im Sheet mit zwei Klicks nach (Ansicht →
 Daten → Filter erstellen) oder erweitert `sheets_bruecke.gs` um eine `format`-Aktion; dann
 muss die Web-App aber neu bereitgestellt werden.
 
+**Formeln brauchen Semikolons.** Die Themenplanung steht auf deutscher Locale, dort trennt
+`;` die Argumente. `=COUNTIF(A2:A;"x")` mit Komma liefert in jeder Zelle `#ERROR!` — am
+14.09.2026 einmal so eingebaut und wieder ausgebaut. Englische Funktionsnamen versteht Google
+dagegen unabhängig von der Locale, `IF` und `COUNTIF` müssen also nicht übersetzt werden.
+
+Bereiche in Formeln, die mit der Tabelle wachsen sollen, nach unten offen lassen
+(`$A$2:$A` statt `$A$2:$A$226`). Sonst rechnet die Formel spätere Zeilen nicht mit — genau
+die, die eine Routine anhängt.
+
 ## Bekannte Tabellen
 
 | Tabelle | ID | Eigentümer | Laschen |
 |---|---|---|---|
 | CGT – Themenplanung | `1p9_9S8D4GiQFz2dKggup7cqoMscewW7p86glvi5k3sA` | thomas.goetz@cg-trade.de | Monats Plan, Themen, Sales Status, Kontakte |
 
-Die Lasche **Kontakte** trägt seit dem 14.09.2026 den Pipedrive-Personenexport:
-Kopfzeile plus 224 Datensätze in den 17 Spalten des Exports, ab Zeile 1. Vorher war sie
-leer. Zur Aufbereitung des Exports siehe [`wissen/pipedrive-export.md`](../wissen/pipedrive-export.md).
+Die Lasche **Kontakte** trägt seit dem 14.09.2026 die 225 Kontakte aus dem
+Pipedrive-Personenexport plus einen aus Slack (Alexandra Ochsenkiel). Zur Aufbereitung des
+Exports siehe [`wissen/pipedrive-export.md`](../wissen/pipedrive-export.md).
 
-In Zeile 226 kam am selben Tag ein Kontakt aus dem Slack-Kanal `#kontakte` dazu
-(Alexandra Ochsenkiel, Deichmann SE) — Stand jetzt 225 Datensätze. Die Lasche ist damit
-nicht mehr nur eine Abbildung des Exports: Wer sie gegen Pipedrive vergleicht, muss mit
-Zeilen rechnen, die dort noch fehlen.
+Am selben Tag von der Pipedrive-Rohstruktur auf die aufbereitete umgestellt
+(`40_Resources/tools/kontakte_umbau.py`): **15 Spalten** statt 17, sortiert nach Firma, mit
+Firmen-Zähler und abgeleitetem Land.
+
+| A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Firma | Kontakte i. Firma | Anrede | Vorname | Nachname | Position | E-Mail | Telefon | Mobil | Land | PLZ | Adresse | Website | Kategorie | Label |
+
+Weggefallen sind vier Spalten, die in allen 225 Zeilen leer waren: Telefon privat, Telefon
+sonstige, E-Mail privat, E-Mail sonstige. Land ist bei 173 von 225 bestimmt; leer heißt „aus
+den Daten nicht sicher ableitbar", nicht „kein Land".
+
+Die Lasche ist damit nicht mehr die Abbildung eines Exports: Wer sie gegen Pipedrive
+vergleicht, muss mit Zeilen rechnen, die dort fehlen, und mit anderen Spaltennamen.
 
 Freigabe am 14.09.2026: Thomas (Eigentümer), Sascha (beide Adressen) und Martin Lindegger
 als Bearbeiter — dazu „Jeder mit Link: Bearbeiter". Letzteres ist für eine Datei mit

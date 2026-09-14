@@ -2,6 +2,40 @@
 
 Neueste oben.
 
+## 2026-09-14 — Lasche „Kontakte" auf die aufbereitete Struktur umgestellt
+
+Die Lasche trug die Pipedrive-Rohstruktur; jetzt trägt sie die aufbereitete. Aus 17 Spalten
+wurden 15, gemacht mit `40_Resources/tools/kontakte_umbau.py`.
+
+- **Vier Spalten raus** — Telefon privat, Telefon sonstige, E-Mail privat, E-Mail sonstige.
+  Vor dem Löschen geprüft: in allen 225 Zeilen leer. Das Skript bricht ab, wenn eine davon
+  doch etwas enthält.
+- **Sortiert nach Firma**, innerhalb der Firma nach Nachname. Zeilen ohne Firma ans Ende.
+- **Spalte „Kontakte i. Firma"** als COUNTIF-Formel. 98 Zeilen gehören zu Firmen mit mehreren
+  Ansprechpartnern.
+- **Spalte „Land"**, abgeleitet aus dem Landesnamen in der Adresse, sonst aus der
+  Telefonvorwahl. Bei 173 von 225 bestimmt; die übrigen 52 bleiben leer, weil die Daten es
+  nicht hergeben — nicht geraten.
+- Spaltennamen sind jetzt lesbar („Firma" statt „Person - Organisation").
+
+Gegengeprüft: 225 Zeilen rein, 225 raus, kein Kontakt verloren, keiner dazuerfunden. Die alte
+Fassung liegt als Sicherung im Scratchpad dieser Session — die ist mit der Session weg.
+
+**Was Sascha von Hand nachziehen muss:** Kopfzeile fixieren und den Autofilter auf A1:O226
+setzen. Die Apps-Script-Brücke schreibt Werte und Formeln, keine Formatierung.
+
+Zwei Dinge dabei gelernt, beide in `40_Resources/google-sheets-zugang.md` festgehalten:
+
+- Die Tabelle steht auf **deutscher Locale**: Formeln brauchen Semikolons als
+  Argumenttrenner. Mit Komma steht in jeder Zelle `#ERROR!` — erst so gebaut, dann korrigiert.
+- Der COUNTIF-Bereich muss nach unten **offen** sein (`$A$2:$A`). Mit festem Ende hätte die
+  Formel genau die Zeilen nicht mitgezählt, die die Routine später anhängt.
+
+Die Kontakte-Routine war während des Umbaus abgeschaltet und läuft wieder; ihr Runbook und
+ihr Prompt kennen jetzt die 15 Spalten. Eine Sache bleibt schief: `append` hängt unten an,
+die Sortierung nach Firma gilt also nur bis zum nächsten neuen Kontakt. Das ist hingenommen —
+neu sortieren heißt alle Zeilen neu schreiben, und der Autofilter macht es mit zwei Klicks.
+
 ## 2026-09-14 — Lasche „Kontakte" geprüft: Inhalt steht, Aufbereitung fehlt
 
 Unabhängige Kontrolle des Ergebnisses über den Drive-Zugang (Export der Tabelle, nicht über

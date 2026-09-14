@@ -4,8 +4,10 @@ Was Thomas oder Sascha in den Kanal `#kontakte` (CG TRADE) posten, landet automa
 Lasche **Kontakte** der Tabelle „CGT – Themenplanung". Diese Seite ist die Anleitung, der die
 Routine folgt — sie wird bei jedem Lauf gelesen, nicht aus dem Gedächtnis wiederholt.
 
-**Stand 14.09.2026:** eingerichtet, läuft stündlich. Bilderkennung gebaut, aber noch nie an
-einem echten Bild gelaufen — im Kanal lag bis dahin keins.
+**Stand 14.09.2026:** eingerichtet, läuft stündlich. Die Lasche wurde am selben Tag von der
+Pipedrive-Rohstruktur (17 Spalten) auf die aufbereitete (15 Spalten) umgestellt — die
+Spaltenzuordnung unten ist die neue. Bilderkennung gebaut, aber noch nie an einem echten Bild
+gelaufen — im Kanal lag bis dahin keins.
 
 ## Takt
 
@@ -56,7 +58,7 @@ wie `00_RAW/` auch nicht.
 
 ### 2. Zieltabelle lesen
 
-    python3 40_Resources/tools/gsheets.py read --range "Kontakte!A1:Q400"
+    python3 40_Resources/tools/gsheets.py read --range "Kontakte!A1:O400"
 
 Zeile 1 ist die Kopfzeile. Die letzte belegte Zeile ist zugleich die Zahl der Datensätze plus
 eins; `append` hängt von allein an der richtigen Stelle an.
@@ -92,36 +94,53 @@ Am 14.09.2026 waren fünf von sechs Posts Dubletten. Das ist der Normalfall, nic
 
 ### 5. Neue Zeilen anhängen
 
-    python3 40_Resources/tools/gsheets.py append --range "Kontakte" --row <17 Werte>
+    python3 40_Resources/tools/gsheets.py append --range "Kontakte" --row <15 Werte>
 
-Erst mit `--dry-run` ansehen, dann schreiben. Die 17 Spalten in dieser Reihenfolge:
+Erst mit `--dry-run` ansehen, dann schreiben. Die Lasche trägt seit dem 14.09.2026 die
+aufbereitete Struktur mit **15** Spalten (vorher 17 Pipedrive-Rohspalten):
 
 | # | Spalte | Was hinein gehört |
 |---|---|---|
-| A | Person - Organisation | Firmenname. Steht die Firma schon in der Lasche, **deren** Schreibweise übernehmen („Deichmann SE", nicht „Deichmann"). |
-| B | Person - Geschlecht | „Herr" oder „Frau" — nur wenn die Quelle es hergibt. **Nie** aus dem Vornamen raten. |
-| C | Person - Vorname | |
-| D | Person - Nachname | Mehrteilige Namen bleiben zusammen („van Dijk"). |
-| E | Person - Position | Alle Zeilen der Signatur zu einer zusammenziehen, nichts weglassen. |
-| F | Organisation - Adresse | Aus der Signatur. Fehlt sie und die Firma steht schon in der Lasche: deren Adresse übernehmen. |
-| G | Organisation - PLZ | |
-| H | Person - Telefon - Büro | Was die Signatur als Phone/Tel/T führt. |
-| I | Person - Telefon - Privat | War im Export durchgehend leer. |
-| J | Person - Telefon - Mobil | Mobile/Cell/M. |
-| K | Person - Telefon - Sonstiger | |
-| L | Person - E-Mail-Adresse - Büro | |
-| M | Person - E-Mail-Adresse - Privat | War im Export durchgehend leer. |
-| N | Person - E-Mail-Adresse - Sonstiger | |
-| O | Organisation - Website | |
-| P | Person - Kundenkategorie | Leer lassen. Wird in Pipedrive gepflegt, nicht hier geraten. |
-| Q | Person - Label | Leer lassen, dito. |
+| A | Firma | Steht die Firma schon in der Lasche, **deren** Schreibweise übernehmen („Deichmann SE", nicht „Deichmann"). |
+| B | Kontakte i. Firma | **Formel, nicht tippen.** Für eine neue Zeile *n*: `=IF(An="";"";COUNTIF($A$2:$A;An))` |
+| C | Anrede | „Herr" oder „Frau" — nur wenn die Quelle es hergibt. **Nie** aus dem Vornamen raten. |
+| D | Vorname | |
+| E | Nachname | Mehrteilige Namen bleiben zusammen („van Dijk"). |
+| F | Position | Alle Zeilen der Signatur zu einer zusammenziehen, nichts weglassen. |
+| G | E-Mail | |
+| H | Telefon | Was die Signatur als Phone/Tel/T führt. |
+| I | Mobil | Mobile/Cell/M. |
+| J | Land | Abgeleitet, nicht geraten: `laender.py` nimmt den ausgeschriebenen Landesnamen aus der Adresse, sonst die Vorwahl. Gibt beides nichts her, bleibt es leer. |
+| K | PLZ | |
+| L | Adresse | Aus der Signatur. Fehlt sie und die Firma steht schon in der Lasche: deren Adresse übernehmen. |
+| M | Website | |
+| N | Kategorie | Leer lassen. Wird in Pipedrive gepflegt, nicht hier geraten. |
+| O | Label | Leer lassen, dito. |
 
-Was die Quelle nicht hergibt, bleibt leer. Nichts ausschmücken, nichts ableiten außer der
-Firmenadresse nach Regel F.
+Für Spalte J das Werkzeug benutzen, nicht selbst entscheiden:
+
+    python3 -c "import sys; sys.path.insert(0, '40_Resources/tools'); \
+      from laender import land_aus_adresse, land_aus_telefon; \
+      print(land_aus_adresse('<Adresse>') or land_aus_telefon('<Tel>', '<Mobil>'))"
+
+Was die Quelle nicht hergibt, bleibt leer. Nichts ausschmücken, nichts ableiten außer Land
+nach Regel J und der Firmenadresse nach Regel L.
 
 Steht in `text` eine Adresse als `a (Link: b)`, widersprechen sich Anzeigetext und Mailto-Link
 der Signatur. Dann den **Anzeigetext** in die Spalte schreiben und den Widerspruch in der
 Notiz vermerken — entscheiden kann das nur ein Mensch.
+
+**Zwei Fallstricke bei Formeln in dieser Tabelle**, beide am 14.09.2026 einmal hineingelaufen:
+
+- Der Argumenttrenner ist ein **Semikolon**, die Tabelle steht auf deutscher Locale. Mit
+  Komma liefert jede Zelle `#ERROR!`.
+- Der COUNTIF-Bereich ist nach unten **offen** (`$A$2:$A`, nicht `$A$2:$A$226`). Sonst zählt
+  die Formel genau die Zeilen nicht mit, die diese Routine anhängt.
+
+**Die Sortierung geht beim Anhängen verloren.** Die Lasche ist nach Firma sortiert, `append`
+hängt aber unten an. Eine neue Zeile steht also am Ende, nicht bei ihrer Firma. Das ist
+hingenommen: Neu-Einsortieren hieße, alle Zeilen neu zu schreiben, und der Autofilter sortiert
+mit zwei Klicks. Wenn es stört, `kontakte_umbau.py` erneut laufen lassen.
 
 ### 6. Auffälligkeiten notieren, nicht reparieren
 
