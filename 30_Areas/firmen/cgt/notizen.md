@@ -2,6 +2,38 @@
 
 Neueste oben.
 
+## 2026-09-15 — Slack-Auslöser gebaut, Alibaba-Routine pausiert
+
+**Auslöser.** Der Weg, den Sascha vermutet hatte, existiert: Routinen haben einen
+`/fire`-Endpunkt, den ein HTTP-POST mit Bearer-Token startet. Gegengeprüft — der Endpunkt
+antwortet für unsere Routine mit `401` (Token fehlt), nicht mit `404`; er kennt sie also.
+
+Slack kann den Aufruf nicht selbst machen, weil seine Events-API keinen Token mitschickt.
+Dazwischen steht jetzt [`40_Resources/tools/slack_ausloeser.gs`](../../../40_Resources/tools/slack_ausloeser.gs),
+ein eigenes Apps-Script-Projekt neben der Sheets-Brücke. Filterlogik gegen vierzehn
+Slack-Ereignisformen geprüft: normaler Post und Visitenkarte kommen durch, Bot-Nachrichten,
+Beitritte, Umbenennungen, nachträgliche Edits, Thread-Antworten und fremde Kanäle nicht.
+
+Zwei Konstruktionsentscheidungen, die im Skript begründet stehen:
+
+- **Kein sofortiges Feuern.** Slack wartet nur drei Sekunden und wiederholt sonst die
+  Zustellung. Das Skript setzt eine Marke und antwortet gleich; ein Minutentakt feuert
+  90 Sekunden später. Nebeneffekt: Drei Posts hintereinander ergeben einen Lauf, nicht drei.
+- **Geheimnis im Query-String statt Signaturprüfung.** Apps Script reicht keine HTTP-Header
+  an `doPost` weiter, Slacks `X-Slack-Signature` ist damit unprüfbar. Wer die URL kennt, kann
+  die Routine auslösen — mehr nicht, der Auslöser nimmt keine Daten entgegen.
+
+Bereitgestellt ist nichts: Token erzeugen und Event Subscriptions einschalten gehen nur von
+Hand, beides braucht Sascha. Der tägliche Lauf bleibt als Netz bestehen.
+
+**Alibaba-Routine pausiert.** Auf Zuruf abgeschaltet (`trig_01VneSUhqCBuoNKXFuE9J28T`), weil
+Sascha zwei Wochen nicht am Rechner ist. Sie lief alle 20–30 Minuten und hätte Lieferanten
+angeschrieben, während acht Punkte auf ihrer Liste auf ihn warten — Gläser messen und
+verschicken, Linda Wang 162,50 USD entscheiden, zwei Musterzahlungen. Beim Wiedereinschalten
+ist zu beachten: Sie plant sich selbst per `run_once_at` weiter, und der gespeicherte
+Zeitpunkt liegt dann in der Vergangenheit. Er muss neu gesetzt werden, sonst läuft sie nicht
+wieder an.
+
 ## 2026-09-14 — Lasche „Kontakte" auf die aufbereitete Struktur umgestellt
 
 Die Lasche trug die Pipedrive-Rohstruktur; jetzt trägt sie die aufbereitete. Aus 17 Spalten

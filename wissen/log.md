@@ -117,3 +117,12 @@ abgeleitetes Land rein, sortiert nach Firma. 225 Zeilen rein, 225 raus. Werkzeug
 deutsche Locale braucht Semikolons in Formeln, wachsende Bereiche müssen offen sein.
 Quelle: `30_Areas/firmen/cgt/notizen.md`.
 
+## [2026-09-15] gebaut | Slack-Auslöser für die Kontakte-Routine
+
+Dem API-Trigger nachgegangen: Routinen haben einen `/fire`-Endpunkt (401 statt 404 belegt,
+dass er unsere Routine kennt). `40_Resources/tools/slack_ausloeser.gs` nimmt Slacks Event an
+und startet die Routine; Filterlogik gegen vierzehn Ereignisformen geprüft. Nicht
+bereitgestellt — Token und Event-Subscription gehen nur von Hand. Alibaba-Routine für
+Saschas zwei Wochen Abwesenheit pausiert.
+Quelle: `30_Areas/firmen/cgt/notizen.md`.
+

@@ -20,12 +20,15 @@ Takt auf täglich, und dabei ist es geblieben. Rechnerisch ist das der bessere S
 0,45 $ pro Lauf (gemessen am ersten Testlauf), also etwa **14 $ im Monat** statt 320 $. Der
 Preis ist bis zu ein Tag Verzug, was bei sechs Kontakten im Quartal niemandem wehtut.
 
-Echtzeit („in dem Moment, in dem gepostet wird") geht über einen **API-Trigger**: Routinen
-haben einen eigenen `/fire`-Endpunkt, den ein HTTP-POST mit Bearer-Token startet. Slack kann
-selbst keinen Token mitschicken, aber die Apps-Script-Brücke läuft ohnehin dauerhaft bei
-Google und könnte Slacks Event annehmen und weiterreichen. Damit liefe eine Session nur noch
-bei einem echten Post — Echtzeit und billiger zugleich. Gebaut ist das nicht, siehe
-[`slack-zugang.md`](slack-zugang.md#echtzeit-statt-takt-der-api-trigger) — _(offen)_.
+Schneller geht es über den **API-Trigger**: Ein Apps Script nimmt Slacks Event an und startet
+die Routine über ihren `/fire`-Endpunkt, sodass eine Session nur noch bei einem echten Post
+läuft — binnen zwei Minuten statt am nächsten Morgen. Das Skript liegt fertig in
+[`tools/slack_ausloeser.gs`](tools/slack_ausloeser.gs), bereitgestellt ist es noch nicht;
+Token und Event-Subscription gehen nur von Hand, siehe
+[`slack-zugang.md`](slack-zugang.md#echtzeit-statt-takt-der-api-trigger).
+
+Dieser tägliche Lauf bleibt auch dann bestehen — als Netz, falls der Auslöser ein Event
+verschluckt.
 
 Wer den Takt ändert, ändert ihn in der Routinenliste des Kontos, nicht hier.
 

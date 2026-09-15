@@ -99,38 +99,62 @@ Liste, lesen kann er sie nicht (`not_in_channel`) — dafür bräuchte es je ein
 
 ## Echtzeit statt Takt: der API-Trigger
 
-Die Routine fragt Slack in festem Takt ab. Umgekehrt ginge auch: Routinen haben einen
-**API-Trigger** — einen eigenen Endpunkt, den ein HTTP-POST startet.
+Die Routine fragt Slack in festem Takt ab und laeuft dabei meistens leer. Umgekehrt geht auch:
+Routinen haben einen **API-Trigger** — einen eigenen Endpunkt, den ein HTTP-POST startet.
 
     POST https://api.anthropic.com/v1/claude_code/routines/<trig_...>/fire
-    Authorization: Bearer <Token>
+    Authorization: Bearer sk-ant-oat01-…
     anthropic-beta: experimental-cc-routine-2026-04-01
     anthropic-version: 2023-06-01
-    Content-Type: application/json
 
-    {"text": "optionaler Zusatzkontext für diesen einen Lauf"}
+Slack kann diesen Aufruf nicht selbst machen — seine Events-API schickt zwar bei jeder
+Nachricht einen POST, aber ohne Bearer-Token. Dazwischen steht deshalb ein Apps Script:
+[`tools/slack_ausloeser.gs`](tools/slack_ausloeser.gs), ein eigenes Projekt neben der
+Sheets-Brücke. Es läuft dauerhaft bei Google, ein Server wird nicht gebraucht.
 
-Damit liefe eine Session nur noch, wenn wirklich jemand postet — statt 30 Leerläufen im Monat.
-Was fehlt, ist das Stück zwischen Slack und diesem Endpunkt: Slacks Events-API postet zwar bei
-jeder Nachricht, kann aber keinen Bearer-Token mitschicken. Ein Vermittler muss her, und der
-ist im Prinzip schon da — die **Apps-Script-Brücke** läuft dauerhaft bei Google, kann Slacks
-Event annehmen und den Aufruf mit den richtigen Kopfzeilen weiterreichen. Ein eigener Server
-wird dafür nicht gebraucht.
+    Slack #kontakte  →  Apps Script  →  /fire  →  Session
 
-Zu tun wäre:
+**Stand 15.09.2026:** Das Skript ist geschrieben und seine Filterlogik gegen vierzehn
+Slack-Ereignisformen geprüft (normaler Post, Visitenkarte, Bot-Nachricht, Beitritt,
+Umbenennung, Thread-Antwort, fremder Kanal …). Bereitgestellt ist es **nicht** — dafür
+braucht es zwei Dinge, die nur von Hand gehen.
 
-1. In der Routinenliste (`claude.ai/code/routines`) die Routine öffnen → Stift →
-   **Add another trigger** → **API** → **Generate token**. Das Token wird **einmal** angezeigt.
-   Über die CLI oder ein MCP-Werkzeug geht das nicht, nur in der Oberfläche.
-2. Ein Apps Script, das Slacks Verifikation beantwortet und den `/fire`-Aufruf absetzt.
-3. In der Slack-App **Event Subscriptions** einschalten, die Script-URL eintragen und
-   `message.channels` für `#kontakte` abonnieren.
+### Die zwei Handgriffe, die nur Sascha machen kann
 
-Stand 15.09.2026 nicht gebaut — _(offen)_. Der Weg ist belegt
-([Routines-Doku](https://code.claude.com/docs/en/routines#add-an-api-trigger)), nur Schritt 1
-und 3 kann niemand außer Sascha erledigen.
+1. **Token erzeugen.** `claude.ai/code/routines` → Routine öffnen → Stift →
+   **Add another trigger** → **API** → **Generate token**. Das Token wird **einmal**
+   angezeigt. Über CLI oder MCP-Werkzeug geht das nicht, es gibt keine API dafür.
+2. **Event Subscriptions einschalten.** `api.slack.com/apps` → die App →
+   **Event Subscriptions** → einschalten, Request-URL eintragen, unter *Subscribe to bot
+   events* `message.channels` hinzufügen, speichern, App neu installieren.
 
-## Was noch offen ist
+Dazwischen liegt das Bereitstellen des Skripts; der Ablauf steht vollständig im Kopf von
+[`slack_ausloeser.gs`](tools/slack_ausloeser.gs).
+
+### Was das bringt
+
+Eine Session läuft nur noch bei einem echten Post statt einmal täglich ins Leere. Bei sechs
+Kontakten im Quartal sind das zwei Läufe im Monat statt dreißig — und sie laufen binnen zwei
+Minuten statt am nächsten Morgen.
+
+**Der tägliche Lauf bleibt trotzdem stehen.** Er ist das Netz: Verschluckt Slack ein Event,
+ist das Skript kurz tot oder das Token zurückgezogen, fängt er alles auf, weil die Routine
+ohnehin gegen die Lasche abgleicht statt einen Merkzettel zu führen.
+
+### Zwei Einschränkungen, die man kennen muss
+
+**Keine Signaturprüfung möglich.** Apps Script reicht keine HTTP-Header an `doPost` weiter,
+also lässt sich Slacks `X-Slack-Signature` nicht prüfen. Stattdessen steht ein Geheimnis im
+Query-String der URL. Wer die URL samt Geheimnis kennt, kann die Routine auslösen — mehr
+nicht: Der Auslöser nimmt keine Daten entgegen, er startet einen Lauf, den es ohnehin täglich
+gibt. Landet die URL irgendwo, wo sie nicht hingehört: neues Geheimnis, neue Bereitstellung.
+
+**Slack wartet nur 3 Sekunden** und wiederholt sonst die Zustellung. Das Skript feuert deshalb
+nicht sofort, sondern hinterlässt eine Marke und antwortet gleich; ein Minutentakt feuert
+90 Sekunden später. Das fängt die Wiederholungen ab und bündelt nebenbei mehrere Posts zu
+einem Lauf — wer drei Kontakte hintereinander postet, löst einen Lauf aus, nicht drei.
+
+## Was noch offen ist## Was noch offen ist
 
 - Der Free-Plan von Slack schneidet die Kanalhistorie nach 90 Tagen ab. Am 14.09.2026 reichte
   sie bis zum 29.06.2026 zurück — zehn Nachrichten. Für laufend neue Kontakte egal, für
