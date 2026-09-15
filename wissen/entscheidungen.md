@@ -37,8 +37,17 @@ und genau dann fragt jemand danach).
 **Nachtrag vom selben Tag:** Der erste Testlauf kostete 0,45 $, stündlich also rund 320 $ im
 Monat — für sechs Kontakte im vorangegangenen Vierteljahr. Sascha wurde die Rechnung samt
 billigerer Takte vorgelegt (4× werktags ≈ 36 $, 2× werktags ≈ 18 $, täglich ≈ 9 $) und hat
-sich bewusst für stündlich entschieden. Die Bereitschaft ist ihm den Posten wert. Wer das
-später kippen will, braucht ein neues Argument, nicht dieses.
+sich bewusst für stündlich entschieden. Die Bereitschaft war ihm den Posten wert.
+
+**Korrektur vom 15.09.2026:** Tatsächlich läuft die Routine **täglich um 9:35**, nicht
+stündlich. Beim Bearbeiten in der Web-UI sprang der Takt auf das Preset „daily"; aufgefallen
+ist das erst am Folgetag. Dabei bleibt es — rund 14 $ im Monat statt 320 $, und bis zu ein Tag
+Verzug tut bei dieser Menge niemandem weh. Die Entscheidung oben ist damit überholt, der
+Gedankengang bleibt stehen, weil er beim nächsten Takt wieder gebraucht wird.
+
+**Lehre daraus:** Ein Takt, der über die Web-UI angefasst wird, kann sich auf ein Preset
+zurücksetzen. Nach jeder Bearbeitung in der Oberfläche gehört der Cron-Ausdruck gegengelesen —
+`next_run_at` in der Routinenliste verrät es sofort.
 
 ## 2026-09-14 — Schreibzugriff auf Google Sheets über eine Apps-Script-Brücke
 

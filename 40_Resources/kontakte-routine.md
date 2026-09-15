@@ -4,30 +4,30 @@ Was Thomas oder Sascha in den Kanal `#kontakte` (CG TRADE) posten, landet automa
 Lasche **Kontakte** der Tabelle „CGT – Themenplanung". Diese Seite ist die Anleitung, der die
 Routine folgt — sie wird bei jedem Lauf gelesen, nicht aus dem Gedächtnis wiederholt.
 
-**Stand 14.09.2026:** eingerichtet, läuft stündlich. Die Lasche wurde am selben Tag von der
-Pipedrive-Rohstruktur (17 Spalten) auf die aufbereitete (15 Spalten) umgestellt — die
+**Stand 15.09.2026:** läuft **täglich um 9:35** deutscher Zeit. Die Lasche wurde am 14.09. von
+der Pipedrive-Rohstruktur (17 Spalten) auf die aufbereitete (15 Spalten) umgestellt — die
 Spaltenzuordnung unten ist die neue. Bilderkennung gebaut, aber noch nie an einem echten Bild
 gelaufen — im Kanal lag bis dahin keins.
 
 ## Takt
 
-Stündlich, über die Routine „Kontakte aus Slack anlegen"
-(`trig_012tHxtWTqGz3yqxmhm5AmCK`, jeweils zur Minute 35). Jeder Lauf startet eine frische
-Session, es gibt kein Gedächtnis zwischen den Läufen.
+Täglich um 9:35 deutscher Zeit (Cron `35 7 * * *`, also 7:35 UTC), über die Routine
+„Kontakte aus Slack anlegen (täglich 9:35)", `trig_012tHxtWTqGz3yqxmhm5AmCK`. Jeder Lauf
+startet eine frische Session, es gibt kein Gedächtnis zwischen den Läufen.
 
-Echtzeit („in dem Moment, in dem gepostet wird") ginge nur mit einem Server, der dauerhaft an
-Slacks Events-API hängt. Den gibt es nicht und er wäre für ein paar Kontakte im Monat zu viel
-Apparat. Eine Stunde Verzug ist der Preis dafür.
+Am 14.09. war die Routine stündlich eingerichtet; beim Bearbeiten in der Web-UI sprang der
+Takt auf täglich, und dabei ist es geblieben. Rechnerisch ist das der bessere Schnitt: rund
+0,45 $ pro Lauf (gemessen am ersten Testlauf), also etwa **14 $ im Monat** statt 320 $. Der
+Preis ist bis zu ein Tag Verzug, was bei sechs Kontakten im Quartal niemandem wehtut.
 
-**Was ein Lauf kostet:** rund 0,45 $, gemessen am ersten Testlauf am 14.09.2026 — auch wenn er
-nichts findet, denn er liest jedes Mal Kanal und Lasche komplett. Stündlich sind das etwa
-320 $ im Monat. Sascha hat das am 14.09.2026 so entschieden, mit der Zahl vor Augen; die
-billigeren Takte stehen in `wissen/entscheidungen.md`. Wer den Takt ändert, ändert ihn in der
-Routinenliste des Kontos, nicht hier.
+Echtzeit („in dem Moment, in dem gepostet wird") geht über einen **API-Trigger**: Routinen
+haben einen eigenen `/fire`-Endpunkt, den ein HTTP-POST mit Bearer-Token startet. Slack kann
+selbst keinen Token mitschicken, aber die Apps-Script-Brücke läuft ohnehin dauerhaft bei
+Google und könnte Slacks Event annehmen und weiterreichen. Damit liefe eine Session nur noch
+bei einem echten Post — Echtzeit und billiger zugleich. Gebaut ist das nicht, siehe
+[`slack-zugang.md`](slack-zugang.md#echtzeit-statt-takt-der-api-trigger) — _(offen)_.
 
-Der Posten sinkt spürbar, wenn ein Vorfilter dazukommt, der den Abgleich mechanisch macht und
-die Session nur startet, wenn wirklich ein unbekannter Name im Kanal steht. Gebaut ist das
-nicht — _(offen)_.
+Wer den Takt ändert, ändert ihn in der Routinenliste des Kontos, nicht hier.
 
 ## Kein Merkzettel, sondern Abgleich
 
@@ -183,6 +183,26 @@ einem unbeaufsichtigten Lauf.
 - **Threads werden nicht gelesen.** Nur Nachrichten im Kanal selbst. Bisher postet niemand
   Kontakte in Threads.
 - **Nur `#kontakte`.** Der Bot ist in keinem anderen Kanal, siehe `40_Resources/slack-zugang.md`.
+
+## Wenn niemand hinsieht
+
+Die Routine läuft auf Anthropics Cloud-Infrastruktur, nicht auf Saschas Rechner. Ob der
+Laptop zu ist, ob jemand im Urlaub ist, spielt keine Rolle — Token, Brücke und Repo liegen
+alle außerhalb.
+
+**Ein Ausfall heilt sich selbst.** Weil die Routine keinen Merkzettel führt, sondern jedes Mal
+gegen die Lasche abgleicht, holt der erste wieder funktionierende Lauf alles nach, was
+zwischenzeitlich liegen geblieben ist. Fällt sie eine Woche aus, fehlt am Ende nichts —
+solange die Slack-Historie reicht (Free-Plan: 90 Tage).
+
+**Was trotzdem unbemerkt bleibt:** Die Routine ist auf stumm gestellt (`notifications` alle
+`false`). Scheitert ein Lauf — Token zurückgezogen, Bereitstellung der Brücke archiviert,
+Scope verloren —, merkt das niemand, bis jemand in die Routinenliste schaut. Für längere
+Abwesenheiten lohnt sich eine E-Mail-Benachrichtigung: Routinenliste → Routine → Stift →
+Benachrichtigungen. Über das MCP-Werkzeug geht das nicht, nur in der Oberfläche.
+
+**Tageslimit:** Routine-Läufe zählen gegen ein Kontingent pro Konto, das sich alle Routinen
+teilen. Wer eine zweite Routine im Minutentakt laufen lässt, kann diese hier verdrängen.
 
 ## Abschalten
 

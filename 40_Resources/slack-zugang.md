@@ -97,6 +97,39 @@ Liste, lesen kann er sie nicht (`not_in_channel`) — dafür bräuchte es je ein
 `/invite @Brain Reader`: `#fandom`, `#ktn`, `#herzbach`, `#deltex`, `#deals`, `#to_do`,
 `#fressnapf`, `#miloy`, `#pets`, `#epsilon`, `#tracker`, `#pmt`, `#hard-rock`.
 
+## Echtzeit statt Takt: der API-Trigger
+
+Die Routine fragt Slack in festem Takt ab. Umgekehrt ginge auch: Routinen haben einen
+**API-Trigger** — einen eigenen Endpunkt, den ein HTTP-POST startet.
+
+    POST https://api.anthropic.com/v1/claude_code/routines/<trig_...>/fire
+    Authorization: Bearer <Token>
+    anthropic-beta: experimental-cc-routine-2026-04-01
+    anthropic-version: 2023-06-01
+    Content-Type: application/json
+
+    {"text": "optionaler Zusatzkontext für diesen einen Lauf"}
+
+Damit liefe eine Session nur noch, wenn wirklich jemand postet — statt 30 Leerläufen im Monat.
+Was fehlt, ist das Stück zwischen Slack und diesem Endpunkt: Slacks Events-API postet zwar bei
+jeder Nachricht, kann aber keinen Bearer-Token mitschicken. Ein Vermittler muss her, und der
+ist im Prinzip schon da — die **Apps-Script-Brücke** läuft dauerhaft bei Google, kann Slacks
+Event annehmen und den Aufruf mit den richtigen Kopfzeilen weiterreichen. Ein eigener Server
+wird dafür nicht gebraucht.
+
+Zu tun wäre:
+
+1. In der Routinenliste (`claude.ai/code/routines`) die Routine öffnen → Stift →
+   **Add another trigger** → **API** → **Generate token**. Das Token wird **einmal** angezeigt.
+   Über die CLI oder ein MCP-Werkzeug geht das nicht, nur in der Oberfläche.
+2. Ein Apps Script, das Slacks Verifikation beantwortet und den `/fire`-Aufruf absetzt.
+3. In der Slack-App **Event Subscriptions** einschalten, die Script-URL eintragen und
+   `message.channels` für `#kontakte` abonnieren.
+
+Stand 15.09.2026 nicht gebaut — _(offen)_. Der Weg ist belegt
+([Routines-Doku](https://code.claude.com/docs/en/routines#add-an-api-trigger)), nur Schritt 1
+und 3 kann niemand außer Sascha erledigen.
+
 ## Was noch offen ist
 
 - Der Free-Plan von Slack schneidet die Kanalhistorie nach 90 Tagen ab. Am 14.09.2026 reichte
