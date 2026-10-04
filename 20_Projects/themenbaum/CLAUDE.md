@@ -1,20 +1,25 @@
 # Themenbaum — Technik
 
-Code liegt in `app/`. Kein Framework, kein Build-Schritt.
+Code liegt in `app/`. Kein Framework, kein Build-Schritt, keine npm-Abhängigkeiten (Node ≥ 20).
 
 | Datei | Zweck |
 |---|---|
 | `app/public/index.html` | Komplette Oberfläche (HTML/CSS/JS). Drag & Drop über SortableJS vom cdnjs. |
-| `app/api/login.js` | `POST` Code prüfen und Sitzungs-Cookie setzen, `GET` Status, `DELETE` abmelden. |
+| `app/server.mjs` | Node-Server: liefert die Seite und `/api/*`, lauscht nur auf 127.0.0.1 (hinter Webserver/TLS). |
+| `app/api/login.js` | `POST` Code prüfen und Sitzungs-Cookie setzen (max. 8 Fehlversuche/IP in 15 min), `GET` Status, `DELETE` abmelden. |
 | `app/api/data.js` | `GET` Daten laden, `PUT` speichern (nur mit gültigem Cookie). |
 | `app/lib/auth.js` | Cookie = HMAC aus `ACCESS_CODE`. Code ändern meldet alle Geräte ab. |
-| `app/lib/store.js` | Speicher: eine Datei `themenbaum.json` im **privaten** Vercel-Blob-Store, Schutz gegen gleichzeitiges Überschreiben per ETag (`ifMatch`), täglich eine Kopie unter `backups/JJJJ-MM-TT.json`. |
+| `app/lib/store.js` | Speicher: `DATA_DIR/themenbaum.json`, atomar geschrieben, Versionsnummer gegen gleichzeitiges Überschreiben, täglich Kopie unter `backups/` (60 Tage). |
 | `app/lib/validate.js` | Prüft die Datenform vor dem Speichern. |
-| `app/dev-server.mjs` | Lokaler Test ohne Vercel: `cd app && npm i && ACCESS_CODE=test node dev-server.mjs` (Speicher im RAM). |
+| `app/deploy/` | systemd-Unit und nginx-Vorlage. |
+
+## Lokal testen
+
+`cd app && ACCESS_CODE=test DATA_DIR=/tmp/tb node server.mjs` → http://127.0.0.1:3100
 
 ## Hosting
 
-- Vercel, Projekt-Root `20_Projects/themenbaum/app`, Framework „Other“, Output `public`.
-- Secrets in Vercel (nie ins Repo): `ACCESS_CODE` (Zugangscode), `BLOB_READ_WRITE_TOKEN`
-  (kommt automatisch, wenn der Blob-Store mit dem Projekt verbunden wird).
+- Hetzner-Server von milsh.com, Adresse `lykke.milsh.com`. Installation: `ANLEITUNG-DEPLOY.md`.
+- Auf dem Server: Code `/opt/themenbaum`, Daten `/var/lib/themenbaum`, Secret `/etc/themenbaum.env`
+  (`ACCESS_CODE`, nie ins Repo), Dienst `themenbaum` (systemd).
 - Datenform: `{ topics: [{ id, name, c (Farbe 1–6), subs: [{ id, t, d (erledigt) }] }] }`.

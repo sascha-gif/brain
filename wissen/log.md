@@ -133,3 +133,10 @@ To-do-Web-App nach Saschas Skizze (Themen → Unterthemen
 mit Kästchen) als Mockup abgestimmt, dann als eigene App mit Zugangscode und privatem
 Vercel-Blob-Speicher umgesetzt; lokal getestet (Login, Speichern, Konflikt, Druck nur offene).
 Noch nicht deployt — Vercel-Team offen. Quelle: `20_Projects/themenbaum/uebersicht.md`.
+
+## [2026-10-04] umgebaut | Themenbaum auf Hetzner statt Vercel
+
+Auf Saschas Vorgabe Vercel verworfen: App läuft als eigener Node-Server ohne Abhängigkeiten,
+Daten als JSON-Datei, Fehlversuchs-Sperre beim Login. Lokal getestet. Cloud-Session kommt
+nicht an den Server (kein SSH, Host gesperrt) — Installation per Anleitung in lokaler Session.
+Quelle: `20_Projects/themenbaum/ANLEITUNG-DEPLOY.md`.

@@ -1,0 +1,24 @@
+[Unit]
+Description=Themenbaum (To-do-App, lykke.milsh.com)
+After=network.target
+
+[Service]
+Type=simple
+User=themenbaum
+Group=themenbaum
+WorkingDirectory=/opt/themenbaum
+EnvironmentFile=/etc/themenbaum.env
+Environment=PORT=3100
+Environment=HOST=127.0.0.1
+Environment=DATA_DIR=/var/lib/themenbaum
+ExecStart=/usr/bin/env node /opt/themenbaum/server.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/themenbaum
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
