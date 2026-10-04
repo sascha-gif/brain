@@ -172,7 +172,33 @@
       "id": "fastable",
       "name": "Fastable",
       "c": 8,
-      "subs": []
+      "subs": [
+        {
+          "id": "fastable-1",
+          "t": "Mustervertrag",
+          "d": false
+        },
+        {
+          "id": "fastable-2",
+          "t": "ZEOS-Vertrag",
+          "d": false
+        },
+        {
+          "id": "fastable-3",
+          "t": "PP-Vertrag",
+          "d": false
+        },
+        {
+          "id": "fastable-4",
+          "t": "AY Onboarding",
+          "d": false
+        },
+        {
+          "id": "fastable-5",
+          "t": "Erste Kunden",
+          "d": false
+        }
+      ]
     }
   ]
 }
