@@ -257,6 +257,11 @@
           "id": "wohnungen-3",
           "t": "Alzey: Mieterhöhung und fehlende Miete",
           "d": false
+        },
+        {
+          "id": "wohnungen-4",
+          "t": "Neue Wohnung kaufen",
+          "d": false
         }
       ]
     }
