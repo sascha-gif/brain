@@ -58,6 +58,28 @@
           "d": false
         }
       ]
+    },
+    {
+      "id": "mysterybox",
+      "name": "Mysterybox",
+      "c": 3,
+      "subs": [
+        {
+          "id": "mysterybox-1",
+          "t": "Bilanz klären",
+          "d": false
+        },
+        {
+          "id": "mysterybox-2",
+          "t": "Antrag zur Löschung",
+          "d": false
+        },
+        {
+          "id": "mysterybox-3",
+          "t": "Konto auflösen",
+          "d": false
+        }
+      ]
     }
   ]
 }
