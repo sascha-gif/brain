@@ -12,7 +12,7 @@
 :root{
   --bg:#f6f8fb; --card:#ffffff; --ink:#2a3445; --muted:#7a8699; --line:#d5dce6; --soft:#edf1f6;
   --accent:#3b82c4; --danger:#d14b4b;
-  --c1:#3b82c4; --c2:#1fa58a; --c3:#e08a3c; --c4:#d0567a; --c5:#7c6fd6; --c6:#4aa3b8; --c7:#7a9a3a; --c8:#b0745a;
+  --c1:#3b82c4; --c2:#1fa58a; --c3:#e08a3c; --c4:#d0567a; --c5:#7c6fd6; --c6:#4aa3b8; --c7:#7a9a3a; --c8:#b0745a; --c9:#c49a1f; --c10:#8e5ea2; --c11:#5e7d8c; --c12:#a8607a;
   --f-body:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
   --shadow:0 1px 2px rgba(42,52,69,.05), 0 4px 16px rgba(42,52,69,.06);
@@ -20,7 +20,7 @@
 }
 @media (prefers-color-scheme: dark){:root{
   --bg:#172030; --card:#1f2a3c; --ink:#e4e9f1; --muted:#93a0b4; --line:#34425a; --soft:#2a3649;
-  --accent:#6aa9e0; --danger:#e06a6a; --c1:#6aa9e0; --c2:#4cc7a8; --c3:#f0a764; --c4:#e57d9c; --c5:#a196ec; --c6:#6fc1d4; --c7:#a3c266; --c8:#d39a7f;
+  --accent:#6aa9e0; --danger:#e06a6a; --c1:#6aa9e0; --c2:#4cc7a8; --c3:#f0a764; --c4:#e57d9c; --c5:#a196ec; --c6:#6fc1d4; --c7:#a3c266; --c8:#d39a7f; --c9:#e2bd4f; --c10:#b98ccc; --c11:#8fb0bf; --c12:#d08ca6;
   --shadow:0 1px 2px rgba(0,0,0,.2), 0 4px 16px rgba(0,0,0,.18); color-scheme:dark}}
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -294,7 +294,7 @@ document.addEventListener("submit",e=>{
   if(e.target.id==="loginForm")return;
   e.preventDefault();
   if(e.target.id==="addTopic"){const f=$("newTopic"),v=f.value.trim();
-    if(v){const used=new Set(state.map(t=>t.c));const c=[1,2,3,4,5,6,7,8].find(x=>!used.has(x))||state.length%8+1;
+    if(v){const used=new Set(state.map(t=>t.c));const c=[1,2,3,4,5,6,7,8,9,10,11,12].find(x=>!used.has(x))||state.length%12+1;
       state.push({id:nid(),name:v,c,subs:[]});f.value="";commit()}return}
   const id=e.target.dataset.add; if(!id)return;
   const inp=e.target.querySelector("input"), v=inp.value.trim(); if(!v)return;

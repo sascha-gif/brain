@@ -204,6 +204,24 @@
           "d": false
         }
       ]
+    },
+    {
+      "id": "holding",
+      "name": "Holding",
+      "c": 9,
+      "subs": []
+    },
+    {
+      "id": "einzelunternehmen",
+      "name": "Einzelunternehmen",
+      "c": 10,
+      "subs": []
+    },
+    {
+      "id": "wohnungen",
+      "name": "Wohnungen",
+      "c": 11,
+      "subs": []
     }
   ]
 }

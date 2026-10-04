@@ -23,4 +23,4 @@ Code liegt in `app/`. Kein Framework, kein Build-Schritt, keine npm-Abhängigkei
 - Hetzner-Server von milsh.com, Adresse `lykke.milsh.com`. Installation: `ANLEITUNG-DEPLOY.md`.
 - Auf dem Server: Code `/opt/themenbaum`, Daten `/var/lib/themenbaum`, Secret `/etc/themenbaum.env`
   (`ACCESS_CODE`, nie ins Repo), Dienst `themenbaum` (systemd).
-- Datenform: `{ topics: [{ id, name, c (Farbe 1–8), subs: [{ id, t, d (erledigt) }] }] }`.
+- Datenform: `{ topics: [{ id, name, c (Farbe 1–12), subs: [{ id, t, d (erledigt) }] }] }`.
