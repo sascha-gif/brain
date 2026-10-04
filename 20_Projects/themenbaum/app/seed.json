@@ -132,6 +132,11 @@
           "id": "privat-1",
           "t": "Willywacker-Shop",
           "d": false
+        },
+        {
+          "id": "privat-2",
+          "t": "Bootsführerschein",
+          "d": false
         }
       ]
     },
