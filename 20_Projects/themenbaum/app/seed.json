@@ -209,7 +209,28 @@
       "id": "holding",
       "name": "Holding",
       "c": 9,
-      "subs": []
+      "subs": [
+        {
+          "id": "holding-1",
+          "t": "Darlehensverträge",
+          "d": false
+        },
+        {
+          "id": "holding-2",
+          "t": "Fahrrad-Rechnung",
+          "d": false
+        },
+        {
+          "id": "holding-3",
+          "t": "Steueroptimierung",
+          "d": false
+        },
+        {
+          "id": "holding-4",
+          "t": "Bilanzen",
+          "d": false
+        }
+      ]
     },
     {
       "id": "einzelunternehmen",
