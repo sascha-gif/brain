@@ -197,6 +197,11 @@
           "id": "fastable-5",
           "t": "Erste Kunden",
           "d": false
+        },
+        {
+          "id": "fastable-6",
+          "t": "StB kündigen",
+          "d": false
         }
       ]
     }
