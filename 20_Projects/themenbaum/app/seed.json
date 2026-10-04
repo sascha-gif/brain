@@ -1,5 +1,46 @@
 {
   "topics": [
-    { "id": "haus", "name": "Haus", "c": 1, "subs": [] }
+    {
+      "id": "haus",
+      "name": "Haus",
+      "c": 1,
+      "subs": [
+        {
+          "id": "haus-1",
+          "t": "Laptops verkaufen",
+          "d": false
+        },
+        {
+          "id": "haus-2",
+          "t": "Handys verkaufen",
+          "d": false
+        },
+        {
+          "id": "haus-3",
+          "t": "PV-Module registrieren",
+          "d": false
+        },
+        {
+          "id": "haus-4",
+          "t": "Räder verkaufen",
+          "d": false
+        },
+        {
+          "id": "haus-5",
+          "t": "Platten verlegen",
+          "d": false
+        },
+        {
+          "id": "haus-6",
+          "t": "Baum kaufen und einbuddeln",
+          "d": false
+        },
+        {
+          "id": "haus-7",
+          "t": "Beetmauer bauen",
+          "d": false
+        }
+      ]
+    }
   ]
 }
