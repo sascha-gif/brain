@@ -16,9 +16,15 @@ async function read() {
     const raw = JSON.parse(await readFile(FILE, "utf8"));
     return { data: raw.data ?? { topics: [] }, etag: String(raw.version ?? 0) };
   } catch (e) {
-    if (e.code === "ENOENT") return { data: { topics: [] }, etag: "0" };
+    if (e.code === "ENOENT") return { data: await seed(), etag: "0" };
     throw e;
   }
+}
+
+// Startbestand, solange auf dem Server noch nichts gespeichert ist
+async function seed() {
+  try { return JSON.parse(await readFile(new URL("../seed.json", import.meta.url), "utf8")); }
+  catch { return { topics: [] }; }
 }
 
 export async function load() {

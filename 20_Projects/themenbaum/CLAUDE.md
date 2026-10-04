@@ -11,6 +11,7 @@ Code liegt in `app/`. Kein Framework, kein Build-Schritt, keine npm-Abhängigkei
 | `app/lib/auth.js` | Cookie = HMAC aus `ACCESS_CODE`. Code ändern meldet alle Geräte ab. |
 | `app/lib/store.js` | Speicher: `DATA_DIR/themenbaum.json`, atomar geschrieben, Versionsnummer gegen gleichzeitiges Überschreiben, täglich Kopie unter `backups/` (60 Tage). |
 | `app/lib/validate.js` | Prüft die Datenform vor dem Speichern. |
+| `app/seed.json` | Startbestand, solange auf dem Server noch nichts gespeichert ist. Danach ohne Wirkung. |
 | `app/deploy/` | systemd-Unit und nginx-Vorlage. |
 
 ## Lokal testen
