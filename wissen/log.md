@@ -127,7 +127,9 @@ Saschas zwei Wochen Abwesenheit pausiert.
 Quelle: `30_Areas/firmen/cgt/notizen.md`.
 
 
-**2026-10-04 · Themenbaum gebaut.** To-do-Web-App nach Saschas Skizze (Themen → Unterthemen
+## [2026-10-04] gebaut | Themenbaum, To-do-App nach Skizze
+
+To-do-Web-App nach Saschas Skizze (Themen → Unterthemen
 mit Kästchen) als Mockup abgestimmt, dann als eigene App mit Zugangscode und privatem
 Vercel-Blob-Speicher umgesetzt; lokal getestet (Login, Speichern, Konflikt, Druck nur offene).
 Noch nicht deployt — Vercel-Team offen. Quelle: `20_Projects/themenbaum/uebersicht.md`.
