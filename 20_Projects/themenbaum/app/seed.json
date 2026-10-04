@@ -160,7 +160,13 @@
       "id": "helpingbrands",
       "name": "helpingbrands",
       "c": 7,
-      "subs": []
+      "subs": [
+        {
+          "id": "helpingbrands-1",
+          "t": "Fokus Marketplace",
+          "d": false
+        }
+      ]
     },
     {
       "id": "fastable",
