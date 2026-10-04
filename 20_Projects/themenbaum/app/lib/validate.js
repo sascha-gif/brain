@@ -8,7 +8,7 @@ export function clean(input) {
     topics: topics.map((t) => ({
       id: str(t?.id, 40),
       name: str(t?.name, 120) || "Ohne Namen",
-      c: Number.isInteger(t?.c) && t.c >= 1 && t.c <= 6 ? t.c : 1,
+      c: Number.isInteger(t?.c) && t.c >= 1 && t.c <= 8 ? t.c : 1,
       subs: (Array.isArray(t?.subs) ? t.subs.slice(0, 500) : []).map((s) => ({
         id: str(s?.id, 40),
         t: str(s?.t, 300) || "Ohne Titel",
