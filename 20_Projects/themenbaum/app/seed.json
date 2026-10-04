@@ -41,6 +41,23 @@
           "d": false
         }
       ]
+    },
+    {
+      "id": "lykke",
+      "name": "Lykke",
+      "c": 2,
+      "subs": [
+        {
+          "id": "lykke-1",
+          "t": "Mitarbeiter kündigen",
+          "d": false
+        },
+        {
+          "id": "lykke-2",
+          "t": "OPOS klären und Zahlungsplan erstellen",
+          "d": false
+        }
+      ]
     }
   ]
 }
