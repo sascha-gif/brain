@@ -14,7 +14,7 @@ Eigene Datenbank, geschützt mit Zugangscode. Technik: `CLAUDE.md`.
 - [ ] Vercel-Team festlegen, in dem die App läuft _(offen — zur Auswahl: BCD Intern, BCD, VILLA CASPAR, U25)_
 - [ ] Projekt + privaten Blob-Store anlegen, Zugangscode als Secret `ACCESS_CODE` setzen
 - [ ] Deployen und auf Handy + Rechner testen (inkl. Drucken)
-- [ ] Eigene Domain _(offen — vorerst Vercel-Adresse)_
+- [ ] Adresse `lykke.milsh.com`: in Vercel am Projekt eintragen, beim DNS-Anbieter von milsh.com CNAME `lykke` → `cname.vercel-dns.com` setzen _(DNS-Anbieter offen)_
 
 ## Offene Fragen
 
