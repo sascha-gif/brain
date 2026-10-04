@@ -95,6 +95,11 @@
           "id": "cgt-2",
           "t": "Neue Kunden finden",
           "d": false
+        },
+        {
+          "id": "cgt-3",
+          "t": "Cubcoats",
+          "d": false
         }
       ]
     }
