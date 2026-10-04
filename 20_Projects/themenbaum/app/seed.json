@@ -39,6 +39,11 @@
           "id": "haus-7",
           "t": "Beetmauer bauen",
           "d": false
+        },
+        {
+          "id": "haus-8",
+          "t": "Außenbewegungsmelder",
+          "d": false
         }
       ]
     },
