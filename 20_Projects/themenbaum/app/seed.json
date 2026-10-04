@@ -242,7 +242,23 @@
       "id": "wohnungen",
       "name": "Wohnungen",
       "c": 11,
-      "subs": []
+      "subs": [
+        {
+          "id": "wohnungen-1",
+          "t": "Ordner anlegen",
+          "d": false
+        },
+        {
+          "id": "wohnungen-2",
+          "t": "Mietverträge",
+          "d": false
+        },
+        {
+          "id": "wohnungen-3",
+          "t": "Alzey: Mieterhöhung und fehlende Miete",
+          "d": false
+        }
+      ]
     }
   ]
 }
