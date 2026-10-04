@@ -127,7 +127,13 @@
       "id": "privat",
       "name": "Privat",
       "c": 5,
-      "subs": []
+      "subs": [
+        {
+          "id": "privat-1",
+          "t": "Willywacker-Shop",
+          "d": false
+        }
+      ]
     },
     {
       "id": "pasa",
