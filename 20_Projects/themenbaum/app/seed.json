@@ -133,7 +133,28 @@
       "id": "pasa",
       "name": "PaSa",
       "c": 6,
-      "subs": []
+      "subs": [
+        {
+          "id": "pasa-1",
+          "t": "Brotdosen bestellen",
+          "d": false
+        },
+        {
+          "id": "pasa-2",
+          "t": "Meta Ads",
+          "d": false
+        },
+        {
+          "id": "pasa-3",
+          "t": "Lager klären",
+          "d": false
+        },
+        {
+          "id": "pasa-4",
+          "t": "Flyer erstellen",
+          "d": false
+        }
+      ]
     },
     {
       "id": "helpingbrands",
