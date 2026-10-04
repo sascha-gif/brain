@@ -80,6 +80,23 @@
           "d": false
         }
       ]
+    },
+    {
+      "id": "cgt",
+      "name": "CGT",
+      "c": 4,
+      "subs": [
+        {
+          "id": "cgt-1",
+          "t": "Pitchdeck per Claude",
+          "d": false
+        },
+        {
+          "id": "cgt-2",
+          "t": "Neue Kunden finden",
+          "d": false
+        }
+      ]
     }
   ]
 }
