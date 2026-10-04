@@ -44,6 +44,11 @@
           "id": "haus-8",
           "t": "Außenbewegungsmelder",
           "d": false
+        },
+        {
+          "id": "haus-9",
+          "t": "Bad renovieren",
+          "d": false
         }
       ]
     },
