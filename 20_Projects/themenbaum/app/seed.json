@@ -54,6 +54,11 @@
           "id": "haus-10",
           "t": "Rasen säen",
           "d": false
+        },
+        {
+          "id": "haus-11",
+          "t": "Elternbad: Monteur finden",
+          "d": false
         }
       ]
     },
