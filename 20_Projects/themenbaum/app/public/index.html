@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Themenbaum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: helle, ruhige Fläche; Themen als Spalten nebeneinander, dünne Leitung oben, Unterthemen als Äste in der Farbe ihres Themas. */
+:root{
+  --bg:#f6f8fb; --card:#ffffff; --ink:#2a3445; --muted:#7a8699; --line:#d5dce6; --soft:#edf1f6;
+  --accent:#3b82c4; --danger:#d14b4b;
+  --c1:#3b82c4; --c2:#1fa58a; --c3:#e08a3c; --c4:#d0567a; --c5:#7c6fd6; --c6:#4aa3b8;
+  --f-body:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --shadow:0 1px 2px rgba(42,52,69,.05), 0 4px 16px rgba(42,52,69,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#172030; --card:#1f2a3c; --ink:#e4e9f1; --muted:#93a0b4; --line:#34425a; --soft:#2a3649;
+  --accent:#6aa9e0; --danger:#e06a6a; --c1:#6aa9e0; --c2:#4cc7a8; --c3:#f0a764; --c4:#e57d9c; --c5:#a196ec; --c6:#6fc1d4;
+  --shadow:0 1px 2px rgba(0,0,0,.2), 0 4px 16px rgba(0,0,0,.18); color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14.5px;line-height:1.45;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+[hidden]{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:32px 48px}
+header{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:end;justify-content:space-between}
+h1{font-weight:700;font-size:clamp(26px,3.6vw,34px);margin:0;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:4px 0 0}
+.stats{display:flex;gap:22px;font-variant-numeric:tabular-nums;color:var(--muted);font-size:12.5px}
+.stats b{color:var(--ink);font-size:20px;font-weight:700;display:block}
+.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c2)}
+.status.busy::before{background:var(--c3)}
+.status.err::before{background:var(--danger)}
+
+.toolbar{margin-top:26px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.toolbar .spacer{flex:1}
+input[type=text],input[type=password]{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 12px;min-width:0;flex:1 1 220px;max-width:340px;transition:border-color .15s, box-shadow .15s}
+input::placeholder{color:var(--muted)}
+input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+button{font:inherit;cursor:pointer}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:9px 16px;font-weight:600}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.link{background:none;border:0;color:var(--muted);font-size:12.5px;padding:4px;text-decoration:underline;text-underline-offset:3px}
+.btn:focus-visible,.icon:focus-visible,.box:focus-visible,.link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:13px;box-shadow:var(--shadow);max-width:calc(100% - 32px);z-index:10}
+
+/* Login */
+.login{min-height:100vh;display:grid;place-items:center;padding-inline:16px}
+.login form{background:var(--card);box-shadow:var(--shadow);border-radius:16px;padding:28px;width:100%;max-width:360px;display:grid;gap:12px}
+.login h1{font-size:24px}
+.login input{max-width:none}
+.login .err{color:var(--danger);font-size:13px;margin:0}
+
+/* Diagramm */
+.scroller{overflow-x:auto;margin-top:30px;padding-bottom:10px}
+.tree{position:relative;display:flex;gap:24px;padding-top:24px;min-width:max-content}
+.tree::before{content:"";position:absolute;top:0;left:20px;right:20px;border-top:2px solid var(--line);border-radius:2px}
+.topic{position:relative;width:240px;flex:none}
+.topic::before{content:"";position:absolute;top:-24px;left:22px;height:24px;border-left:2px solid var(--tc)}
+.topic::after{content:"";position:absolute;top:-28px;left:18px;width:10px;height:10px;border-radius:50%;background:var(--tc);box-shadow:0 0 0 3px var(--bg)}
+.thead{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:12px 14px}
+.trow{display:flex;align-items:center;gap:8px}
+.code{font-family:var(--f-mono);font-size:11px;color:var(--tc);background:color-mix(in srgb,var(--tc) 12%,transparent);padding:2px 6px;border-radius:6px}
+.tname{font-weight:700;font-size:16px;margin:0;flex:1;min-width:0;overflow-wrap:break-word;letter-spacing:-.01em}
+.prog{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:4px;background:var(--soft);margin-top:10px;border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--tc);border-radius:999px;transition:width .3s}
+.subs{list-style:none;margin:6px 0 0 22px;padding:0;border-left:2px solid color-mix(in srgb,var(--tc) 35%,var(--line));min-height:34px}
+.subs li{position:relative;display:flex;align-items:center;gap:10px;padding:6px 0 6px 20px}
+.subs li::before{content:"";position:absolute;left:0;top:50%;width:14px;border-top:2px solid color-mix(in srgb,var(--tc) 35%,var(--line))}
+.subs li:last-child{border-left:2px solid var(--bg);margin-left:-2px}
+.subs li:last-child::after{content:"";position:absolute;left:0;top:0;height:50%;border-left:2px solid color-mix(in srgb,var(--tc) 35%,var(--line))}
+.subs li,.thead{cursor:grab;user-select:none;-webkit-user-select:none}
+.drag-ghost{opacity:.35}
+.chosen .thead,.subs li.chosen{background:var(--card);border-radius:10px;box-shadow:var(--shadow)}
+.box{flex:none;width:20px;height:20px;border:1.5px solid var(--line);border-radius:6px;background:var(--card);display:grid;place-items:center;padding:0;color:#fff;transition:background .15s,border-color .15s}
+.box:hover{border-color:var(--tc)}
+.box svg{width:12px;height:12px;opacity:0}
+li.done .box{background:var(--tc);border-color:var(--tc)}
+li.done .box svg{opacity:1}
+.stext{flex:1;min-width:0;overflow-wrap:anywhere;font-weight:500}
+.stext small{display:block;font-family:var(--f-mono);font-size:10px;color:var(--muted);font-weight:500}
+li.done .stext span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+[data-edit]{cursor:text;border-radius:4px}
+[data-edit]:hover{background:var(--soft)}
+.edit-in{font:inherit;font-weight:inherit;color:var(--ink);background:var(--card);border:1px solid var(--accent);border-radius:6px;padding:2px 6px;width:100%;min-width:0;max-width:none;flex:1}
+.icon{background:none;border:0;color:var(--muted);padding:2px 5px;border-radius:6px;opacity:0;font-size:12px}
+li:hover .icon,.thead:hover .icon,.icon:focus-visible{opacity:1}
+@media (hover:none){.icon{opacity:.5}}
+.icon.confirm{opacity:1;color:#fff;background:var(--danger);font-weight:600;font-size:11.5px;padding:3px 8px}
+.addsub{margin:4px 0 0 22px;padding-left:20px}
+.addsub input{width:100%;max-width:none;font-size:13.5px;padding:7px 10px;background:transparent;border-style:dashed}
+.addsub input:focus{background:var(--card)}
+.empty{margin-top:36px;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:28px;max-width:520px}
+.empty b{color:var(--ink)}
+.print-head{display:none}
+
+@media (max-width:640px){
+  .scroller{margin-inline:-16px;padding-inline:16px;scroll-snap-type:x proximity;scroll-padding-inline:16px}
+  .tree{gap:16px}
+  .topic{width:210px;scroll-snap-align:start}
+}
+@media (prefers-reduced-motion:reduce){.bar i,.box,input{transition:none}}
+
+/* Druck: nur offene Aufgaben, Kästchen zum Abhaken mit dem Stift */
+@media print{
+  :root{--bg:#fff;--card:#fff;--ink:#1d2533;--muted:#6b7686;--line:#b9c2cf;--soft:#eef1f5;color-scheme:light}
+  body{font-size:12px;padding:0}
+  .wrap{padding:0;max-width:none}
+  .print-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .print-head h1{font-size:20px}
+  header,.toolbar,.icon,.addsub,.bar,li.done,.topic.none,.toast,.empty,.prog{display:none!important}
+  .scroller{overflow:visible;margin:14px 0 0;padding:0}
+  .tree{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 24px;padding-top:0;min-width:0}
+  .tree::before,.topic::before,.topic::after{display:none}
+  .topic{width:auto;break-inside:avoid}
+  .thead{box-shadow:none;border-radius:0;background:none;padding:0 0 4px;border-bottom:2px solid var(--tc)}
+  .code{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .thead{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .subs{margin:4px 0 0;border-left:0;min-height:0}
+  .subs li,.subs li:last-child{border-left:0;margin-left:0;padding:4px 0}
+  .subs li::before,.subs li::after{display:none}
+  .box{background:none;border-color:var(--muted);width:14px;height:14px;border-radius:3px}
+  .box svg{opacity:0}
+  [data-edit]:hover{background:none}
+}
+</style>
+</head>
+<body>
+
+<div class="login" id="login" hidden>
+  <form id="loginForm">
+    <h1>Themenbaum</h1>
+    <p class="sub" style="margin:0">Bitte Zugangscode eingeben.</p>
+    <input type="password" id="code" autocomplete="current-password" placeholder="Zugangscode" aria-label="Zugangscode" required>
+    <p class="err" id="loginErr" hidden></p>
+    <button class="btn" type="submit">Öffnen</button>
+  </form>
+</div>
+
+<div class="wrap" id="app" hidden>
+  <div class="print-head"><h1>Offene Aufgaben</h1><span id="printDate"></span></div>
+  <header>
+    <div>
+      <h1>Themenbaum</h1>
+      <p class="sub">Themen oben an der Leitung, Unterthemen als Äste mit Kästchen.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="toolbar">
+    <form id="addTopic" style="display:contents">
+      <input type="text" id="newTopic" placeholder="Neues Thema, z. B. Lykke" aria-label="Neues Thema" maxlength="120">
+      <button class="btn" type="submit">Thema anlegen</button>
+    </form>
+    <button class="btn ghost" type="button" id="printBtn">Drucken (nur offene)</button>
+    <span class="spacer"></span>
+    <span class="status" id="status">Gespeichert</span>
+    <button class="link" type="button" id="logout">Abmelden</button>
+  </div>
+
+  <div class="empty" id="empty" hidden><b>Noch keine Themen.</b><br>Leg oben dein erstes Thema an, zum Beispiel Lykke. Darunter fügst du Unterthemen hinzu und hakst sie ab, wenn sie erledigt sind.</div>
+  <div class="scroller"><div class="tree" id="tree"></div></div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+<script>
+let state=[], etag=null, confirmDel=null, saveTimer=null, saving=false, dirty=false;
+const $=id=>document.getElementById(id);
+const tree=$("tree");
+const nid=()=>Math.random().toString(36).slice(2,10);
+const check='<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg>';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=tp=>{tp.subs=[...tp.subs.filter(s=>!s.d),...tp.subs.filter(s=>s.d)]};
+const findSub=id=>{for(const tp of state){const j=tp.subs.findIndex(s=>s.id===id);if(j>-1)return[tp,j]}};
+
+function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>t.hidden=true,4000)}
+function setStatus(text,cls=""){const s=$("status");s.textContent=text;s.className="status "+cls}
+
+/* ---------- Server ---------- */
+async function api(method,path,body){
+  const r=await fetch(path,{method,headers:body?{"content-type":"application/json"}:{},body:body?JSON.stringify(body):undefined,credentials:"same-origin"});
+  let data={}; try{data=await r.json()}catch{}
+  return {status:r.status,data};
+}
+async function loadData(){
+  const {status,data}=await api("GET","/api/data");
+  if(status===401){showLogin();return}
+  if(status!==200){setStatus("Laden fehlgeschlagen","err");return}
+  state=data.data.topics||[]; etag=data.etag; state.forEach(norm);
+  $("login").hidden=true; $("app").hidden=false; render(); setStatus("Gespeichert");
+}
+function commit(){render();dirty=true;setStatus("Speichert …","busy");clearTimeout(saveTimer);saveTimer=setTimeout(flush,500)}
+async function flush(){
+  if(saving){saveTimer=setTimeout(flush,300);return}
+  if(!dirty)return;
+  saving=true; dirty=false;
+  try{
+    const {status,data}=await api("PUT","/api/data",{data:{topics:state},etag});
+    if(status===200){etag=data.etag;if(!dirty)setStatus("Gespeichert")}
+    else if(status===409){state=data.data.topics||[];etag=data.etag;state.forEach(norm);render();setStatus("Gespeichert");
+      toast("Auf einem anderen Gerät wurde inzwischen etwas geändert. Ich habe den neuen Stand geladen, bitte deine letzte Änderung prüfen.")}
+    else if(status===401){showLogin()}
+    else{dirty=true;setStatus("Nicht gespeichert, neuer Versuch …","err");saveTimer=setTimeout(flush,4000)}
+  }catch{dirty=true;setStatus("Offline, neuer Versuch …","err");saveTimer=setTimeout(flush,4000)}
+  finally{saving=false}
+}
+window.addEventListener("beforeunload",e=>{if(dirty||saving){e.preventDefault();e.returnValue=""}});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&!dirty&&!saving&&!$("app").hidden&&!document.querySelector(".edit-in"))loadData()});
+
+/* ---------- Login ---------- */
+function showLogin(){$("app").hidden=true;$("login").hidden=false;$("code").focus()}
+$("loginForm").addEventListener("submit",async e=>{
+  e.preventDefault(); $("loginErr").hidden=true;
+  const {status,data}=await api("POST","/api/login",{code:$("code").value});
+  if(status===200){$("code").value="";loadData()}
+  else{$("loginErr").textContent=data.error||"Anmeldung fehlgeschlagen.";$("loginErr").hidden=false}
+});
+$("logout").onclick=async()=>{await flush();await api("DELETE","/api/login");state=[];showLogin()};
+
+/* ---------- Ansicht ---------- */
+function render(){
+  $("empty").hidden=state.length>0;
+  tree.innerHTML=state.map((tp,i)=>{
+    const done=tp.subs.filter(s=>s.d).length, n=tp.subs.length;
+    const del=confirmDel===tp.id
+      ?`<button class="icon confirm" data-del-topic="${tp.id}">Löschen?</button>`
+      :`<button class="icon" data-ask-del="${tp.id}" aria-label="Thema löschen" title="Thema löschen">✕</button>`;
+    return `<section class="topic${n-done?"":" none"}" data-id="${tp.id}" style="--tc:var(--c${tp.c})">
+      <div class="thead"><div class="trow"><span class="code">T${i+1}</span>
+        <h2 class="tname"><span data-edit="${tp.id}" title="Zum Bearbeiten anklicken">${esc(tp.name)}</span></h2>
+        <span class="prog">${done}/${n}</span>${del}</div>
+      <div class="bar"><i style="width:${n?done/n*100:0}%"></i></div></div>
+      <ul class="subs" data-t="${tp.id}">${tp.subs.map((s,j)=>`<li data-id="${s.id}" class="${s.d?"done":""}">
+        <button class="box" data-toggle="${s.id}" role="checkbox" aria-checked="${s.d}" aria-label="${esc(s.t)}">${check}</button>
+        <span class="stext"><small>UT${i+1}.${j+1}</small><span data-edit="${s.id}" title="Zum Bearbeiten anklicken">${esc(s.t)}</span></span>
+        <button class="icon" data-del-sub="${s.id}" aria-label="Unterthema löschen" title="Löschen">✕</button></li>`).join("")}</ul>
+      <form class="addsub" data-add="${tp.id}"><input type="text" id="sub-${tp.id}" maxlength="300" placeholder="+ Unterthema" aria-label="Unterthema zu ${esc(tp.name)}"></form>
+    </section>`}).join("");
+  const all=state.flatMap(t=>t.subs), d=all.filter(s=>s.d).length;
+  $("stats").innerHTML=`<span><b>${state.length}</b>Themen</span><span><b>${all.length-d}</b>offen</span><span><b>${d}</b>erledigt</span>`;
+  tree.querySelectorAll(".subs").forEach(ul=>Sortable.create(ul,{
+    group:"subs",animation:160,delay:220,delayOnTouchOnly:true,filter:"input,button,[data-edit]",preventOnFilter:false,
+    ghostClass:"drag-ghost",chosenClass:"chosen",onEnd:syncFromDom}));
+}
+function syncFromDom(){
+  const tmap=Object.fromEntries(state.map(t=>[t.id,t]));
+  const smap=Object.fromEntries(state.flatMap(t=>t.subs).map(s=>[s.id,s]));
+  state=[...tree.querySelectorAll(".topic")].map(sec=>{
+    const tp=tmap[sec.dataset.id];
+    tp.subs=[...sec.querySelectorAll(".subs > li")].map(li=>smap[li.dataset.id]);
+    norm(tp); return tp;
+  });
+  setTimeout(commit,0);
+}
+Sortable.create(tree,{draggable:".topic",handle:".thead",animation:180,delay:220,delayOnTouchOnly:true,
+  filter:"input,button,[data-edit]",preventOnFilter:false,ghostClass:"drag-ghost",chosenClass:"chosen",onEnd:syncFromDom});
+
+function startEdit(el){
+  const id=el.dataset.edit, tp=state.find(t=>t.id===id), hit=tp?null:findSub(id);
+  if(!tp&&!hit)return;
+  const obj=tp||hit[0].subs[hit[1]], key=tp?"name":"t";
+  const inp=document.createElement("input"); inp.type="text"; inp.className="edit-in"; inp.id="edit-"+id; inp.value=obj[key]; inp.maxLength=tp?120:300;
+  let closed=false;
+  const finish=save=>{if(closed)return;closed=true;const v=inp.value.trim();
+    if(save&&v&&v!==obj[key]){obj[key]=v;commit()}else render()};
+  inp.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();finish(true)}else if(e.key==="Escape")finish(false)});
+  inp.addEventListener("blur",()=>finish(true));
+  el.replaceWith(inp); inp.focus(); inp.select();
+}
+
+document.addEventListener("click",e=>{
+  if($("app").hidden)return;
+  const ed=e.target.closest("[data-edit]"); if(ed){startEdit(ed);return}
+  const t=e.target.closest("[data-toggle],[data-del-sub],[data-del-topic],[data-ask-del]");
+  if(!t){if(confirmDel){confirmDel=null;render()}return}
+  if(t.dataset.toggle){const[tp,j]=findSub(t.dataset.toggle);const s=tp.subs.splice(j,1)[0];s.d=!s.d;
+    if(s.d)tp.subs.push(s);else{const k=tp.subs.findIndex(x=>x.d);tp.subs.splice(k<0?tp.subs.length:k,0,s)}}
+  else if(t.dataset.delSub){const[tp,j]=findSub(t.dataset.delSub);tp.subs.splice(j,1)}
+  else if(t.dataset.askDel){confirmDel=t.dataset.askDel;render();return}
+  else if(t.dataset.delTopic){state=state.filter(x=>x.id!==t.dataset.delTopic)}
+  confirmDel=null; commit();
+});
+document.addEventListener("submit",e=>{
+  if(e.target.id==="loginForm")return;
+  e.preventDefault();
+  if(e.target.id==="addTopic"){const f=$("newTopic"),v=f.value.trim();
+    if(v){const used=new Set(state.map(t=>t.c));const c=[1,2,3,4,5,6].find(x=>!used.has(x))||state.length%6+1;
+      state.push({id:nid(),name:v,c,subs:[]});f.value="";commit()}return}
+  const id=e.target.dataset.add; if(!id)return;
+  const inp=e.target.querySelector("input"), v=inp.value.trim(); if(!v)return;
+  const tp=state.find(t=>t.id===id); const k=tp.subs.findIndex(x=>x.d);
+  tp.subs.splice(k<0?tp.subs.length:k,0,{id:nid(),t:v,d:false});
+  commit(); $("sub-"+id).focus();
+});
+$("printBtn").onclick=()=>{$("printDate").textContent="Stand "+new Date().toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit",year:"numeric"});window.print()};
+window.addEventListener("beforeprint",()=>{if(!$("printDate").textContent)$("printDate").textContent="Stand "+new Date().toLocaleDateString("de-DE")});
+
+loadData().catch(()=>setStatus("Laden fehlgeschlagen","err"));
+</script>
+</body>
+</html>
