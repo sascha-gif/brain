@@ -94,6 +94,11 @@ Wichtig: Der Proxy muss `X-Forwarded-Proto` und `X-Real-IP` setzen (sonst fehlt 
 3. `sudo ls /var/lib/themenbaum` zeigt `themenbaum.json` und `backups/`.
 4. „Drucken (nur offene)“ öffnet den Druckdialog, Vorschau zeigt nur offene Aufgaben.
 
+## Schritt 6b — Einträge übernehmen
+
+Beim ersten Öffnen zeigt die App den Startbestand aus `seed.json`. Falls auf dem Server schon
+Daten liegen: `ANLEITUNG-IMPORT.md` ausführen.
+
 ## Schritt 7 — Festhalten
 
 - `20_Projects/themenbaum/uebersicht.md`: Status auf „läuft“, erledigte Schritte abhaken,

@@ -11,6 +11,7 @@ Code liegt in `app/`. Kein Framework, kein Build-Schritt, keine npm-Abhängigkei
 | `app/lib/auth.js` | Cookie = HMAC aus `ACCESS_CODE`. Code ändern meldet alle Geräte ab. |
 | `app/lib/store.js` | Speicher: `DATA_DIR/themenbaum.json`, atomar geschrieben, Versionsnummer gegen gleichzeitiges Überschreiben, täglich Kopie unter `backups/` (60 Tage). |
 | `app/lib/validate.js` | Prüft die Datenform vor dem Speichern. |
+| `app/import.mjs` | Themen/Unterthemen aus einer JSON-Datei in den laufenden Bestand ergänzen (nur hinzufügen, nie löschen). Ablauf: `ANLEITUNG-IMPORT.md`. |
 | `app/seed.json` | Startbestand, solange auf dem Server noch nichts gespeichert ist. Danach ohne Wirkung. |
 | `app/deploy/` | systemd-Unit und nginx-Vorlage. |
 
@@ -20,7 +21,7 @@ Code liegt in `app/`. Kein Framework, kein Build-Schritt, keine npm-Abhängigkei
 
 ## Hosting
 
-- Hetzner-Server von milsh.com, Adresse `lykke.milsh.com`. Installation: `ANLEITUNG-DEPLOY.md`.
+- Hetzner-Server von milsh.com, Adresse `lykke.milsh.com`. Installation: `ANLEITUNG-DEPLOY.md`, Einträge übernehmen: `ANLEITUNG-IMPORT.md`.
 - Auf dem Server: Code `/opt/themenbaum`, Daten `/var/lib/themenbaum`, Secret `/etc/themenbaum.env`
   (`ACCESS_CODE`, nie ins Repo), Dienst `themenbaum` (systemd).
 - Datenform: `{ topics: [{ id, name, c (Farbe 1–12), subs: [{ id, t, d (erledigt) }] }] }`.

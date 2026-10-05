@@ -140,3 +140,10 @@ Auf Saschas Vorgabe Vercel verworfen: App läuft als eigener Node-Server ohne Ab
 Daten als JSON-Datei, Fehlversuchs-Sperre beim Login. Lokal getestet. Cloud-Session kommt
 nicht an den Server (kein SSH, Host gesperrt) — Installation per Anleitung in lokaler Session.
 Quelle: `20_Projects/themenbaum/ANLEITUNG-DEPLOY.md`.
+
+## [2026-10-05] gebaut | Themenbaum: Import für Themen und Unterthemen
+
+Mit Sascha 11 Themen und 40 Unterthemen in `app/seed.json` gesammelt. `app/import.mjs`
+ergänzt sie in den laufenden Bestand auf dem Server (nur hinzufügen, Abgleich über den Namen,
+Häkchen bleiben). Lokal getestet: leerer Bestand, Teilbestand mit Erledigtem, Doppellauf.
+Ausführung in lokaler Session nach `20_Projects/themenbaum/ANLEITUNG-IMPORT.md`.

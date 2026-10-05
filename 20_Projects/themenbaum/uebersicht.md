@@ -14,6 +14,7 @@ Hetzner-Server von milsh.com unter `lykke.milsh.com`. Technik: `CLAUDE.md`.
 
 - [ ] Installation in lokaler CLI-Session nach `ANLEITUNG-DEPLOY.md` (Cloud-Session hat keinen SSH-Zugang)
 - [ ] DNS: `lykke.milsh.com` zeigt auf den Hetzner-Server _(offen, wird in Schritt 1 geprüft)_
+- [ ] Themen übernehmen nach `ANLEITUNG-IMPORT.md` (11 Themen, 40 Unterthemen in `app/seed.json`)
 - [ ] Auf Handy + Rechner testen, inkl. Drucken
 
 ## Entscheidungen
