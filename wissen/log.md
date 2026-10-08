@@ -165,3 +165,12 @@ werden beim Sessionstart festgelegt; eine per MCP angelegte Routine hat keine Qu
 `add_repo` im Lauf reicht nicht. Die Routine muss über die Oberfläche mit ausgewähltem
 Repository neu angelegt werden — Auftrag dafür steht in `40_Resources/kontakte-routine.md`.
 Quelle: Testlauf `cse_017yAuzoab5Gn6cXWknLMmRT`, 08.10.2026.
+
+## [2026-10-08] setup | Kontakte-Routine als Dauerläufer neu aufgesetzt
+
+Session mit Repo-Quelle angelegt (`session_019d2GY4sPzwVj4J6SuX6R8M`) und die Routine
+`trig_01Le1ggnBvKCwK7SYSfTBZyZ` daran gebunden, täglich 9:35. Damit hat jeder Lauf den
+Checkout dabei. Alte Routine ohne Quelle deaktiviert. Preis der Lösung: Der Kontext der
+Session wächst mit jedem Lauf — Bruchstelle und Gegenmittel in
+`30_Areas/firmen/cgt/notizen.md`.
+Quelle: Gespräch vom 08.10.2026 (nicht im Repo).

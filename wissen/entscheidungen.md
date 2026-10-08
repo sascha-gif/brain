@@ -49,6 +49,28 @@ Gedankengang bleibt stehen, weil er beim nächsten Takt wieder gebraucht wird.
 zurücksetzen. Nach jeder Bearbeitung in der Oberfläche gehört der Cron-Ausdruck gegengelesen —
 `next_run_at` in der Routinenliste verrät es sofort.
 
+## 2026-10-08 — Die Kontakte-Routine weckt eine Dauer-Session statt eine frische zu starten
+
+**Entschieden:** Die Routine `trig_01Le1ggnBvKCwK7SYSfTBZyZ` ist an die Session
+`session_019d2GY4sPzwVj4J6SuX6R8M` („Kontakte-Routine CGT (Dauerläufer)") gebunden. Diese
+Session wurde mit `sascha-gif/brain` als Quelle angelegt und hat den Checkout dauerhaft dabei.
+Täglich 9:35 bekommt sie den Arbeitsauftrag in dieselbe Unterhaltung. Die alte Routine
+`trig_012tHxtWTqGz3yqxmhm5AmCK` ist deaktiviert und umbenannt, nicht gelöscht.
+**Grund:** Die Repositories einer Session werden beim Start festgelegt. `create_trigger` kennt
+keinen Parameter dafür, also startet eine per Werkzeug angelegte Routine jede Session ohne
+Checkout (`config:no-git-repo`) — sie findet Runbook und Werkzeuge nicht und läuft ins Leere.
+Genau das passierte drei Wochen lang unbemerkt. Eine gebundene Session umgeht das Problem,
+weil ihr Checkout schon da ist, und ließ sich ohne Klickarbeit in der Oberfläche einrichten.
+**Verworfen:** Die Routine über die Oberfläche neu anlegen, wo das Repository mitgewählt wird
+— der robustere Weg, weil jeder Lauf frisch startet und kein Kontext mitwächst. Verlangt aber
+Handarbeit; Sascha wollte eine Lösung, die ohne ihn zustande kommt. Ebenfalls verworfen: die
+Session soll sich das Repo im Lauf per `add_repo` selbst holen — am 08.10.2026 getestet, der
+Lauf war nach 16 Sekunden ohne Ergebnis vorbei.
+**Preis und Bruchstelle:** Eine gebundene Session sammelt Kontext über alle Läufe und wird
+irgendwann voll; geht sie kaputt, läuft nichts mehr. Deshalb gilt: Wenn vier Wochen kein
+stiller Lauf und kein Eintrag mehr kommt, zuerst diese Session prüfen.
+**Quelle:** Gespräch vom 08.10.2026, `40_Resources/kontakte-routine.md`.
+
 ## 2026-10-08 — Schreibende Aufrufe werden nicht wiederholt
 
 **Entschieden:** `gsheets.py` wiederholt nur lesende Aufrufe, wenn die Apps-Script-Brücke mit

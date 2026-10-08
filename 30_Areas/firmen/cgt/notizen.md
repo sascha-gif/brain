@@ -34,6 +34,26 @@ ist zu beachten: Sie plant sich selbst per `run_once_at` weiter, und der gespeic
 Zeitpunkt liegt dann in der Vergangenheit. Er muss neu gesetzt werden, sonst läuft sie nicht
 wieder an.
 
+## 2026-10-08 (Abend) — Routine läuft als Dauerläufer
+
+Die Routine weckt jetzt eine feste Session, statt bei jedem Lauf eine neue zu starten:
+
+| | |
+|---|---|
+| Routine | `trig_01Le1ggnBvKCwK7SYSfTBZyZ` — täglich 9:35 |
+| Session | `session_019d2GY4sPzwVj4J6SuX6R8M` — „Kontakte-Routine CGT (Dauerläufer)" |
+| Quelle | `sascha-gif/brain`, Branch `main` — dauerhaft im Container |
+| Alte Routine | `trig_012tHxtWTqGz3yqxmhm5AmCK` — deaktiviert, umbenannt, nicht gelöscht |
+
+Grund und verworfene Alternativen in `wissen/entscheidungen.md`.
+
+**Woran man merkt, dass sie kaputt ist:** Ein stiller Lauf ist der Normalfall und sagt nichts.
+Wenn aber ein Kontakt in Slack steht und nach einem Tag nicht in der Lasche auftaucht, ist die
+Session das Erste, was man ansieht — nicht die Werkzeuge. Eine gebundene Session kann
+volllaufen oder ablaufen; dann hilft nur, eine neue anzulegen und die Routine darauf
+umzuhängen (`create_session` mit der Quelle, dann `create_trigger` mit
+`persistent_session_id`; `update_trigger` kann die Bindung nicht ändern).
+
 ## 2026-10-08 (später) — Schritt 0 reicht nicht, die Routine braucht ein Repo von Anfang an
 
 Der Testlauf nach der Reparatur war nach **16 Sekunden** vorbei, ohne etwas zu tun. Der
