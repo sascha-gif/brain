@@ -34,6 +34,26 @@ ist zu beachten: Sie plant sich selbst per `run_once_at` weiter, und der gespeic
 Zeitpunkt liegt dann in der Vergangenheit. Er muss neu gesetzt werden, sonst läuft sie nicht
 wieder an.
 
+## 2026-10-08 (später) — Schritt 0 reicht nicht, die Routine braucht ein Repo von Anfang an
+
+Der Testlauf nach der Reparatur war nach **16 Sekunden** vorbei, ohne etwas zu tun. Der
+Auftrag mit Schritt 0 („Repo per `add_repo` holen") löst das Problem nicht.
+
+Grund: Die Repositories einer Session werden **beim Start** festgelegt. Diese Routine ist per
+MCP angelegt (`created_via: meta_mcp`) und trägt keine Quelle (`sources: []`); jede gefeuerte
+Session startet mit dem Kennzeichen `config:no-git-repo`, und das Nachholen im laufenden Betrieb
+kommt in dieser Session-Art nicht durch. Immerhin bricht sie jetzt ab, statt stillschweigend
+nichts zu tun — vorher sah ein Leerlauf wie ein erfolgreicher Lauf aus.
+
+**Was es braucht:** Die Routine muss über die Oberfläche neu angelegt werden, mit
+`sascha-gif/brain` als ausgewähltem Repository. Dann bringt jeder Lauf den Checkout mit und
+Schritt 0 entfällt. Der Auftrag dafür steht unten in diesem Runbook unter „Auftrag der
+Routine". Die alte Routine (`trig_012tHxtWTqGz3yqxmhm5AmCK`) gehört danach gelöscht, sonst
+laufen zwei.
+
+Bis dahin bleibt der Abgleich Handarbeit: `slack.py read` lesen, gegen die Lasche prüfen,
+mit `gsheets.py update` schreiben. Beide Werkzeuge laufen.
+
 ## 2026-10-08 — Vier Kontakte nachgetragen, Routine lief drei Wochen leer
 
 Thomas hat heute früh im Kanal gefragt, ob der Job noch läuft. Er lief nicht: Seit dem

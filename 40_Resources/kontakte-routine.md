@@ -224,3 +224,29 @@ Die Routine steht in der Routinenliste des Kontos („Kontakte aus Slack anlegen
 oder löschen geht dort; ein Lauf ohne neue Kontakte tut ohnehin nichts. Wer nur das Schreiben
 stoppen will, ohne die Routine anzufassen: das Secret in der Apps-Script-Brücke zurückziehen
 (`40_Resources/google-sheets-zugang.md`).
+
+## Auftrag der Routine
+
+Dieser Text gehört in die Routine, wenn sie über die Oberfläche neu angelegt wird — dort mit
+`sascha-gif/brain` als Repository und Takt täglich 9:35. Ein Schritt zum Holen des Repos ist
+dann nicht nötig.
+
+> Neue Kontakte aus dem Slack-Kanal #kontakte (CG TRADE) in die Lasche Kontakte der Tabelle
+> CGT – Themenplanung eintragen.
+>
+> Die vollständige Anleitung steht in `40_Resources/kontakte-routine.md`. Lies sie zuerst und
+> halte dich daran — sie regelt Holen, Dublettenprüfung, Spaltenzuordnung und was festgehalten
+> wird. Findest du die Datei nicht, brich ab und melde das; schreibe nichts ins Sheet.
+>
+> Kurzfassung: Slack mit `slack.py holen` lesen, Lasche mit `gsheets.py read` lesen, jede
+> Nachricht gegen die Lasche auf Dubletten prüfen, nur wirklich Neues mit `gsheets.py update`
+> an die ausgezählte erste freie Zeile schreiben (nicht `append`), danach gegenlesen.
+> Bestehende Zeilen nie ändern. Wenn etwas geschrieben wurde: Notiz in
+> `30_Areas/firmen/cgt/notizen.md`, Zeile in `wissen/log.md`, committen und nach `main` pushen.
+> Wenn nichts neu ist: nichts schreiben, nichts committen, keine Meldung.
+>
+> Visitenkarten-Bilder sind Kundendaten — sie bleiben im Scratchpad und kommen nie ins Repo.
+
+**Warum nicht per MCP angelegt:** Eine per Werkzeug erstellte Routine trägt keine Quelle, ihre
+Sessions starten ohne Checkout und finden die Werkzeuge nicht. Am 08.10.2026 lief sie drei
+Wochen so ins Leere. Siehe `30_Areas/firmen/cgt/notizen.md`.

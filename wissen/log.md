@@ -157,3 +157,11 @@ Fleury/MBS) in die Zeilen 227–230 geschrieben. Dabei zwei eigene Fehler behobe
 wiederholte schreibende Aufrufe und erzeugte sie vierfach, und die Zählformel stand mit Komma
 statt Semikolon. Beides korrigiert, Duplikate aus 323–338 entfernt.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 08.10.2026.
+
+## [2026-10-08] lint | Routine-Reparatur greift nicht, Neuanlage nötig
+
+Testlauf nach der Prompt-Reparatur war nach 16 Sekunden ohne Ergebnis vorbei. Repositories
+werden beim Sessionstart festgelegt; eine per MCP angelegte Routine hat keine Quelle, und
+`add_repo` im Lauf reicht nicht. Die Routine muss über die Oberfläche mit ausgewähltem
+Repository neu angelegt werden — Auftrag dafür steht in `40_Resources/kontakte-routine.md`.
+Quelle: Testlauf `cse_017yAuzoab5Gn6cXWknLMmRT`, 08.10.2026.
