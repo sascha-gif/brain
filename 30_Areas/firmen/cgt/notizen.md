@@ -34,6 +34,43 @@ ist zu beachten: Sie plant sich selbst per `run_once_at` weiter, und der gespeic
 Zeitpunkt liegt dann in der Vergangenheit. Er muss neu gesetzt werden, sonst läuft sie nicht
 wieder an.
 
+## 2026-10-08 — Vier Kontakte nachgetragen, Routine lief drei Wochen leer
+
+Thomas hat heute früh im Kanal gefragt, ob der Job noch läuft. Er lief nicht: Seit dem
+16.09. lagen **vier Kontakte** in `#kontakte`, die nie in der Lasche ankamen.
+
+- **Ingo Lambers**, Senior Einkäufer, Getränke Hoffmann Gruppe KG (16.09.)
+- **Alexander Grunwald**, Einkäufer Getränke Marke, EDEKA Zentralhandelsgesellschaft mbH
+  (17.09.) — siebter Kontakt bei EDEKA
+- **Tifo Agency ltd**, Founder/Director (08.10.) — der Post trägt **keinen Namen**, nur
+  Firma, Telefon und `brett.tifoagency.com`. Nicht geraten; Vor- und Nachname bleiben leer,
+  bis jemand den Namen nachliefert.
+- **Thomas Fleury**, MBS, SA / mybeachspirit.com, Sant Boi de Llobregat, Spanien (08.10.)
+
+Alle vier stehen jetzt in den Zeilen 227–230.
+
+### Warum die Routine nichts tat
+
+Der gefeuerten Session fehlte das **Repository**. Ihr Auftrag verwies auf
+`40_Resources/kontakte-routine.md` und die Werkzeuge, aber die Routine ist ohne Quelle
+angelegt (`sources: []`) — jeder Lauf startete in einem leeren Container, fand nichts und
+endete nach gut zwanzig Sekunden als erfolgreich. Der Auftrag beginnt jetzt mit einem
+Schritt 0, der das Repo per `add_repo` holt und klont, und bricht ab, wenn das misslingt.
+
+### Zwei Fehler beim Nachtragen, beide behoben
+
+1. **Vierfach geschrieben.** `gsheets.py` wiederholte fehlgeschlagene Aufrufe bis zu viermal —
+   auch schreibende. Apps Script hatte die Zeilen längst geschrieben und trotzdem einen
+   Fehlercode geliefert, also standen die vier Kontakte viermal in der Lasche (Zeilen
+   323–338). Überschrieben und bereinigt. Schreibende Aufrufe werden jetzt nicht mehr blind
+   wiederholt.
+2. **Formel mit Komma.** `COUNTIF($A$2:$A,A227)` ergibt in dieser Tabelle `#ERROR!` — sie
+   erwartet Semikolon. Das Runbook sagt es, es wurde überlesen. Jetzt korrekt.
+
+Dazu kam: `append` setzte die Zeilen nach 335 statt 227, weil Google `getLastRow()` auf
+früher belegte Zeilen bezieht. Geschrieben wird deshalb mit `update` auf einen ausgezählten
+Bereich, nicht mit `append`.
+
 ## 2026-09-14 — Lasche „Kontakte" auf die aufbereitete Struktur umgestellt
 
 Die Lasche trug die Pipedrive-Rohstruktur; jetzt trägt sie die aufbereitete. Aus 17 Spalten

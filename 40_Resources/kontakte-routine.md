@@ -97,7 +97,18 @@ Am 14.09.2026 waren fünf von sechs Posts Dubletten. Das ist der Normalfall, nic
 
 ### 5. Neue Zeilen anhängen
 
-    python3 40_Resources/tools/gsheets.py append --range "Kontakte" --row <15 Werte>
+    python3 40_Resources/tools/gsheets.py update --range "Kontakte!A<n>:O<m>" --from-csv <datei>
+
+**Nicht `append` benutzen.** Google bezieht `getLastRow()` auf früher belegte
+Zeilen, nicht auf die letzte gefüllte: Am 08.10.2026 landeten vier Kontakte dadurch
+in Zeile 335 statt 227. Die erste freie Zeile selbst auszählen (letzte belegte plus
+eins) und mit `update` genau dorthin schreiben.
+
+**Nach dem Schreiben gegenlesen:** Stehen die Zeilen an der erwarteten Stelle?
+Rechnet Spalte B, oder steht dort `#ERROR!`? Bricht eine schreibende Aktion mit
+einem HTTP-Fehler ab, **nicht wiederholen** — erst in der Tabelle nachsehen, ob sie
+trotzdem angekommen ist. Doppelte Zeilen sind schlimmer als ein ausgefallener Lauf;
+der nächste Lauf holt ihn nach.
 
 Erst mit `--dry-run` ansehen, dann schreiben. Die Lasche trägt seit dem 14.09.2026 die
 aufbereitete Struktur mit **15** Spalten (vorher 17 Pipedrive-Rohspalten):

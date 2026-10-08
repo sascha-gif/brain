@@ -147,3 +147,13 @@ Mit Sascha 11 Themen und 40 Unterthemen in `app/seed.json` gesammelt. `app/impor
 ergänzt sie in den laufenden Bestand auf dem Server (nur hinzufügen, Abgleich über den Namen,
 Häkchen bleiben). Lokal getestet: leerer Bestand, Teilbestand mit Erledigtem, Doppellauf.
 Ausführung in lokaler Session nach `20_Projects/themenbaum/ANLEITUNG-IMPORT.md`.
+
+## [2026-10-08] ingest | Vier Kontakte nachgetragen, Routine repariert
+
+Die Routine lief seit dem 16.09. ins Leere: Ihrer Session fehlte das Repository, sie fand
+weder Runbook noch Werkzeuge. Auftrag um einen Schritt 0 ergänzt, der das Repo holt. Vier
+liegengebliebene Kontakte (Lambers/Getränke Hoffmann, Grunwald/EDEKA, Tifo Agency,
+Fleury/MBS) in die Zeilen 227–230 geschrieben. Dabei zwei eigene Fehler behoben: `gsheets.py`
+wiederholte schreibende Aufrufe und erzeugte sie vierfach, und die Zählformel stand mit Komma
+statt Semikolon. Beides korrigiert, Duplikate aus 323–338 entfernt.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 08.10.2026.

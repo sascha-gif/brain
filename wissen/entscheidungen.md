@@ -49,6 +49,22 @@ Gedankengang bleibt stehen, weil er beim nächsten Takt wieder gebraucht wird.
 zurücksetzen. Nach jeder Bearbeitung in der Oberfläche gehört der Cron-Ausdruck gegengelesen —
 `next_run_at` in der Routinenliste verrät es sofort.
 
+## 2026-10-08 — Schreibende Aufrufe werden nicht wiederholt
+
+**Entschieden:** `gsheets.py` wiederholt nur lesende Aufrufe, wenn die Apps-Script-Brücke mit
+404 oder 5xx antwortet. Schreibende (`append`, `update`, `clear`) brechen ab und melden, dass
+die Zeilen trotz des Fehlers geschrieben sein können.
+**Grund:** Apps Script liefert unter Last Fehlercodes, obwohl die Zeilen längst im Blatt
+stehen. Die Wiederholung schrieb am 08.10.2026 vier Kontakte viermal in die Lasche. Ein
+ausgefallener Lauf kostet nichts — die Routine gleicht bei jedem Lauf gegen die Tabelle ab und
+holt ihn selbst nach. Doppelte Zeilen dagegen muss ein Mensch von Hand suchen und löschen.
+**Verworfen:** Weiter blind wiederholen, das erzeugt Dubletten. Ebenfalls verworfen für jetzt:
+Idempotenz in der Brücke über eine mitgeschickte `request_id`, die bereits ausgeführte Aufrufe
+erkennt — technisch der sauberere Weg, verlangt aber eine neue Bereitstellung der Web-App. Der
+Client schickt die `request_id` bereits mit und erkennt an der Antwort, ob die Brücke sie
+auswertet; sobald sie das tut, darf wieder wiederholt werden.
+**Quelle:** `30_Areas/firmen/cgt/notizen.md`, Eintrag vom 08.10.2026.
+
 ## 2026-09-14 — Schreibzugriff auf Google Sheets über eine Apps-Script-Brücke
 
 **Entschieden:** Schreiben in Google Sheets läuft über ein eigenständiges Apps Script in

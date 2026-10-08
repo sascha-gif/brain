@@ -29,6 +29,7 @@ import json
 import os
 import re
 import sys
+import uuid
 import time
 
 SHEET_ID_STANDARD = '1p9_9S8D4GiQFz2dKggup7cqoMscewW7p86glvi5k3sA'  # CGT – Themenplanung
@@ -67,16 +68,26 @@ class Bruecke:
 
     def __init__(self, url, secret, sheet_id):
         self.url, self.secret, self.sheet_id = url, secret, sheet_id
+        self.idempotent = False   # wird aus der ersten Antwort der Bruecke gesetzt
 
     # Google laesst Apps-Script-Web-Apps unter Last mit 404 oder 5xx antworten,
     # obwohl die Bereitstellung steht — eine Sekunde spaeter geht derselbe Aufruf
-    # durch. Fuer die stuendliche Routine (kontakte-routine.md) darf das den Lauf
-    # nicht beenden, also wird wiederholt statt abgebrochen.
+    # durch. Deshalb wird wiederholt statt abgebrochen.
     WIEDERHOLBAR = (404, 429, 500, 502, 503, 504)
+
+    # Schreibende Aktionen duerfen NICHT blind wiederholt werden: Apps Script
+    # hat die Zeilen oft laengst geschrieben und antwortet trotzdem mit einem
+    # Fehlercode. Am 08.10.2026 standen vier Kontakte dadurch vierfach in der
+    # Lasche. Wiederholt wird nur, wenn die Bruecke Idempotenz bestaetigt — sie
+    # erkennt dann die mitgeschickte request_id wieder und schreibt kein zweites
+    # Mal (sheets_bruecke.gs ab Fassung vom 08.10.2026).
+    SCHREIBEND = ('append', 'update', 'clear')
 
     def ruf(self, **nutzlast):
         import requests
         nutzlast['secret'] = self.secret
+        nutzlast['request_id'] = uuid.uuid4().hex   # ueber alle Versuche derselbe
+        schreibend = nutzlast.get('action') in self.SCHREIBEND
         letzte = ''
         for versuch in range(4):
             if versuch:
@@ -89,6 +100,14 @@ class Bruecke:
                 continue
             if antwort.status_code in self.WIEDERHOLBAR:
                 letzte = f'HTTP {antwort.status_code} von der Bruecke'
+                if schreibend and not self.idempotent:
+                    sys.exit(
+                        f'{letzte} bei einer schreibenden Aktion. NICHT wiederholt — '
+                        'die Zeilen koennen trotz des Fehlers geschrieben worden sein. '
+                        'Erst in der Tabelle nachsehen, dann entscheiden.\n'
+                        'Dauerhaft behoben wird das, sobald die Web-App auf die Fassung '
+                        'mit request_id neu bereitgestellt ist — siehe '
+                        '40_Resources/google-sheets-zugang.md')
                 continue
             if not antwort.ok:
                 sys.exit(f'HTTP {antwort.status_code} von der Bruecke: '
@@ -100,6 +119,7 @@ class Bruecke:
                          '"Zugriff: Jeder" bereitgestellt?\n' + knapp(antwort.text))
             if 'error' in daten:
                 sys.exit('Fehler aus der Bruecke: ' + str(daten['error']))
+            self.idempotent = bool(daten.get('idempotent'))
             return daten
         sys.exit(f'{letzte} — auch nach vier Versuchen. Steht die Bereitstellung noch? '
                  'Siehe 40_Resources/google-sheets-zugang.md')
@@ -199,9 +219,16 @@ def zugang(sheet_id):
           '(Apps-Script-Bruecke) oder GOOGLE_SERVICE_ACCOUNT_JSON setzen.')
 
 
-def zeilen_aus_csv(pfad, kopf_ueberspringen):
+def zeilen_aus_csv(pfad, kopf_ueberspringen, leere_behalten=False):
+    """Zeilen aus einer CSV lesen.
+
+    Beim Anhaengen sind leere Zeilen Muell und fliegen raus. Beim Ueberschreiben
+    sind sie die Absicht — so leert man einen Bereich.
+    """
     with open(pfad, newline='', encoding='utf-8') as f:
-        zeilen = [z for z in csv.reader(f) if any(feld.strip() for feld in z)]
+        zeilen = list(csv.reader(f))
+    if not leere_behalten:
+        zeilen = [z for z in zeilen if any(feld.strip() for feld in z)]
     return zeilen[1:] if kopf_ueberspringen else zeilen
 
 
@@ -238,7 +265,8 @@ def main():
         return
 
     if args.from_csv:
-        zeilen = zeilen_aus_csv(args.from_csv, args.skip_header)
+        zeilen = zeilen_aus_csv(args.from_csv, args.skip_header,
+                                leere_behalten=(args.befehl == 'update'))
     elif args.row:
         zeilen = args.row
     else:
