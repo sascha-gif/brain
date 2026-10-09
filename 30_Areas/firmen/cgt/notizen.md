@@ -2,6 +2,31 @@
 
 Neueste oben.
 
+## 2026-10-09 — Kontakte-Routine: ein neuer Kontakt (Burmeister/Lagardère)
+
+Erster Lauf des Dauerläufers nach der Bereitschaftsprüfung vom 08.10. Zehn Nachrichten aus
+`#kontakte` gelesen, keine Bilder im Kanal.
+
+**Neu:** Marco Burmeister, Sr. Category Manager Toys, Gifts, Souvenirs, Tech, Lagardère Travel
+Retail Deutschland GmbH (Frankfurt), in Zeile 231 geschrieben. Die Firma stand noch nicht in
+der Lasche.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel/Deichmann SE (Zeile 35), van Dijk/Tempting
+Brands (191), Lambers/Getränke Hoffmann (227), Grunwald/EDEKA (228), Fleury/MBS (230).
+Tifo Agency (229) steht ebenfalls schon drin — der Post trägt ohnehin keinen Personennamen.
+Übersprungen außerdem: Kanal-Umbenennung, Beitritt des Bots, Thomas' Rückfrage vom 08.10.,
+ob der Job läuft.
+
+**Aufgefallen, nicht repariert:**
+
+- Burmeisters Nummer `+49 (0)1515 4403726` steht in der Signatur unter einem allgemeinen
+  Telefon-Symbol, ohne Angabe „Mobil". Nach Regel H in Spalte Telefon geschrieben, obwohl die
+  Vorwahl 0151 auf ein Mobiltelefon deutet. Wer es besser weiß, verschiebt es in Spalte I.
+- Keine Website in der Signatur. Aus der Mailadresse ließe sich `lagardere-tr.de` ableiten —
+  bewusst nicht getan, Spalte M bleibt leer.
+- Ochsenkiel/Deichmann (Zeile 35) trägt in Spalte L die Firmenzentrale in Essen, der
+  Slack-Post nennt gar keine Adresse. Kein Widerspruch, nur zur Kenntnis.
+
 ## 2026-09-15 — Slack-Auslöser gebaut, Alibaba-Routine pausiert
 
 **Auslöser.** Der Weg, den Sascha vermutet hatte, existiert: Routinen haben einen

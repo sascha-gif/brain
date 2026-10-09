@@ -174,3 +174,12 @@ Checkout dabei. Alte Routine ohne Quelle deaktiviert. Preis der Lösung: Der Kon
 Session wächst mit jedem Lauf — Bruchstelle und Gegenmittel in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Gespräch vom 08.10.2026 (nicht im Repo).
+
+## [2026-10-09] ingest | Ein Kontakt aus #kontakte: Burmeister/Lagardère
+
+Erster regulärer Lauf des Dauerläufers. Zehn Slack-Nachrichten gegen die Lasche abgeglichen,
+einer war neu: Marco Burmeister, Lagardère Travel Retail Deutschland GmbH, Zeile 231. Fünf
+Dubletten (Ochsenkiel, van Dijk, Lambers, Grunwald, Fleury), Tifo Agency stand schon drin.
+Telefonnummer unter allgemeinem Telefon-Symbol in Spalte Telefon statt Mobil — vermerkt in
+`30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 09.10.2026.
