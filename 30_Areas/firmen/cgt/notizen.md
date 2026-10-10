@@ -2,6 +2,41 @@
 
 Neueste oben.
 
+## 2026-10-10 — Kontakte-Routine: Köller/REWE, dazu ein Fehler in `gsheets.py update`
+
+Elf Nachrichten aus `#kontakte`, keine Bilder. Ein Kontakt war neu.
+
+**Neu:** Annika Köller, Category Buyer Assistant ZooRoyal & Tier Nonfood REWE (W D1 VN),
+REWE Group Buying GmbH, in Zeile 232. Firmenschreibweise von den sieben bestehenden
+REWE-Zeilen übernommen; die Zählformel steht jetzt dort überall auf 8.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Lambers (227),
+Grunwald (228), Fleury (230), Burmeister (231). Tifo Agency (229) steht schon drin.
+Übersprungen: Umbenennung, Bot-Beitritt, Thomas' Rückfrage vom 08.10.
+
+**`gsheets.py update` meldet Erfolg als Fehler.** Der Schreibvorgang kam an — Zeile 232 steht
+genau einmal, Spalte B rechnet, keine Fehlerzelle —, aber das Werkzeug brach danach mit
+`KeyError: 'updated'` (Zeile 141) ab und lieferte Exit-Code 1. Die Brücke hat also gültiges
+JSON ohne `error`, aber ohne den Schlüssel `updated` zurückgegeben; vermutlich wurde die
+Apps-Script-Fassung neu bereitgestellt und die Antwort heißt jetzt anders. Nicht repariert,
+weil ein unbeaufsichtigter Lauf nicht an den Werkzeugen schrauben soll, und weil die Diagnose
+einen zweiten Schreibvorgang bräuchte.
+
+Das ist gefährlicher, als es aussieht: Ein künftiger Lauf sieht einen Abbruch, obwohl
+geschrieben wurde. Die Regel „nach einem Fehler nicht wiederholen, erst nachsehen" fängt das
+ab — aber nur, solange sie befolgt wird. Gehört zeitnah korrigiert: entweder `update()` gegen
+die tatsächliche Antwort der Brücke robust machen (`d.get('updated')`), oder die Brücke auf
+den alten Schlüssel zurücksetzen.
+
+**Aufgefallen, nicht repariert:**
+
+- Die Signatur führt zwei Adressen: Firmensitz Domstraße 20, 50668 Köln, und Büroanschrift
+  Stolberger Straße 92, 50933 Köln. In die Lasche kam der Firmensitz, weil alle sieben
+  bestehenden REWE-Zeilen ihn tragen. Wer die Büroanschrift braucht, trägt sie von Hand nach.
+- Die sieben bestehenden REWE-Zeilen haben in Spalte N „DELTEX" stehen, die neue nicht —
+  Regel N sagt, Kategorie wird in Pipedrive gepflegt und hier nicht geraten.
+- Keine Anrede in der Signatur, Spalte C bleibt leer. Aus dem Vornamen wird nicht geraten.
+
 ## 2026-10-09 — Kontakte-Routine: ein neuer Kontakt (Burmeister/Lagardère)
 
 Erster Lauf des Dauerläufers nach der Bereitschaftsprüfung vom 08.10. Zehn Nachrichten aus

@@ -183,3 +183,12 @@ Dubletten (Ochsenkiel, van Dijk, Lambers, Grunwald, Fleury), Tifo Agency stand s
 Telefonnummer unter allgemeinem Telefon-Symbol in Spalte Telefon statt Mobil — vermerkt in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 09.10.2026.
+
+## [2026-10-10] ingest | Ein Kontakt aus #kontakte: Köller/REWE
+
+Elf Slack-Nachrichten abgeglichen, eine war neu: Annika Köller, REWE Group Buying GmbH,
+Zeile 232. Sechs Dubletten. Dabei ein Werkzeugfehler aufgefallen: `gsheets.py update` bricht
+seit heute mit `KeyError: 'updated'` ab, obwohl der Schreibvorgang ankommt — die
+Apps-Script-Brücke antwortet ohne diesen Schlüssel. Nicht repariert, Begründung und Risiko in
+`30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 10.10.2026.
