@@ -2,6 +2,33 @@
 
 Neueste oben.
 
+## 2026-10-16 — Kontakte-Routine: Fischer/SAGAFLOR
+
+Zwölf Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Lea Caterina Fischer, Leitung Category Management Hund, Katze, Nager, Vogel –
+Zubehör, SAGAFLOR AG - ZOO & Co. (Kassel), in Zeile 233. Firma stand noch nicht in der Lasche.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Lambers (227),
+Grunwald (228), Tifo Agency (229), Fleury (230), Burmeister (231), Köller (232).
+
+**Aufgefallen, nicht repariert:**
+
+- Die Signatur führt zwei Nummern ohne Beschriftung, untereinander: `+49 561 58599344` und
+  `+49 151 44144934`. Nach der Reihenfolge und den Vorwahlen die erste als Telefon, die
+  zweite als Mobil eingetragen. Die Quelle sagt es nicht — wer es besser weiß, korrigiert es.
+- „i.A." vor dem Namen ist Signaturformel, nicht Namensbestandteil, und bleibt draußen — wie
+  am 08.10. bei „i.V. Alexander Grunwald".
+- Julia Fischer (Deichmann SE, Zeile 34) ist eine andere Person; kein Dublettentreffer, weil
+  Vorname und Firma verschieden sind.
+- Der Fehler vom 10.10. (`gsheets.py update` brach mit `KeyError: 'updated'` ab, obwohl
+  geschrieben wurde) trat **nicht** wieder auf: Die Brücke antwortete diesmal regulär mit
+  „Geschrieben: A233:O233". Entweder wurde sie zwischenzeitlich neu bereitgestellt, oder es
+  war ein einmaliger Ausrutscher. Nichts geändert, nur zur Kenntnis.
+- Der erste Lesezugriff nach dem Schreiben kam leer zurück (Exit-Code 0, keine Ausgabe), der
+  zweite sauber. Dasselbe Wackeln wie am 10.10. Wenn das öfter vorkommt, gehört in
+  `gsheets.py read` eine Wiederholung bei leerer Antwort.
+
 ## 2026-10-10 — Kontakte-Routine: Köller/REWE, dazu ein Fehler in `gsheets.py update`
 
 Elf Nachrichten aus `#kontakte`, keine Bilder. Ein Kontakt war neu.

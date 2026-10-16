@@ -192,3 +192,11 @@ seit heute mit `KeyError: 'updated'` ab, obwohl der Schreibvorgang ankommt — d
 Apps-Script-Brücke antwortet ohne diesen Schlüssel. Nicht repariert, Begründung und Risiko in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 10.10.2026.
+
+## [2026-10-16] ingest | Ein Kontakt aus #kontakte: Fischer/SAGAFLOR
+
+Zwölf Slack-Nachrichten abgeglichen, eine war neu: Lea Caterina Fischer, SAGAFLOR AG - ZOO &
+Co., Zeile 233. Acht Dubletten. Zwei unbeschriftete Rufnummern nach Reihenfolge und Vorwahl
+auf Telefon und Mobil verteilt, vermerkt in `30_Areas/firmen/cgt/notizen.md`. Der
+`KeyError`-Abbruch vom 10.10. trat nicht wieder auf.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 16.10.2026.
