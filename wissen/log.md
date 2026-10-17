@@ -200,3 +200,11 @@ Co., Zeile 233. Acht Dubletten. Zwei unbeschriftete Rufnummern nach Reihenfolge 
 auf Telefon und Mobil verteilt, vermerkt in `30_Areas/firmen/cgt/notizen.md`. Der
 `KeyError`-Abbruch vom 10.10. trat nicht wieder auf.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 16.10.2026.
+
+## [2026-10-17] ingest | Ein Kontakt aus #kontakte: Marschhausen/FITX
+
+Dreizehn Slack-Nachrichten abgeglichen, eine war neu: Dennis Marschhausen, FITX SE, Zeile 234.
+Neun Dubletten. Signatur stand in Versalien, auf normale Schreibweise gebracht; unbeschriftete
+Mobilnummer nach Regel H in Spalte Telefon. Beides vermerkt in
+`30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 17.10.2026.

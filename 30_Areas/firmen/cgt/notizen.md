@@ -2,6 +2,30 @@
 
 Neueste oben.
 
+## 2026-10-17 — Kontakte-Routine: Marschhausen/FITX
+
+Dreizehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Dennis Marschhausen, Head of Procurement & Strategic Purchasing, Product Management,
+FITX SE (Essen), in Zeile 234. Firma stand noch nicht in der Lasche.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Lambers (227),
+Grunwald (228), Tifo Agency (229), Fleury (230), Burmeister (231), Köller (232),
+Fischer (233).
+
+**Aufgefallen, nicht repariert:**
+
+- Die Signatur steht komplett in Großbuchstaben. Name, Position und Adresse auf normale
+  Schreibweise gebracht, weil Versalien hier Gestaltung sind und keine Schreibweise; die
+  Mailadresse entsprechend klein. Der Firmenname **FITX SE** bleibt groß, das ist die Marke.
+- Nur eine Rufnummer, ohne Beschriftung: `+491735901270`. Nach Regel H in Spalte Telefon,
+  obwohl die Vorwahl 0173 auf ein Mobiltelefon deutet — dasselbe wie bei Burmeister am 10.10.
+  Wenn das zur Regel werden soll („unbeschriftete 015x/016x/017x gehört nach Mobil"), gehört
+  sie ins Runbook; von sich aus entscheidet das die Routine nicht.
+- Keine Website in der Signatur. Aus der Mailadresse ließe sich `fitx.de` ableiten — bewusst
+  nicht getan, Spalte M bleibt leer.
+- Dennis Marohn (ROVE Consulting, Zeile 168) ist eine andere Person; kein Dublettentreffer.
+
 ## 2026-10-16 — Kontakte-Routine: Fischer/SAGAFLOR
 
 Zwölf Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
