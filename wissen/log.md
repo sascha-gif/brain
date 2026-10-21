@@ -260,3 +260,13 @@ waren dort offen. Handelsregisternummer weiterhin _(offen)_. Beide London-Abrech
 tragen jetzt die Anschrift und als Reisezweck den Messebesuch; der Name der Messe fehlt
 noch und ist in beiden Dateien als offener Punkt vermerkt.
 Quelle: Angabe Sascha, 21.10.2026.
+
+## [2026-10-21] korrektur | Sascha ist bei CGT kein Angestellter
+
+Ich hatte die Abrechnung als Reisekostenerstattung an einen Arbeitnehmer angelegt und gefragt,
+ob CGT die Verpflegungspauschale steuerfrei zahlen darf. Falsche Annahme: Sascha bezieht von
+CGT keinen Lohn, sondern stellt Rechnungen. Damit sind es weiterberechnete Spesen, die als
+Teil des Entgelts mit 19 % in seine Rechnung gehören. Datei zur Spesenaufstellung als Anlage
+zur Rechnung umgebaut, 267,98 € netto. Hotel liegt bei der Firma und ist draußen.
+Regel in `wissen/reisekosten.md` ergänzt.
+Quelle: Angabe Sascha, 21.10.2026.

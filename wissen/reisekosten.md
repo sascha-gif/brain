@@ -78,9 +78,17 @@ So hat jede Buchung genau einen Zahlungsweg und einen Beleg. Zwei offene Punkte 
   Rechnung: ohne Umsatzsteuer. Weiterbelastung im eigenen Namen: eigene Leistung, in der Regel
   mit 19 % — auch wenn die weiterbelastete Leistung selbst steuerfrei war, etwa ein
   internationaler Flug. _(offen)_, gehört vor der ersten Buchung geklärt.
-- **Pauschalen darf nur der Arbeitgeber steuerfrei erstatten.** Zahlt eine andere Firma die
-  Verpflegungspauschale an jemanden, der dort nicht angestellt ist, ist das keine steuerfreie
-  Erstattung. Dann besser über den Arbeitgeber abrechnen und von dort weiterbelasten. _(offen)_
+- **Wer abrechnet, entscheidet über die Umsatzsteuer.** Ein Angestellter bekommt Reisekosten
+  steuerfrei erstattet. Wer dagegen als Selbstständiger eine Rechnung stellt, berechnet Spesen
+  weiter: sie sind dann Teil des Entgelts und gehören **mit 19 % in die Rechnung** — auch die
+  Verpflegungspauschale, und auch dann, wenn eine Einzelposition für sich steuerfrei war, etwa
+  ein internationaler Flug. Sascha ist bei CGT kein Angestellter, sondern stellt Rechnungen;
+  seine Spesenaufstellungen sind deshalb Netto-Anlagen zur Rechnung, keine
+  Reisekostenabrechnungen.
+
+Die Verpflegungspauschalen gelten für Selbstständige genauso wie für Angestellte
+(§ 4 Abs. 5 Nr. 5 EStG verweist auf § 9 Abs. 4a EStG). Belege braucht es dafür nicht, nur
+die Abwesenheitszeiten.
 
 ## Was nicht in die Reisekostenabrechnung gehört
 
