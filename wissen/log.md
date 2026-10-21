@@ -270,3 +270,19 @@ Teil des Entgelts mit 19 % in seine Rechnung gehören. Datei zur Spesenaufstellu
 zur Rechnung umgebaut, 267,98 € netto. Hotel liegt bei der Firma und ist draußen.
 Regel in `wissen/reisekosten.md` ergänzt.
 Quelle: Angabe Sascha, 21.10.2026.
+
+## [2026-10-21] output | Rechnung Fahrrad, Sascha privat an die Holding
+
+Rechnung über das Rose Backroad APEX AXS XPLR 1x12 erstellt, Werte aus der Rose-Rechnung
+205006771 vom 06.05.2026: 2.057,94 € netto, 391,01 € USt, 2.448,95 € brutto. Bankdaten und
+Steuernummer 26 026 70812 (Finanzamt Mainz-Süd) eingetragen, Rechnungsnummer und
+Leistungsdatum bleiben offen.
+
+Drei Punkte stehen als Warnung in der Datei: die angegebene USt-IdNr. DE278832927 ist
+ausweislich der Flugrechnung die der Holding und nicht Saschas eigene; der Verkauf an die
+eigene GmbH muss dem Fremdvergleich standhalten, ein fünf Monate altes Rad zum Neupreis
+riskiert eine verdeckte Gewinnausschüttung; und ausgewiesene Umsatzsteuer verträgt sich
+nicht mit einem Verkauf aus dem Privatvermögen.
+
+Nebenbei die USt-IdNr. der Holding im Steckbrief nachgetragen.
+Quelle: Rose-Rechnung 205006771 und Angaben Sascha, 21.10.2026.
