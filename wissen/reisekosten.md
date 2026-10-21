@@ -79,9 +79,18 @@ Durchnummerieren, Nummer in die Abrechnung eintragen, in derselben Reihenfolge a
 Aufbewahrungsfrist 10 Jahre.
 
 Ein Kontoauszug ersetzt keinen Beleg, ist aber gut geeignet, um eine Abrechnung
-nachträglich zu rekonstruieren: Kartenumsätze verraten über Händlernamen und Ort
-zuverlässig, wann die Reise wirklich begann und endete. Beim Kartenumsatz ist das
-**Value Date** näher am Kaufdatum als das Booking Date.
+nachträglich zu rekonstruieren: Händlername und Ort zeigen, was wo bezahlt wurde.
+
+**Aber nicht wann.** Der Händler reicht den Kartenumsatz ein bis zwei Tage später ein,
+und zwar auch das Value Date. Ein Kauf am Abflugtag erscheint im Auszug also am Tag
+darauf. Das Reisedatum lässt sich daraus **nicht** ableiten — dafür braucht es die
+Flug- oder Hotelbuchung. Am 21.10.2026 hat genau dieser Fehlschluss eine Abrechnung
+auf das falsche Datum gesetzt, siehe [feedback.md](feedback.md).
+
+Was der Auszug dagegen zuverlässig sagt: **wer gezahlt hat.** Fehlt eine Zahlung im
+privaten Auszug, obwohl die Rechnung existiert, lief sie über die Firma — und gehört
+dann nicht in die Erstattung an den Reisenden, sondern unter „direkt von der Firma
+bezahlt".
 
 ---
 

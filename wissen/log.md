@@ -224,3 +224,18 @@ Kilometer nachgereicht (35 einfach, 70 hin und zurück = 21,00 €). Offen bleib
 und Hotelbetrag, beide als vorbereitete Zeile in der Datei. Die Londoner Pauschalen stammen
 aus Sekundärquellen und sind noch nicht gegen die amtliche BMF-Tabelle geprüft.
 Quelle: Kontoauszug Hauptkonto Juni–Oktober 2026, hochgeladen am 21.10.2026.
+
+## [2026-10-21] korrektur | Reisedatum London: Sascha hatte recht
+
+Ich hatte das Reisedatum aufgrund der Kartenumsätze auf 07.–08.10. korrigiert. Die
+Flugbuchung (LH 919, LHR–FRA am 07.10., 19:30) und die eDreams-Rechnung
+2026-B2B7-000199110 zeigen: richtig ist 06.–07.10., wie ursprünglich angegeben.
+Ursache des Fehlschlusses: Kartenumsätze werden verzögert eingereicht, auch das Value
+Date ist nicht das Kaufdatum. Korrigiert in `wissen/reisekosten.md`, Regel in
+`wissen/feedback.md`.
+
+Flug Rückreise 89,98 €: Rechnung läuft auf die Coldewey Holding GmbH, Zahlung fehlt im
+privaten Konto — also von der Firma direkt gezahlt und in der Abrechnung unten wieder
+abgezogen. Reisekosten gesamt 357,96 €, Erstattung an Sascha 267,98 €. Offen bleiben der
+Hinflug Frankfurt–London und der Hotelbetrag.
+Quelle: Opodo-Buchung 25549946153 und Rechnung 2026-B2B7-000199110, hochgeladen 21.10.2026.
