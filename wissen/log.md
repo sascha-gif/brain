@@ -252,3 +252,11 @@ festgehalten, mit den zwei offenen Steuerfragen: Umsatzsteuer auf die Weiterbela
 ob CGT die Verpflegungspauschale überhaupt steuerfrei erstatten darf, da der Lohn von der
 Holding kommt.
 Quelle: Opodo-Buchungen 25549979827 und 25549946153, Rechnung 2026-B2B7-000199110.
+
+## [2026-10-21] ingest | CGT: Anschrift und Reisezweck nachgetragen
+
+CGT UG, Biebricher Allee 36, 65187 Wiesbaden — im Steckbrief ergänzt, Rechtsform und Sitz
+waren dort offen. Handelsregisternummer weiterhin _(offen)_. Beide London-Abrechnungen
+tragen jetzt die Anschrift und als Reisezweck den Messebesuch; der Name der Messe fehlt
+noch und ist in beiden Dateien als offener Punkt vermerkt.
+Quelle: Angabe Sascha, 21.10.2026.

@@ -1,6 +1,6 @@
 # CGT
 
-**Stand:** 2026-09-14
+**Stand:** 2026-10-21
 
 ## Kurz
 
@@ -19,8 +19,10 @@ Inhaber und CEO, gemeinsam mit Thomas Goetz.
 
 ## Eckdaten
 
-- Rechtsform, Sitz, Handelsregister: _(offen)_
+- Rechtsform und Sitz: CGT UG, Biebricher Allee 36, 65187 Wiesbaden
+- Handelsregister: _(offen)_
 - Gegründet: _(offen)_
+- Domain: cg-trade.de (Mailadressen `vorname.nachname@cg-trade.de`)
 
 ## Laufende Projekte
 
