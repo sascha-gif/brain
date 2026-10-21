@@ -220,6 +220,7 @@ Rechnende Vorlage unter `templates/reisekostenabrechnung-vorlage.xlsx`, Sätze a
 
 Die Belege im Kontoauszug widersprechen dem genannten Reisedatum (06./07.10.): Abflug Frankfurt
 und Rückflug Heathrow sprechen für 07./08.10. Abrechnung steht auf 07.–08.10., Rückfrage offen.
-Ebenso offen: Kilometer, Hotelbeleg, Flugticket. Die Londoner Pauschalen stammen aus
-Sekundärquellen und sind noch nicht gegen die amtliche BMF-Tabelle geprüft.
+Kilometer nachgereicht (35 einfach, 70 hin und zurück = 21,00 €). Offen bleiben Flugpreis
+und Hotelbetrag, beide als vorbereitete Zeile in der Datei. Die Londoner Pauschalen stammen
+aus Sekundärquellen und sind noch nicht gegen die amtliche BMF-Tabelle geprüft.
 Quelle: Kontoauszug Hauptkonto Juni–Oktober 2026, hochgeladen am 21.10.2026.
