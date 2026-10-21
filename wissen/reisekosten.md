@@ -63,6 +63,25 @@ Kilometerpauschale nicht. Bei Auslandsbelegen gibt es keine deutsche Vorsteuer �
 britische VAT auf dem Londoner Hotelbeleg ist über das Vorsteuer-Vergütungsverfahren
 theoretisch erstattbar, lohnt bei einzelnen Übernachtungen aber nicht.
 
+## Wenn eine andere Firma die Reise trägt
+
+Reist jemand für Firma A, zahlt aber Firma B einen Teil vorab, braucht es **zwei getrennte
+Papiere** — nicht eine Abrechnung mit Verrechnungszeile:
+
+1. **Weiterbelastung B → A** für das, was B verauslagt hat. Eigener Beleg, eigene Summe.
+2. **Reisekostenabrechnung der reisenden Person → A** für deren private Auslagen und die
+   Pauschalen.
+
+So hat jede Buchung genau einen Zahlungsweg und einen Beleg. Zwei offene Punkte dabei:
+
+- **Umsatzsteuer der Weiterbelastung.** Durchlaufender Posten im fremden Namen und für fremde
+  Rechnung: ohne Umsatzsteuer. Weiterbelastung im eigenen Namen: eigene Leistung, in der Regel
+  mit 19 % — auch wenn die weiterbelastete Leistung selbst steuerfrei war, etwa ein
+  internationaler Flug. _(offen)_, gehört vor der ersten Buchung geklärt.
+- **Pauschalen darf nur der Arbeitgeber steuerfrei erstatten.** Zahlt eine andere Firma die
+  Verpflegungspauschale an jemanden, der dort nicht angestellt ist, ist das keine steuerfreie
+  Erstattung. Dann besser über den Arbeitgeber abrechnen und von dort weiterbelasten. _(offen)_
+
 ## Was nicht in die Reisekostenabrechnung gehört
 
 - **Einfuhrabgaben und Zoll** für ein Paket. Das ist eine eigene Betriebsausgabe, auch

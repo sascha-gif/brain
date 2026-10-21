@@ -239,3 +239,16 @@ privaten Konto — also von der Firma direkt gezahlt und in der Abrechnung unten
 abgezogen. Reisekosten gesamt 357,96 €, Erstattung an Sascha 267,98 €. Offen bleiben der
 Hinflug Frankfurt–London und der Hotelbetrag.
 Quelle: Opodo-Buchung 25549946153 und Rechnung 2026-B2B7-000199110, hochgeladen 21.10.2026.
+
+## [2026-10-21] kompilieren | London-Reise: zwei Abrechnungen statt einer
+
+Die Reise lief für CGT, nicht für die Coldewey Holding. Beide Flüge (BA Frankfurt–London
+111,97 € und LH 919 zurück 89,98 €) hat die Holding gezahlt, alles Übrige Sascha privat.
+Daraus zwei Papiere: Weiterbelastung Holding → CGT über 201,95 € und Reisekostenabrechnung
+Sascha → CGT über 267,98 € zuzüglich Hotel.
+
+Das Muster „eine Firma zahlt vor, eine andere trägt die Reise" in `wissen/reisekosten.md`
+festgehalten, mit den zwei offenen Steuerfragen: Umsatzsteuer auf die Weiterbelastung und
+ob CGT die Verpflegungspauschale überhaupt steuerfrei erstatten darf, da der Lohn von der
+Holding kommt.
+Quelle: Opodo-Buchungen 25549979827 und 25549946153, Rechnung 2026-B2B7-000199110.
