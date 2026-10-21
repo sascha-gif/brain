@@ -9,3 +9,4 @@ Zeile — ohne Zeile findet ihn keiner, und Claude sucht ihn nicht.
 | [feedback.md](feedback.md) | Dauerhaftes Feedback zur Zusammenarbeit | — |
 | [log.md](log.md) | Protokoll: Ingests, Kompilieren, Lints | — |
 | [pipedrive-export.md](pipedrive-export.md) | Warum der Pipedrive-CSV-Export Datensätze verliert und wie man ihn repariert | [Sheets-Zugang](../40_Resources/google-sheets-zugang.md) |
+| [reisekosten.md](reisekosten.md) | Dienstreisen abrechnen: Pauschalen, Kürzung bei gestellter Mahlzeit, was nicht hineingehört | [London-Abrechnung](../10_Output/2026-10-21-reisekosten-london-coldewey-holding.xlsx) |

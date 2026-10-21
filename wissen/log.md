@@ -208,3 +208,18 @@ Neun Dubletten. Signatur stand in Versalien, auf normale Schreibweise gebracht; 
 Mobilnummer nach Regel H in Spalte Telefon. Beides vermerkt in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 17.10.2026.
+
+## [2026-10-21] kompilieren | Reisekosten: Vorlage, Sätze 2026 und London-Abrechnung
+
+Reisekostenabrechnung für die Coldewey Holding gebaut (London, 07.–08.10.2026). Dabei die
+Sätze für 2026 nachgeschlagen und als `wissen/reisekosten.md` abgelegt: Inland 28/14 €,
+London 66/44 €, Kilometersatz Dienstreise 0,30 € — nicht zu verwechseln mit der
+Entfernungspauschale, die ab 2026 einheitlich 0,38 € beträgt und nur für den Arbeitsweg gilt.
+Rechnende Vorlage unter `templates/reisekostenabrechnung-vorlage.xlsx`, Sätze an einer Stelle
+änderbar.
+
+Die Belege im Kontoauszug widersprechen dem genannten Reisedatum (06./07.10.): Abflug Frankfurt
+und Rückflug Heathrow sprechen für 07./08.10. Abrechnung steht auf 07.–08.10., Rückfrage offen.
+Ebenso offen: Kilometer, Hotelbeleg, Flugticket. Die Londoner Pauschalen stammen aus
+Sekundärquellen und sind noch nicht gegen die amtliche BMF-Tabelle geprüft.
+Quelle: Kontoauszug Hauptkonto Juni–Oktober 2026, hochgeladen am 21.10.2026.
