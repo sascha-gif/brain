@@ -489,3 +489,15 @@ Anlass war, dass der Sicherheitsfilter dieser Session den Push eines Commits mit
 letzten Mahnung ablehnte — darin standen IBAN und Mieterdaten. Entscheidung von Sascha.
 Verworfene Alternative: den Push per Berechtigungsregel freigeben und weiter alles
 versionieren.
+
+## [2026-10-26] output | Beteiligungsübersicht gezeichnet
+
+Übergreifende Zeichnung aller sechs Firmen, der beiden Partner und der zwei Immobilien,
+dazu die Geldflüsse zwischen den Einheiten. Liegt als `30_Areas/firmen/struktur.svg` im
+Repo und ist aus `30_Areas/firmen/README.md` verlinkt.
+
+Beim Zeichnen aufgefallen: Bei vier von sechs Firmen fehlen Rechtsform, Sitz und
+Handelsregister. Die Verflechtungen laufen quer — Holding zahlt Gehalt und streckt
+Reisekosten für CGT vor, Sascha stellt CGT als Dienstleister Rechnungen und verkauft der
+Holding ein Fahrrad.
+Quelle: 30_Areas/firmen/ und 20_Projects/wohnung-*.
