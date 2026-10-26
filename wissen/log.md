@@ -286,3 +286,11 @@ nicht mit einem Verkauf aus dem Privatvermögen.
 
 Nebenbei die USt-IdNr. der Holding im Steckbrief nachgetragen.
 Quelle: Rose-Rechnung 205006771 und Angaben Sascha, 21.10.2026.
+
+## [2026-10-26] output | Fahrradrechnung abgeschlossen
+
+Rechnungsnummer 2026-001, Rechnungs- und Leistungsdatum 26.10.2026 eingetragen, USt-IdNr.
+auf Wunsch entfernt — die Steuernummer allein genügt nach § 14 UStG. Damit ist die Rechnung
+vollständig: 2.057,94 € netto, 391,01 € USt, 2.448,95 € brutto. Datei auf das Rechnungsdatum
+umbenannt. Offen bleibt allein der Fremdvergleich beim Verkauf an die eigene GmbH.
+Quelle: Angaben Sascha, 26.10.2026.
