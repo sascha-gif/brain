@@ -380,3 +380,15 @@ Senkung von 300 € ist bereits erfolgt. Für 2024 und 2025 galten noch 300 €,
 ist durch einen ersetzt, der die bestehenden 200 € bestätigt. Offen bleibt allein die
 Aufteilung der 720 € in Alzey.
 Quelle: Angabe Sascha, 26.10.2026.
+
+## [2026-10-26] output | Alzey: Nebenkostenabrechnung 2025 vorbereitet, Fristen geprüft
+
+Hausgeldabrechnungen 2024 und 2025 der Langstraße 35+37 eingearbeitet. Umlagefähig sind
+4.404,80 € für 2025 (2024: 5.670,68 €) plus 123,04 € Grundsteuer. Heizung und Wasser machen
+vier Fünftel davon aus — 3.325,72 € auf 55,45 qm sind rund 60 €/qm im Jahr und damit
+auffällig hoch.
+
+Die Fristen sind der kritische Punkt: Für 2021 bis 2024 ist die Abrechnungsfrist abgelaufen,
+Nachforderungen daraus sind verloren. Für 2025 läuft sie am 31.12.2026 ab. Die Abrechnung ist
+vorbereitet, es fehlt nur die Summe der tatsächlich gezahlten Vorauszahlungen.
+Quelle: Hausgeldabrechnungen Steinmann Immobilien, hochgeladen 26.10.2026.

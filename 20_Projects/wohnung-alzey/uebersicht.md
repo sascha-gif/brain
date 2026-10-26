@@ -89,6 +89,43 @@ Zwei praktische Folgen:
   Finanzierung. _(offen)_ — ob die Löschung schon beantragt ist, ist hier nicht vermerkt.
 - Die Mieteinnahmen fließen seit der Ablösung Sascha zu und gehören in seine Anlage V.
 
+## Nebenkosten — die eigentliche Baustelle
+
+Die WEG rechnet über **Steinmann Immobilien** ab (früher Peter Scheuerling), Einheit
+0144.01.006. Die Kosten liegen weit über denen in Ingelheim:
+
+| | 2024 | 2025 |
+|---|---|---|
+| Umlagefähige Kosten | 5.670,68 € | 4.404,80 € |
+| davon Heizung, Warmwasser, Wasser | 4.701,55 € | 3.629,62 € |
+| Nicht umlagefähig (bleibt bei Sascha) | 467,93 € | 1.057,37 € |
+| Hausgeld-Soll | 4.024,80 € | _(offen)_ |
+| Nachzahlung an die WEG | 2.113,81 € | 192,37 € |
+
+Zuzüglich Grundsteuer von 123,04 €, die Sascha direkt zahlt und ebenfalls umlegen darf.
+
+**Heizung und Wasser machen vier Fünftel der Kosten aus.** 3.325,72 € Heizkosten auf
+55,45 qm sind rund 60 € je Quadratmeter und Jahr — etwa das Dreifache eines üblichen
+Werts. Ob hoher Verbrauch oder eine fragwürdige Techem-Abrechnung dahintersteckt, ist
+nicht geprüft. _(offen)_
+
+### Fristen — hier wird es ernst
+
+| Jahr | Frist nach § 556 Abs. 3 BGB | Stand |
+|---|---|---|
+| 2021–2023 | je 31.12. des Folgejahrs | abgelaufen |
+| 2024 | 31.12.2025 | **abgelaufen** |
+| 2025 | **31.12.2026** | noch möglich |
+
+Für die abgelaufenen Jahre sind Nachforderungen ausgeschlossen, Guthaben müsste Sascha
+trotzdem auszahlen. Ob sein Vater als Nießbraucher abgerechnet hat, ist nicht bekannt
+_(offen)_ — allein für 2024 stünden 5.670,68 € Kosten gegen vermutlich 2.400 €
+Vorauszahlung.
+
+Die Abrechnung 2025 ist vorbereitet:
+[`10_Output/2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx`](../../10_Output/2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx).
+Es fehlt allein die Summe der 2025 tatsächlich gezahlten Vorauszahlungen.
+
 ## Nächste Schritte
 
 - [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
@@ -96,7 +133,9 @@ Zwei praktische Folgen:
 - [ ] Drei Vergleichswohnungen benennen, dann versenden
       ([Entwurf](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx))
 - [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
-- [ ] Nebenkostenabrechnung Langstraße 35: letzte vorliegende ist von 2020
+- [ ] **Abrechnung 2025 bis 31.12.2026 versenden** — Vorauszahlungssumme eintragen
+- [ ] Prüfen, ob der Vater für 2021 bis 2024 abgerechnet hat
+- [ ] Heizkosten hinterfragen: 60 € je qm und Jahr sind auffällig hoch
 
 ## Unterlagen
 
