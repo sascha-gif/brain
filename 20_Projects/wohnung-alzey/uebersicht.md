@@ -51,8 +51,16 @@ Beide tragen außerdem dessen Vertragsdaten:
 | Gesamtforderung | 550,00 € | 600,00 € |
 
 **Mieterhöhungsverlangen** (360 € auf 400 €): inhaltlich tragfähig — die Wartefrist von
-15 Monaten ist längst erfüllt, 11,1 % liegen unter der Kappungsgrenze von 15 %. Aber an
-den falschen Empfänger gerichtet und mit falschem Mietbeginn begründet. Muss neu.
+15 Monaten ist längst erfüllt, 11,1 % liegen unter der Kappungsgrenze. Neu aufgesetzt für
+Mazineler: [`10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx`](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx).
+
+Der alte Brief begründete die Erhöhung mit dem „Mietspiegel der Kreisstadt Alzey". Ein
+qualifizierter Mietspiegel für Alzey ist nicht auffindbar; was Immobilienportale als
+Mietspiegel ausgeben, sind Angebotsmieten und taugen nach § 558a BGB nicht. Der neue
+Entwurf geht deshalb den Weg über **drei Vergleichswohnungen** (§ 558a Abs. 2 Nr. 4 BGB).
+Die drei müssen mit Anschrift, Lage im Haus, Wohnfläche und tatsächlicher Kaltmiete so
+benannt werden, dass der Mieter sie identifizieren kann. Ohne sie ist das Verlangen
+unwirksam — die Platzhalter im Entwurf sind zu füllen.
 
 **Zahlungserinnerung** über 550 € für Mai 2025: falscher Empfänger, falscher Betrag.
 Vor dem Neuversand prüfen, ob für Mai 2025 tatsächlich eine Miete offen ist — und bei wem.
@@ -76,7 +84,8 @@ Zwei praktische Folgen:
 ## Nächste Schritte
 
 - [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
-- [ ] Mieterhöhung auf 400 € neu an Mazineler schicken, mit richtigem Mietbeginn
+- [ ] Drei Vergleichswohnungen für das Mieterhöhungsverlangen benennen, dann versenden
+      ([Entwurf](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx))
 - [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
 - [ ] Nebenkostenabrechnung Langstraße 35: letzte vorliegende ist von 2020
 

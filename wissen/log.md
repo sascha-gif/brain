@@ -340,3 +340,12 @@ Die beiden Vermieterbriefe vom 13.03.2026 sind an Bükent Anlar adressiert, den 
 bis 2021. Aktueller Mieter ist Abdurrahim Mazineler, seit 01.05.2021, mit 600 € statt 550 €
 im Monat. Mieterhöhungsverlangen und Zahlungserinnerung müssen neu ausgestellt werden.
 Quelle: Angabe Sascha, 26.10.2026.
+
+## [2026-10-26] output | Mieterhöhungsverlangen Alzey neu aufgesetzt
+
+Brief an Abdurrahim Mazineler, 360 € auf 400 € Kaltmiete, mit korrektem Mietbeginn
+01.05.2021. Begründung über drei Vergleichswohnungen statt über einen Mietspiegel: Für
+Alzey ist kein qualifizierter Mietspiegel auffindbar, und die Zahlen der Immobilienportale
+sind Angebotsmieten, die § 558a BGB nicht genügen. Die drei Wohnungen muss Sascha noch
+eintragen, sonst ist das Verlangen unwirksam.
+Quelle: eigene Recherche und Mietvertrag Mazineler, 26.10.2026.
