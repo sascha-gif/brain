@@ -333,3 +333,10 @@ Grundbuchauszug vom 12.08.2025 bildete noch den alten Stand ab. Sascha ist damit
 und Vermieter, seine Schreiben an die Mieter sind wirksam. Offen bleibt allein, ob die
 Löschung im Grundbuch beantragt ist — die läuft nicht von selbst.
 Quelle: Angabe Sascha, 26.10.2026.
+
+## [2026-10-26] korrektur | Alzey: aktueller Mieter ist Mazineler, nicht Anlar
+
+Die beiden Vermieterbriefe vom 13.03.2026 sind an Bükent Anlar adressiert, den Vormieter
+bis 2021. Aktueller Mieter ist Abdurrahim Mazineler, seit 01.05.2021, mit 600 € statt 550 €
+im Monat. Mieterhöhungsverlangen und Zahlungserinnerung müssen neu ausgestellt werden.
+Quelle: Angabe Sascha, 26.10.2026.

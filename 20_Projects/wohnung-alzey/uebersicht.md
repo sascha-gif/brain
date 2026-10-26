@@ -23,23 +23,40 @@ Notarvertrag liegt vor.
 
 Die Abrechnung läuft über die Liegenschaft **Langstraße 35+37** gemeinsam, zwölf Einheiten.
 
-## Mietverhältnisse — hier ist etwas unklar
+## Mietverhältnis
 
-Es liegen zwei Mietverträge für dieselbe Adresse vor, und es ist nicht erkennbar, ob
-sie dieselbe Wohnung betreffen:
+**Aktueller Mieter: Abdurrahim Mazineler**, seit 01.05.2021. Bülent (Bükent) Anlar war
+Vormieter von November 2017 bis zum Wechsel 2021.
 
-| Mieter | Beginn | Kaltmiete | Garage | Nebenkosten | Gesamt |
-|---|---|---|---|---|---|
-| Bülent (Bükent) Anlar | 01.11.2017 | 360,00 € | 40,00 € | 150,00 € | 550,00 € |
-| Abdurrahim Mazineler | 01.05.2021 | 360,00 € | 40,00 € | 200,00 € | 600,00 € |
+| | Mazineler, seit 01.05.2021 | Anlar, Vormieter ab 01.11.2017 |
+|---|---|---|
+| Kaltmiete | 360,00 € | 360,00 € |
+| Garage | 40,00 € | 40,00 € |
+| Nebenkosten | 200,00 € | 150,00 € |
+| **Gesamt** | **600,00 €** | 550,00 € |
 
-Der Vertrag mit Anlar nennt ausdrücklich die Wohneinheit 6, der mit Mazineler nur
-„Langstraße 35". Saschas Zahlungserinnerung vom 13.03.2026 geht an Anlar, Wohneinheit 6.
-_(offen)_ — zwei Wohnungen oder ein Mieterwechsel?
+Ausstattung laut Vertrag: 2 Zimmer, Kammer, Küche, Korridor/Diele, Bad, Toilette, Balkon,
+Kellerraum. Mietverhältnis auf unbestimmte Zeit.
 
-In beiden Verträgen steht **Elimar Coldewey, Carl-Theodorstraße 11, 55232 Alzey** als
-Vermieter, und die Mieten gingen auf dessen Konto (IBAN DE63 5508 0500 0007 0968 44).
-Das passt zum Nießbrauch.
+## Die Briefe vom 13.03.2026 gehen an den Vormieter
+
+Beide Schreiben sind an **Bükent Anlar** adressiert, der seit 2021 nicht mehr dort wohnt.
+Beide tragen außerdem dessen Vertragsdaten:
+
+| | im Brief | richtig für Mazineler |
+|---|---|---|
+| Adressat | Bükent Anlar | Abdurrahim Mazineler |
+| Mietbeginn | 01.11.2017 | 01.05.2021 |
+| Nebenkosten | 150,00 € | 200,00 € |
+| Gesamtforderung | 550,00 € | 600,00 € |
+
+**Mieterhöhungsverlangen** (360 € auf 400 €): inhaltlich tragfähig — die Wartefrist von
+15 Monaten ist längst erfüllt, 11,1 % liegen unter der Kappungsgrenze von 15 %. Aber an
+den falschen Empfänger gerichtet und mit falschem Mietbeginn begründet. Muss neu.
+
+**Zahlungserinnerung** über 550 € für Mai 2025: falscher Empfänger, falscher Betrag.
+Vor dem Neuversand prüfen, ob für Mai 2025 tatsächlich eine Miete offen ist — und bei wem.
+_(offen)_
 
 ## Vermieterstellung
 
@@ -58,9 +75,9 @@ Zwei praktische Folgen:
 
 ## Nächste Schritte
 
-- [ ] Klären, ob Anlar und Mazineler dieselbe oder zwei verschiedene Wohnungen haben
 - [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
-- [ ] Mieterhöhung auf 400 € nachverfolgen — hat der Mieter zugestimmt?
+- [ ] Mieterhöhung auf 400 € neu an Mazineler schicken, mit richtigem Mietbeginn
+- [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
 - [ ] Nebenkostenabrechnung Langstraße 35: letzte vorliegende ist von 2020
 
 ## Unterlagen
