@@ -191,3 +191,21 @@ Ergebnisse. Die Nummern erzwingen in jeder Ansicht dieselbe Reihenfolge.
 für ein reines Recherche-Wiki, hat aber keinen Platz für Projekte und Kunden. Die Unterteilung
 in `entities/` und `concepts/` kann später in `wissen/` nachgezogen werden, wenn es dort eng wird.
 **Quelle:** Anleitung „Ein Brain aufsetzen" vom 11.09.2026 (nicht im Repo).
+
+## 2026-10-26 — Fertige Dokumente bleiben lokal
+
+**Entscheidung:** `10_Output/` ist gitignored. Ins Repo geht nur die aufbereitete Notiz in
+`20_Projects/` und `wissen/`, nicht das Dokument selbst.
+
+**Grund:** Abrechnungen, Anschreiben und Rechnungen enthalten Namen und Anschriften Dritter,
+Bankverbindungen und Steuernummern. Dieselbe Begründung, aus der `00_RAW/` und die
+`quellen/`-Ordner lokal bleiben. Ein GitHub-Repository ist kein Ort für personenbezogene
+Daten Dritter, auch nicht in einem privaten.
+
+**Verworfene Alternative:** Weiter alles versionieren und den Push per Berechtigungsregel
+freigeben. Hätte funktioniert, aber das Datenschutzproblem nur verschoben statt gelöst.
+
+**Folge:** In Cloud-Sessions ist `10_Output/` leer. Gebrauchte Dokumente müssen hochgeladen
+werden, neue gehen über den Datei-Anhang zurück. Die bereits gepushten dreizehn Dateien
+bleiben in der Git-Historie — sie dort zu entfernen hieße, die Historie neu zu schreiben,
+was das Repo verbietet.

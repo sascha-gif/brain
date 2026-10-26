@@ -25,6 +25,7 @@ der Firmen.
 | Mieter | Frank Huber (geb. 17.10.1966) und Sabine Huber (geb. 29.12.1967) |
 | Mietbeginn | 01.08.2018 |
 | Kaltmiete | **640,00 € seit 01.06.2026** (vorher 590,00 €), Erhöhung angenommen |
+| Zahlungsumstellung | letzte Zahlung über 890 € am 04.05.2026, erste über 840 € am 01.06.2026 |
 | Ausstattung | 2 Zimmer, Küche, Bad, Diele, Keller, Balkon; Baujahr 1994 |
 | Vorauszahlung Nebenkosten | **200,00 € im Monat**, bereits gesenkt. 2024 und 2025 waren es 300,00 € |
 | Hausgeld an die WEG | **320,00 € im Monat seit Oktober 2026** (vorher 380,00 €), Anpassung aus dem Wirtschaftsplan 2026/2027 |
@@ -120,7 +121,9 @@ Vertrag ein anderer Name steht. Ein kurzer Nachtrag stellt es klar. _(offen)_
 
 ## Nächste Schritte
 
-- [ ] Abrechnung 2025 an die Mieter versenden, Guthaben 1.594,49 € überweisen
+- [ ] Abrechnung 2025 mit `2026-10-26-anschreiben-huber-abrechnung-2025.docx` versenden, Guthaben 1.594,49 € überweisen
+- [ ] Vor dem Versenden: 2025er Kontoauszüge durchzählen — kamen wirklich zwölfmal 890 €?
+- [ ] Grundsteuer prüfen: 13 € im Jahr sind auffällig wenig (Alzey: 123 € bei kleinerer Fläche)
 - [ ] Abrechnungsfrist für 2025 endet am **31.12.2026** (§ 556 Abs. 3 BGB)
 - [ ] Bankverbindung an die Hausverwaltung melden, sonst kommt das Guthaben von 1.090,50 € nicht
 - [ ] Mit Frau Huber klären, dass Anliegen an den Vermieter gehen, nicht an die Verwaltung
@@ -140,7 +143,10 @@ Rauchwarnmelder-Wartung und ab 2026 die Fensterreinigung umlagefähig.
 
 ## Unterlagen
 
-- Abrechnung 2025 für den Mieter: [`10_Output/2026-10-26-nebenkosten-2025-ingelheim-whg3-huber.xlsx`](../../10_Output/2026-10-26-nebenkosten-2025-ingelheim-whg3-huber.xlsx)
-- Prüfung der Abrechnung 2024: [`10_Output/2026-10-26-nebenkosten-2024-ingelheim-whg3-pruefung.xlsx`](../../10_Output/2026-10-26-nebenkosten-2024-ingelheim-whg3-pruefung.xlsx)
+Die Dateien selbst liegen **nicht im Repo** — siehe `10_Output/README.md`. Sie enthalten
+Namen, Anschriften und Bankverbindungen und bleiben deshalb lokal.
+
+- Abrechnung 2025 für den Mieter: `2026-10-26-nebenkosten-2025-ingelheim-whg3-huber.xlsx`
+- Prüfung der Abrechnung 2024: `2026-10-26-nebenkosten-2024-ingelheim-whg3-pruefung.xlsx`
 
 Die Originalbelege der Verwaltung liegen nicht im Repo.

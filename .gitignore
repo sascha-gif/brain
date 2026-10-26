@@ -12,3 +12,10 @@ node_modules/
 # Python-Build-Artefakte
 __pycache__/
 *.pyc
+
+# Fertige Dokumente aus 10_Output bleiben lokal.
+# Sie enthalten regelmäßig Namen, Anschriften, Bankverbindungen und Steuernummern
+# — dieselbe Begründung wie bei 00_RAW. Das Wissen daraus steht in 20_Projects
+# und wissen/, die Dateien selbst gehören nicht auf GitHub.
+10_Output/*
+!10_Output/README.md

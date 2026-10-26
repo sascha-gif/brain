@@ -456,3 +456,36 @@ kalten Betriebskosten aber 128,84 € weniger. Vier Positionen fehlen, zwei davo
 (Hebeanlage 52,70 €, Rauchwarnmelder 8,73 €) — dort ist die Frage, ob die Wartungen
 stattfanden.
 Quelle: Mietvertrag Huber, Abrechnung 2023, Einzelabrechnungen 2024 und 2025.
+
+## [2026-10-26] output | Anschreiben Huber, letzte Mahnung Mazineler
+
+Anschreiben zur Abrechnung 2025 an Huber: Guthaben, Hinweis auf die bereits gesenkte
+Vorauszahlung, § 35a-Bescheinigung, dazu die zwei Punkte aus der Eigentümerversammlung.
+Unter Saschas privatem Briefkopf — der Briefkopf der Holding wird nicht mehr verwendet,
+die Wohnungen sind Privatvermögen.
+
+Aus den Zahlungseingängen: Huber zahlte letztmals am 04.05.2026 890 €, ab 01.06.2026 dann
+840 €. Die Umstellung fiel mit der Mieterhöhung zusammen.
+
+Das Schreiben zur offenen Miete in Alzey ist zur letzten Mahnung umgebaut: Sascha hatte
+bereits dreimal gemahnt. Hintergrund ist der Nießbrauch — Mazineler zahlte auf das Konto
+des Vaters, die Maimiete kam dort nicht an und bei Sascha auch nicht. Das Schreiben
+verlangt Zahlung oder einen Kontoauszug als Nachweis, Frist 16.11.2026.
+Quelle: Angaben Sascha, 26.10.2026.
+
+## [2026-10-26] entscheidung | 10_Output bleibt lokal, nur die Notiz geht ins Git
+
+Die fertigen Dokumente — Abrechnungen, Anschreiben, Rechnungen, Mahnungen — enthalten
+regelmäßig Namen und Anschriften von Mietern, Bankverbindungen und Steuernummern. Nach
+derselben Begründung, aus der `00_RAW/` lokal bleibt, ist `10_Output/` jetzt gitignored;
+die dort bereits versionierten dreizehn Dateien sind aus dem Index genommen und liegen
+weiter lokal.
+
+Ins Git geht die aufbereitete Notiz: Beträge, Fristen, Befunde und offene Punkte stehen in
+`20_Projects/` und `wissen/`. Die Links auf die Dateien sind zu reinen Dateinamen
+umgeschrieben, damit sie nicht ins Leere zeigen.
+
+Anlass war, dass der Sicherheitsfilter dieser Session den Push eines Commits mit der
+letzten Mahnung ablehnte — darin standen IBAN und Mieterdaten. Entscheidung von Sascha.
+Verworfene Alternative: den Push per Berechtigungsregel freigeben und weiter alles
+versionieren.

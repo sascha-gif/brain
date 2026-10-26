@@ -122,6 +122,6 @@ bezahlt".
 ---
 
 Quelle: Reisekostenabrechnung London für die Coldewey Holding, 21.10.2026 —
-[`10_Output/2026-10-21-reisekosten-london-coldewey-holding.xlsx`](../10_Output/2026-10-21-reisekosten-london-coldewey-holding.xlsx).
+`2026-10-21-reisekosten-london-coldewey-holding.xlsx`.
 Sätze aus dem BMF-Schreiben vom 05.12.2025; die Londoner Werte stammen aus
 übereinstimmenden Sekundärquellen und sind noch nicht gegen die amtliche Tabelle geprüft.

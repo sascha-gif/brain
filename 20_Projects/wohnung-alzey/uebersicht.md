@@ -48,10 +48,18 @@ nennt 360,00 € als bisherige Kaltmiete, und diese Angabe muss stimmen.
 zurückgebucht; unterm Strich fehlt eine Monatsmiete, die Mai 2025. Mazineler hat 2025
 also elfmal gezahlt, nicht zwölfmal — die Abrechnung rechnet entsprechend.
 
-Die offene Miete selbst ist eine eigene Forderung über 720,00 € und gehört nicht in die
-Nebenkostenabrechnung. Schreiben dazu:
-[`10_Output/2026-10-26-offene-miete-mazineler.docx`](../../10_Output/2026-10-26-offene-miete-mazineler.docx).
-Verjährung tritt erst Ende 2028 ein.
+**Hintergrund:** Bis 2025 standen die Mieten dem Vater als Nießbraucher zu, Mazineler
+zahlte auf dessen Konto. Die Maimiete ging weder dort noch bei Sascha ein, die Lastschrift
+wurde zurückgegeben. Beide Konten sind geprüft.
+
+Sascha hat bereits dreimal gemahnt, zuletzt im März 2026 — allerdings an den falschen
+Adressaten. Das vierte Schreiben ist deshalb als **letzte Mahnung** angelegt:
+`2026-10-26-letzte-mahnung-mazineler.docx`.
+Frist bis 16.11.2026, danach gerichtliche Geltendmachung. Es verlangt entweder Zahlung oder
+einen Kontoauszug als Zahlungsnachweis — die Beweislast für die Erfüllung liegt beim
+Mieter (§ 362 BGB).
+
+Verjährung tritt erst Ende 2028 ein, Zeitdruck besteht also nicht.
 
 Hausgeld an die WEG Langstraße 35+37: **450,00 € im Monat**, zuletzt 05.10.2026.
 
@@ -69,7 +77,7 @@ Beide tragen außerdem dessen Vertragsdaten:
 
 **Mieterhöhungsverlangen** (360 € auf 400 €): inhaltlich tragfähig — die Wartefrist von
 15 Monaten ist längst erfüllt, 11,1 % liegen unter der Kappungsgrenze. Neu aufgesetzt für
-Mazineler: [`10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx`](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx).
+Mazineler: `2026-10-26-mieterhoehung-mazineler-alzey.docx`.
 
 Der alte Brief begründete die Erhöhung mit dem „Mietspiegel der Kreisstadt Alzey". Ein
 qualifizierter Mietspiegel für Alzey ist nicht auffindbar; was Immobilienportale als
@@ -131,7 +139,7 @@ _(offen)_ — allein für 2024 stünden 5.670,68 € Kosten gegen vermutlich 2.4
 Vorauszahlung.
 
 Die Abrechnung 2025 ist vorbereitet:
-[`10_Output/2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx`](../../10_Output/2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx).
+`2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx`.
 Es fehlt allein die Summe der 2025 tatsächlich gezahlten Vorauszahlungen.
 
 ## Heizkosten: dreifacher Verbrauch, belegt
@@ -198,19 +206,22 @@ Nebenkostennachforderung zählt nicht als Miete im Sinne dieser Vorschrift.
 
 - [ ] Aufteilung der 720 € klären — Pflichtangabe im Mieterhöhungsverlangen
 - [ ] Drei Vergleichswohnungen benennen, dann versenden
-      ([Entwurf](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx))
+      (`2026-10-26-mieterhoehung-mazineler-alzey.docx`)
 - [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
 - [ ] **Abrechnung 2025 bis 31.12.2026 versenden** — Vorauszahlungssumme eintragen
 - [ ] Prüfen, ob der Vater für 2021 bis 2024 abgerechnet hat
-- [ ] Mails an Hausverwaltung und Mazineler versenden ([Entwürfe](../../10_Output/2026-10-26-mails-alzey-heizkosten.md))
+- [ ] Mails an Hausverwaltung und Mazineler versenden (`2026-10-26-mails-alzey-heizkosten.md`)
 - [ ] Ortstermin in der Wohnung, Zustand fotografieren
 - [ ] Aufteilung der 720 € aus den eigenen Unterlagen klären
-- [ ] Schreiben zur offenen Miete Mai 2025 (720 €) an Mazineler versenden
+- [ ] Letzte Mahnung über 720 € versenden, Frist 16.11.2026
 - [ ] Rohrwärme prüfen: ungedämmte Steigleitungen in der Wohnung?
 - [ ] CO₂-Vermieteranteil in der Abrechnung abziehen (2024: 43,85 €)
 - [ ] SEPA-Mandat erteilen und Portalzugang einrichten, sonst Gebühren ab 2027
 
 ## Unterlagen
+
+Die Dateien selbst liegen **nicht im Repo** — siehe `10_Output/README.md`. Sie enthalten
+Namen, Anschriften und Bankverbindungen und bleiben deshalb lokal.
 
 Grundbuchauszug, zwei Mietverträge, Grundsteuerbescheid 2013, Betriebskostenumlage 2020
 und die Vermieterbriefe liegen bei Sascha. Im Repo liegen keine Scans.
