@@ -4,9 +4,9 @@
 
 ## Kurz
 
-Eigentumswohnung Nr. 6, DG links, in der Langstraße 35 in Alzey. Sascha steht als
-Eigentümer im Grundbuch — **aber sein Vater hat den Nießbrauch**, und damit stehen die
-Mieteinnahmen bis auf Weiteres ihm zu. Siehe „Die offene Frage" unten.
+Eigentumswohnung Nr. 6, DG links, in der Langstraße 35 in Alzey. Sascha ist Eigentümer
+und seit 2025 auch Vermieter: Der Nießbrauch seines Vaters ist mit dessen Tod abgelöst,
+Notarvertrag liegt vor.
 
 ## Eckdaten
 
@@ -15,7 +15,7 @@ Mieteinnahmen bis auf Weiteres ihm zu. Siehe „Die offene Frage" unten.
 | Adresse | Langstraße 35, Wohneinheit 6, DG links, 55232 Alzey |
 | Grundbuch | Alzey Blatt 4850, Wohnungs- und Teileigentum |
 | Eigentümer | Sascha Elimar Coldewey, Auflassung 17.07.2013 |
-| Belastung | **Nießbrauch für Elimar Coldewey, geb. 28.04.1942**, löschbar bei Todesnachweis |
+| Früherer Nießbrauch | Elimar Coldewey, geb. 28.04.1942, verstorben 2025 — abgelöst, Notarvertrag liegt vor |
 | Miteigentumsanteil | 62 von 1.000 |
 | Teilungserklärung | 17.01.1974, Veräußerungsbeschränkung mit Ausnahmen für Verwandte |
 | Grundsteuer B | 123,04 € im Jahr, Messbetrag 32,38 € × Hebesatz 380 % |
@@ -41,26 +41,26 @@ In beiden Verträgen steht **Elimar Coldewey, Carl-Theodorstraße 11, 55232 Alze
 Vermieter, und die Mieten gingen auf dessen Konto (IBAN DE63 5508 0500 0007 0968 44).
 Das passt zum Nießbrauch.
 
-## Die offene Frage: Wer darf vermieten?
+## Vermieterstellung
 
-Solange der Nießbrauch besteht, ist **der Nießbraucher der Vermieter**. Ihm stehen die
-Mieten zu, und er erklärt Mieterhöhungen und Kündigungen.
+Bis 2025 war der Vater Elimar Coldewey als Nießbraucher der Vermieter — daher nennen ihn
+beide Mietverträge und daher gingen die Mieten auf sein Konto. Mit seinem Tod und der
+Ablösung des Nießbrauchs ist Sascha in die Mietverhältnisse eingetreten (§ 1056 i.V.m.
+§ 566 BGB). Seine Schreiben vom 13.03.2026 — Mieterhöhungsverlangen und
+Zahlungserinnerung — kommen damit vom Richtigen.
 
-Saschas Briefe vom 13.03.2026 — Mieterhöhungsverlangen von 360 € auf 400 € und
-Zahlungserinnerung über 550 € — sind dagegen von Sascha unterschrieben und nennen
-**Saschas** Konto. Wenn der Nießbrauch noch im Grundbuch steht, kommen sie damit vom
-Falschen und ein Mieter könnte sie zurückweisen. Beim Mieterhöhungsverlangen nach
-§ 558 BGB wiegt das schwer, weil es formgebunden ist.
+Zwei praktische Folgen:
 
-**Vor weiteren Schritten klären:** Besteht der Nießbrauch noch? Der Grundbuchauszug ist
-vom 12.08.2025, letzte Änderung 18.07.2025 — zu diesem Zeitpunkt stand er drin.
-_(offen)_
+- Im Grundbuch wird der Nießbrauch nicht von selbst gelöscht, das braucht einen Antrag
+  mit Sterbeurkunde. Steht er noch drin, stört er spätestens bei Verkauf oder
+  Finanzierung. _(offen)_ — ob die Löschung schon beantragt ist, ist hier nicht vermerkt.
+- Die Mieteinnahmen fließen seit der Ablösung Sascha zu und gehören in seine Anlage V.
 
 ## Nächste Schritte
 
-- [ ] Nießbrauch klären: besteht er noch, und wer tritt gegenüber den Mietern auf?
 - [ ] Klären, ob Anlar und Mazineler dieselbe oder zwei verschiedene Wohnungen haben
-- [ ] Erst danach: Mieterhöhung und Zahlungserinnerung erneut versenden, vom richtigen Absender
+- [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
+- [ ] Mieterhöhung auf 400 € nachverfolgen — hat der Mieter zugestimmt?
 - [ ] Nebenkostenabrechnung Langstraße 35: letzte vorliegende ist von 2020
 
 ## Unterlagen

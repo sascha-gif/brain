@@ -324,3 +324,12 @@ dort nennt nur der Mietvertrag von 2018 den Vater als Vermieter, was ein Nachtra
 Nebenbei geklärt: Der Ingelheimer Mietvertrag listet „Sonstige Betriebskosten"
 ausdrücklich auf, damit sind Rauchwarnmelder und Fensterreinigung umlagefähig.
 Quelle: Unterlagen Sascha, hochgeladen am 26.10.2026.
+
+## [2026-10-26] korrektur | Nießbrauch Alzey ist abgelöst
+
+Nachtrag zum Eintrag von heute: Der Nießbrauch des Vaters ist erledigt. Elimar Coldewey ist
+2025 verstorben, der Nießbrauch wurde abgelöst, der Notarvertrag liegt Sascha vor. Der
+Grundbuchauszug vom 12.08.2025 bildete noch den alten Stand ab. Sascha ist damit Eigentümer
+und Vermieter, seine Schreiben an die Mieter sind wirksam. Offen bleibt allein, ob die
+Löschung im Grundbuch beantragt ist — die läuft nicht von selbst.
+Quelle: Angabe Sascha, 26.10.2026.
