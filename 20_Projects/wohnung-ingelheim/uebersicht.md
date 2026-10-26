@@ -16,8 +16,17 @@ der Firmen.
 | Einheit | Wohnung 3, OG rechts |
 | Wohnfläche | 66,07 qm von 413,79 qm der Anlage |
 | Miteigentumsanteil | 159,67 von 1.000 |
-| Mieter | Eheleute Frank und Sabine Huber |
-| Vorauszahlung Nebenkosten | 300,00 € im Monat, 2024 und 2025 bestätigt |
+| Grundbuch | Nieder-Ingelheim Blatt 11537, Flur 47, Flurstück 323 |
+| Eigentümer | Sascha Elimar Coldewey, eingetragen 05.12.2007 |
+| Erwerb | Zuschlagsbeschluss vom 25.10.2007, Amtsgericht Bingen 4 K 67/05 — Zwangsversteigerung |
+| Voreigentümer | Michael Prange |
+| Belastungen | keine. Grundschulden über 149.808,52 € und 25.000 € am 05.12.2007 gelöscht |
+| Einheitswert | 8.538 €, Grundsteuermessbetrag 29,88 € (Bescheid 2008, vor der Reform) |
+| Mieter | Frank Huber (geb. 17.10.1966) und Sabine Huber (geb. 29.12.1967) |
+| Mietbeginn | 01.08.2018 |
+| Kaltmiete | **640,00 € seit 01.06.2026** (vorher 590,00 €), Erhöhung angenommen |
+| Ausstattung | 2 Zimmer, Küche, Bad, Diele, Keller, Balkon; Baujahr 1994 |
+| Vorauszahlung Nebenkosten | 300,00 € im Monat, 2024 und 2025 bestätigt — Senkung auf 185,00 € vorgeschlagen |
 | Hausgeld an die WEG | 380,00 € im Monat, Anpassung zum 01.09.2026 beschlossen |
 | Verwaltung | HCo Hausverwaltung GmbH, Bachweg 20A, 55411 Bingen am Rhein |
 | | verwalter.hco@gmx.de, Tel. 0170 3541349, Ansprechpartner Tim Poss |
@@ -39,6 +48,17 @@ Geschäftsführung gewechselt.
 Die Vorauszahlung ist seit Jahren etwa doppelt so hoch wie nötig. Vorschlag: auf 185 €
 senken (§ 560 Abs. 4 BGB).
 
+## Wer ist Vermieter?
+
+Der Mietvertrag von 2018 nennt als Vermieter **Elimar Coldewey, Carl-Theodorstraße 11,
+55232 Alzey** — also nicht Sascha, obwohl Sascha die Wohnung seit Dezember 2007 besitzt
+und im Grundbuch **kein Nießbrauch** eingetragen ist. Anders als in Alzey gab es hier nie
+einen Rechtsgrund, aus dem der Vater Vermieter gewesen wäre.
+
+Praktisch heißt das: Sascha ist Vermieter, seine Schreiben gehen in Ordnung — die
+Mieterhöhung 2026 hat der Mieter auch angenommen. Sauber ist es trotzdem nicht, dass im
+Vertrag ein anderer Name steht. Ein kurzer Nachtrag stellt es klar. _(offen)_
+
 ## Nächste Schritte
 
 - [ ] Abrechnung 2025 an die Mieter versenden, Guthaben 1.594,49 € überweisen
@@ -49,7 +69,8 @@ senken (§ 560 Abs. 4 BGB).
 - [ ] Blumenkästen nach innen ausrichten lassen, Hausordnung
 - [ ] Beim Verwalter nachfragen: wofür stehen die 2,55 € „sonstige umlagefähige Kosten"
 - [ ] Nachtrag zum Mietvertrag: Vermieter ist Sascha, nicht Elimar Coldewey
-- [ ] Mieterhöhung auf 640 € vom 13.03.2026 nachverfolgen — hat Huber zugestimmt?
+- [x] Mieterhöhung auf 640 € — angenommen, wirksam seit 01.06.2026
+- [ ] Nächste Mieterhöhung frühestens zum 01.06.2027 (Wartefrist 15 Monate)
 
 **Erledigt:** Der Mietvertrag verweist in § 3 Ziff. 2 auf § 2 BetrKV in der jeweiligen
 Fassung und listet unter P) ausdrücklich sonstige Betriebskosten auf. Damit sind

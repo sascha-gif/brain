@@ -349,3 +349,13 @@ Alzey ist kein qualifizierter Mietspiegel auffindbar, und die Zahlen der Immobil
 sind Angebotsmieten, die § 558a BGB nicht genügen. Die drei Wohnungen muss Sascha noch
 eintragen, sonst ist das Verlangen unwirksam.
 Quelle: eigene Recherche und Mietvertrag Mazineler, 26.10.2026.
+
+## [2026-10-26] status | Ingelheim: Mieterhöhung angenommen, Eckdaten nachgetragen
+
+Huber hat der Erhöhung von 590 € auf 640 € zugestimmt, wirksam seit 01.06.2026 — dem
+dritten Kalendermonat nach Zugang des Schreibens vom 13.03.2026. Nächste Erhöhung
+frühestens zum 01.06.2027. Die Nebenkostenabrechnung 2025 bleibt unberührt.
+
+Dabei aufgefallen: Die Grundbuch- und Vertragsdaten waren bei einem früheren Durchlauf
+heute an einem Zitatzeichen gescheitert und fehlten in der Übersicht. Jetzt vollständig.
+Quelle: Angabe Sascha, 26.10.2026.
