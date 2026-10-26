@@ -17,7 +17,7 @@ der Firmen.
 | Wohnfläche | 66,07 qm von 413,79 qm der Anlage |
 | Miteigentumsanteil | 159,67 von 1.000 |
 | Mieter | Eheleute Frank und Sabine Huber |
-| Vorauszahlung Nebenkosten | 300,00 € im Monat _(zu prüfen, Stand 2024)_ |
+| Vorauszahlung Nebenkosten | 300,00 € im Monat, 2024 und 2025 bestätigt |
 | Hausgeld an die WEG | 380,00 € im Monat, Anpassung zum 01.09.2026 beschlossen |
 | Verwaltung | HCo Hausverwaltung GmbH, Bachweg 20A, 55411 Bingen am Rhein |
 | | verwalter.hco@gmx.de, Tel. 0170 3541349, Ansprechpartner Tim Poss |
@@ -33,7 +33,7 @@ Geschäftsführung gewechselt.
 | Umlagefähige Kosten | 1.791,24 € | 2.005,51 € |
 | davon Heizung, Wasser, Abwasser | 969,75 € | 1.312,86 € |
 | Kabelfernsehen | 93,96 € | entfallen |
-| Vorauszahlung | 3.600,00 € | 3.600,00 € _(anzunehmen)_ |
+| Vorauszahlung | 3.600,00 € | 3.600,00 € |
 | Guthaben des Mieters | 1.808,76 € | 1.594,49 € |
 
 Die Vorauszahlung ist seit Jahren etwa doppelt so hoch wie nötig. Vorschlag: auf 185 €
@@ -41,7 +41,7 @@ senken (§ 560 Abs. 4 BGB).
 
 ## Nächste Schritte
 
-- [ ] Vorauszahlungen 2025 gegen die Kontoeingänge prüfen, dann die Abrechnung versenden
+- [ ] Abrechnung 2025 an die Mieter versenden, Guthaben 1.594,49 € überweisen
 - [ ] Abrechnungsfrist für 2025 endet am **31.12.2026** (§ 556 Abs. 3 BGB)
 - [ ] Vorauszahlung auf 185 € im Monat herabsetzen
 - [ ] Bankverbindung an die Hausverwaltung melden, sonst kommt das Guthaben von 1.090,50 € nicht
