@@ -294,3 +294,17 @@ auf Wunsch entfernt — die Steuernummer allein genügt nach § 14 UStG. Damit i
 vollständig: 2.057,94 € netto, 391,01 € USt, 2.448,95 € brutto. Datei auf das Rechnungsdatum
 umbenannt. Offen bleibt allein der Fremdvergleich beim Verkauf an die eigene GmbH.
 Quelle: Angaben Sascha, 26.10.2026.
+
+## [2026-10-26] output | Nebenkostenabrechnung Ingelheim 2024 geprüft, 2025 erstellt
+
+Neues Projekt `20_Projects/wohnung-ingelheim/`. Für 2024 die Abrechnung der Hausverwaltung
+geprüft: Kabelfernsehen war für das ganze Jahr umgelegt, obwohl es seit dem 01.07.2024 nicht
+mehr umlagefähig ist — rund 46,98 € zugunsten des Mieters. Für 2025 die Mieterabrechnung aus
+der WEG-Einzelabrechnung gebaut: 2.005,51 € umlagefähig (1.992,51 € laut Verwaltung plus
+13,00 € Grundsteuer), Guthaben 1.594,49 € bei angenommenen 3.600 € Vorauszahlung.
+
+Aus dem Protokoll der 17. Eigentümerversammlung mitgenommen: die Verwaltung wartet auf
+Saschas Bankverbindung für 1.090,50 € Guthaben, die Mieterin wendet sich mit Anliegen direkt
+an die Verwaltung statt an den Vermieter, und ab 2026 kommt die Fensterreinigung als neue
+Position dazu.
+Quelle: Unterlagen der HCo Hausverwaltung, hochgeladen am 26.10.2026.
