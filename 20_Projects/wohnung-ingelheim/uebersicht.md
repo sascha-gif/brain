@@ -49,9 +49,11 @@ Geschäftsführung gewechselt.
 Die Vorauszahlung ist seit Jahren etwa doppelt so hoch wie nötig. Vorschlag: auf 185 €
 senken (§ 560 Abs. 4 BGB).
 
-**Die 840 € gehen auf.** Kaltmiete 640,00 € plus Vorauszahlung 200,00 €. Die Vorauszahlung
-wurde von 300,00 € gesenkt; für 2024 und 2025 galten noch 300,00 €, die Abrechnung 2025
-steht also richtig auf 3.600,00 €.
+**Die 840 € gehen auf, und die Zahlungshistorie bestätigt es.** Huber überwies von Mai 2025
+bis Mai 2026 durchgängig 890,00 € (590 Kaltmiete + 300 Vorauszahlung) und ab Juni 2026
+840,00 € (640 + 200). Mieterhöhung und Senkung der Vorauszahlung wirkten also beide zum
+01.06.2026. Für 2025 waren es damit zwölfmal 300,00 € — die Abrechnung steht richtig auf
+3.600,00 €.
 
 Bei Kosten von 167,13 € im Monat (2025) sind 200,00 € gut gewählt — genug Puffer für
 steigende Energiepreise, ohne dass der Mieter dauerhaft zu viel vorstreckt. Kein

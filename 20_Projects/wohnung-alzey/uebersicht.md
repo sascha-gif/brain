@@ -38,11 +38,15 @@ Vormieter von November 2017 bis zum Wechsel 2021.
 Ausstattung laut Vertrag: 2 Zimmer, Kammer, Küche, Korridor/Diele, Bad, Toilette, Balkon,
 Kellerraum. Mietverhältnis auf unbestimmte Zeit.
 
-**Tatsächlicher Mieteingang: 720,00 € brutto im Monat**, zuletzt 01.10.2026. Der Vertrag von
-2021 ergibt 600,00 € (360 + 40 + 200). Die Differenz von 120,00 € ist nicht erklärt —
-zwischenzeitliche Erhöhung, angepasste Vorauszahlung oder eine Ratenzahlung. _(offen)_,
-und zu klären, bevor das Mieterhöhungsverlangen rausgeht: Es nennt 360,00 € als bisherige
-Kaltmiete, und diese Angabe muss stimmen.
+**Tatsächlicher Mieteingang: 720,00 € brutto im Monat**, durchgängig seit mindestens
+April 2025, zuletzt 01.10.2026. Der Vertrag von 2021 ergibt 600,00 € (360 + 40 + 200).
+Die Differenz von 120,00 € ist nicht erklärt — zwischenzeitliche Erhöhung oder angepasste
+Vorauszahlung. _(offen)_, und zu klären, bevor das Mieterhöhungsverlangen rausgeht: Es
+nennt 360,00 € als bisherige Kaltmiete, und diese Angabe muss stimmen.
+
+Zwei Eingänge, **30.04.2025 und 30.05.2025**, sind in der Banking-App rot markiert. Waren
+das Rücklastschriften, hat Mazineler 2025 nicht zwölfmal gezahlt — und die offene Miete
+aus der Zahlungserinnerung vom März 2026 hätte hier ihren Ursprung. _(offen)_
 
 Hausgeld an die WEG Langstraße 35+37: **450,00 € im Monat**, zuletzt 05.10.2026.
 
@@ -176,7 +180,10 @@ Verwaltung nicht von den Brennstoffkosten ab.
 - [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
 - [ ] **Abrechnung 2025 bis 31.12.2026 versenden** — Vorauszahlungssumme eintragen
 - [ ] Prüfen, ob der Vater für 2021 bis 2024 abgerechnet hat
-- [ ] Techem-Abrechnung 2025 anfordern, dazu die Bewertungsfaktoren der Heizkostenverteiler
+- [ ] Mails an Hausverwaltung und Mazineler versenden ([Entwürfe](../../10_Output/2026-10-26-mails-alzey-heizkosten.md))
+- [ ] Ortstermin in der Wohnung, Zustand fotografieren
+- [ ] Aufteilung der 720 € aus den eigenen Unterlagen klären
+- [ ] Prüfen, ob die Eingänge vom 30.04. und 30.05.2025 zurückgebucht wurden
 - [ ] Rohrwärme prüfen: ungedämmte Steigleitungen in der Wohnung?
 - [ ] CO₂-Vermieteranteil in der Abrechnung abziehen (2024: 43,85 €)
 - [ ] SEPA-Mandat erteilen und Portalzugang einrichten, sonst Gebühren ab 2027

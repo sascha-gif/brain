@@ -408,3 +408,17 @@ Nebenbefund: Nach dem CO₂-Kostenaufteilungsgesetz trägt der Vermieter 30 % de
 2024 waren das 43,85 €. Techem weist sie aus, zieht sie aber nicht ab — der Vermieter muss
 sie dem Mieter erstatten. Eine Zeile dafür ist in der Abrechnung ergänzt.
 Quelle: Techem-Abrechnung 0144.01.006.01 vom 22.02.2025.
+
+## [2026-10-26] output | Mails an Hausverwaltung und Mieter, Zahlungshistorie geprüft
+
+Zwei Mailentwürfe zum Heizkostenthema Alzey: an Steinmann Immobilien mit konkreten
+Forderungen (Techem-Abrechnung 2025, Bewertungsfaktoren der Heizkostenverteiler,
+CO₂-Vermieteranteil) und Fragen zu Rohrwärme und Gerätezustand; an Mazineler eine
+Vorwarnung zur Nachzahlung samt Bitte um einen Ortstermin.
+
+Aus den Banking-Screenshots bestätigt: Huber zahlte bis Mai 2026 je 890 € (590 + 300) und
+ab Juni 2026 je 840 € (640 + 200) — die Abrechnung 2025 mit 3.600 € Vorauszahlung steht
+damit endgültig. Mazineler zahlt durchgängig 720 €, die Aufteilung bleibt offen; die
+Eingänge vom 30.04. und 30.05.2025 sind in der App rot markiert und könnten
+Rücklastschriften sein.
+Quelle: Banking-Screenshots Sascha, 26.10.2026.
