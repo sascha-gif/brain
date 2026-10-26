@@ -38,16 +38,64 @@ Geschäftsführung gewechselt.
 
 ## Nebenkosten im Vergleich
 
-| | 2024 | 2025 |
-|---|---|---|
-| Umlagefähige Kosten | 1.791,24 € | 2.005,51 € |
-| davon Heizung, Wasser, Abwasser | 969,75 € | 1.312,86 € |
-| Kabelfernsehen | 93,96 € | entfallen |
-| Vorauszahlung | 3.600,00 € | 3.600,00 € |
-| Guthaben des Mieters | 1.808,76 € | 1.594,49 € |
+| | 2023 | 2024 | 2025 |
+|---|---|---|---|
+| Umlagefähige Kosten | 2.040,03 € | 1.791,24 € | 2.005,51 € |
+| davon Heizung, Wasser, Abwasser | _(offen)_ | 969,75 € | 1.312,86 € |
+| Kabelfernsehen | _(offen)_ | 93,96 € | entfallen |
+| **Kalte Betriebskosten** | _(offen)_ | **821,49 €** | **692,65 €** |
+| Vorauszahlung | 3.600,00 € | 3.600,00 € | 3.600,00 € |
+| Guthaben des Mieters | 1.559,97 € | 1.808,76 € | 1.594,49 € |
 
-Die Vorauszahlung ist seit Jahren etwa doppelt so hoch wie nötig. Vorschlag: auf 185 €
-senken (§ 560 Abs. 4 BGB).
+Drei Jahre in Folge rund 1.600 € Guthaben — die Senkung der Vorauszahlung auf 200 € zum
+Juni 2026 war überfällig und trifft es gut.
+
+### Die Vorauszahlung von 300 € ist vierfach belegt
+
+Der Mietvertrag von 2018 nennt unter § 3 Ziff. 1 b) bb) nur **200,00 €** und eine
+Gesamtmiete von 790,00 €. Erhöht wurde später, eine Erklärung dazu liegt nicht vor
+_(offen)_. Dass 300,00 € galten, belegen vier unabhängige Quellen:
+
+1. Die eigene Betriebskostenabrechnung 2023 an Huber weist 3.600,00 € Vorauszahlungen aus.
+2. Die Abrechnung der HCo Hausverwaltung für 2024 ebenfalls.
+3. Huber überwies bis Mai 2026 durchgängig 890,00 €; abzüglich 590,00 € Kaltmiete
+   bleiben 300,00 €.
+4. Die Kaltmiete lag laut Vertrag und Mieterhöhungsschreiben seit 2018 unverändert bei
+   590,00 €; ein Stellplatz ist im Vertrag mit 0,00 € ausgewiesen.
+
+### Warum 2025 weniger kalte Betriebskosten anfallen
+
+Insgesamt werden 214,27 € **mehr** umgelegt als 2024. Bei den kalten Betriebskosten sind
+es aber 128,84 € **weniger**, weil vier Positionen fehlen:
+
+| Position | 2024 | Warum weg |
+|---|---|---|
+| Kabelfernsehen | 93,96 € | seit 01.07.2024 nicht mehr umlagefähig, zu Recht |
+| Abrechnung Heiz-/Wasserkosten | 37,24 € | steckt jetzt in den Heizkosten |
+| Hebeanlage Wartung | 52,70 € | **ungeklärt** |
+| Wartung Rauchmelder, Feuerlöscher | 8,73 € | **ungeklärt** |
+
+Die ersten beiden sind erklärt: Kabelfernsehen darf nicht mehr umgelegt werden, und die
+Abrechnungskosten tauchen 2025 als „Zusatzkosten Heizung“ von 260,55 € in der
+Heizkostenabrechnung auf — fast genau der Betrag, der 2024 separat stand.
+
+Bei den letzten beiden, zusammen 61,43 €, geht es weniger ums Geld als um die Frage, ob
+die **Wartungen überhaupt stattgefunden haben**. Rauchwarnmelder sind jährlich zu prüfen.
+Beim Verwalter nachfragen. _(offen)_
+
+Auch der Heizkostenanstieg von 343,11 € relativiert sich: 2025 enthalten die Heizkosten
+erstmals die Wärmepumpenwartung (562,28 € für die ganze Anlage) und die
+Abrechnungskosten. Grob gerechnet sind rund 175 € davon Umschichtung.
+
+### Ein Vermieter, drei Absender
+
+Die Abrechnung 2023 ging unter dem Briefkopf der **Coldewey Holding GmbH** hinaus, Sascha
+als Geschäftsführer. Der Mietvertrag nennt **Elimar Coldewey**. Die Schreiben von 2026
+kommen von **Sascha privat**. Eigentümer ist durchgehend Sascha privat.
+
+Das ist unsauber und steuerlich nicht egal: Die Mieteinnahmen gehören in Saschas
+Anlage V, nicht in die Holding. Ein Nachtrag sollte den Vermieter klarstellen, und
+künftige Schreiben sollten alle von derselben Person kommen. _(offen)_
 
 **Die 840 € gehen auf, und die Zahlungshistorie bestätigt es.** Huber überwies von Mai 2025
 bis Mai 2026 durchgängig 890,00 € (590 Kaltmiete + 300 Vorauszahlung) und ab Juni 2026
@@ -78,7 +126,11 @@ Vertrag ein anderer Name steht. Ein kurzer Nachtrag stellt es klar. _(offen)_
 - [ ] Mit Frau Huber klären, dass Anliegen an den Vermieter gehen, nicht an die Verwaltung
 - [ ] Blumenkästen nach innen ausrichten lassen, Hausordnung
 - [ ] Beim Verwalter nachfragen: wofür stehen die 2,55 € „sonstige umlagefähige Kosten"
-- [ ] Nachtrag zum Mietvertrag: Vermieter ist Sascha, nicht Elimar Coldewey
+- [ ] Nachtrag zum Mietvertrag: Vermieter ist Sascha privat — weder Elimar Coldewey
+      noch die Coldewey Holding GmbH, die 2023 abgerechnet hat
+- [ ] Prüfen, ob es eine Erklärung zur Erhöhung der Vorauszahlung 200 → 300 € gibt
+- [ ] Beim Verwalter nachfragen: fanden 2025 die Wartungen von Hebeanlage und
+      Rauchwarnmeldern statt? In der Abrechnung fehlen sie
 - [x] Mieterhöhung auf 640 € — angenommen, wirksam seit 01.06.2026
 - [ ] Nächste Mieterhöhung frühestens zum 01.06.2027 (Wartefrist 15 Monate)
 

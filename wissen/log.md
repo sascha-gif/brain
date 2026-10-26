@@ -435,3 +435,24 @@ rechnet jetzt mit elf statt zwölf Monaten Vorauszahlung; je nach Aufteilung der
 ergibt sich eine Nachzahlung zwischen 1.008 und 2.328 €. Zusammen mit der offenen Miete
 kommen auf den Mieter 1.720 bis 3.050 € zu — Ratenzahlung von vornherein anbieten.
 Quelle: Angabe Sascha, 26.10.2026.
+
+## [2026-10-26] korrektur | Vorauszahlung Huber: Vertrag nennt 200 €, gezahlt wurden 300 €
+
+Auf Nachfrage geprüft. Der Mietvertrag von 2018 nennt unter § 3 nur 200,00 € Vorauszahlung
+bei 790,00 € Gesamtmiete. Die 300,00 €, auf denen die Abrechnungen fußen, sind trotzdem
+belegt: durch die eigene Abrechnung 2023 (3.600 € Vorauszahlungen, 1.559,97 € Guthaben),
+die Verwaltungsabrechnung 2024, die Zahlungshistorie von 890 € abzüglich 590 € Kaltmiete
+und die unveränderte Kaltmiete laut Mieterhöhungsschreiben. Eine Erklärung zur Erhöhung
+von 200 auf 300 liegt nicht vor.
+
+Nebenbefund: Die Abrechnung 2023 ging unter dem Briefkopf der Coldewey Holding GmbH
+hinaus, der Mietvertrag nennt Elimar Coldewey, die Schreiben von 2026 kommen von Sascha
+privat — drei Absender für ein Mietverhältnis. Eigentümer ist durchgehend Sascha privat,
+dorthin gehören auch die Einnahmen.
+
+Dazu der Positionsvergleich 2024 gegen 2025: insgesamt 214,27 € mehr umgelegt, bei den
+kalten Betriebskosten aber 128,84 € weniger. Vier Positionen fehlen, zwei davon erklärt
+(Kabelfernsehen zu Recht, Abrechnungskosten in die Heizkosten gewandert), zwei ungeklärt
+(Hebeanlage 52,70 €, Rauchwarnmelder 8,73 €) — dort ist die Frage, ob die Wartungen
+stattfanden.
+Quelle: Mietvertrag Huber, Abrechnung 2023, Einzelabrechnungen 2024 und 2025.
