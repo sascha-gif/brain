@@ -371,3 +371,12 @@ falsche Angabe dort macht es angreifbar.
 Nebenbei: Das Hausgeld Ingelheim ist zum Oktober 2026 von 380 auf 320 € gesunken, das für
 Alzey beträgt 450 € im Monat.
 Quelle: Kontoauszug Sascha, 26.10.2026.
+
+## [2026-10-26] status | Ingelheim: Vorauszahlung bereits auf 200 € gesenkt
+
+Die 840 € von Huber teilen sich in 640 € Kaltmiete und 200 € Nebenkostenvorauszahlung; die
+Senkung von 300 € ist bereits erfolgt. Für 2024 und 2025 galten noch 300 €, die Abrechnung
+2025 bleibt damit richtig. Der Absatz im Anschreiben, der eine Senkung auf 185 € vorschlug,
+ist durch einen ersetzt, der die bestehenden 200 € bestätigt. Offen bleibt allein die
+Aufteilung der 720 € in Alzey.
+Quelle: Angabe Sascha, 26.10.2026.
