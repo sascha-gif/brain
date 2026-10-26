@@ -48,8 +48,12 @@ senken (§ 560 Abs. 4 BGB).
 - [ ] Mit Frau Huber klären, dass Anliegen an den Vermieter gehen, nicht an die Verwaltung
 - [ ] Blumenkästen nach innen ausrichten lassen, Hausordnung
 - [ ] Beim Verwalter nachfragen: wofür stehen die 2,55 € „sonstige umlagefähige Kosten"
-- [ ] Mietvertrag prüfen: sind „sonstige Betriebskosten" vereinbart? Davon hängen
-      Rauchwarnmelder und ab 2026 die Fensterreinigung ab
+- [ ] Nachtrag zum Mietvertrag: Vermieter ist Sascha, nicht Elimar Coldewey
+- [ ] Mieterhöhung auf 640 € vom 13.03.2026 nachverfolgen — hat Huber zugestimmt?
+
+**Erledigt:** Der Mietvertrag verweist in § 3 Ziff. 2 auf § 2 BetrKV in der jeweiligen
+Fassung und listet unter P) ausdrücklich sonstige Betriebskosten auf. Damit sind
+Rauchwarnmelder-Wartung und ab 2026 die Fensterreinigung umlagefähig.
 
 ## Unterlagen
 
