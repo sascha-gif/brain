@@ -308,3 +308,19 @@ Saschas Bankverbindung für 1.090,50 € Guthaben, die Mieterin wendet sich mit 
 an die Verwaltung statt an den Vermieter, und ab 2026 kommt die Fensterreinigung als neue
 Position dazu.
 Quelle: Unterlagen der HCo Hausverwaltung, hochgeladen am 26.10.2026.
+
+## [2026-10-26] ingest | Beide Mietwohnungen dokumentiert, Nießbrauch in Alzey gefunden
+
+Unterlagen zu beiden Wohnungen eingearbeitet: Grundbuchauszüge, Mietverträge,
+Grundsteuerbescheide, Vermieterbriefe. Neues Projekt `20_Projects/wohnung-alzey/`,
+Ingelheim um Grundbuch- und Vertragsdaten ergänzt.
+
+Zentraler Fund: Im Grundbuch Alzey 4850 steht in Abteilung II ein **Nießbrauch für Elimar
+Coldewey, geb. 28.04.1942**. Solange der besteht, ist der Nießbraucher der Vermieter und
+ihm stehen die Mieten zu — Saschas Mieterhöhungsverlangen und Zahlungserinnerung vom
+13.03.2026 kommen damit vom Falschen. In Ingelheim ist dagegen kein Nießbrauch eingetragen;
+dort nennt nur der Mietvertrag von 2018 den Vater als Vermieter, was ein Nachtrag heilt.
+
+Nebenbei geklärt: Der Ingelheimer Mietvertrag listet „Sonstige Betriebskosten"
+ausdrücklich auf, damit sind Rauchwarnmelder und Fensterreinigung umlagefähig.
+Quelle: Unterlagen Sascha, hochgeladen am 26.10.2026.
