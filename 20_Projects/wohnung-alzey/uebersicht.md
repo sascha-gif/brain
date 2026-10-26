@@ -126,6 +126,47 @@ Die Abrechnung 2025 ist vorbereitet:
 [`10_Output/2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx`](../../10_Output/2026-10-26-nebenkosten-2025-alzey-mazineler.xlsx).
 Es fehlt allein die Summe der 2025 tatsächlich gezahlten Vorauszahlungen.
 
+## Heizkosten: dreifacher Verbrauch, belegt
+
+Techem schreibt es in der Verbrauchsanalyse selbst:
+
+| | 2024 | 2023 |
+|---|---|---|
+| Verbrauch der Wohnung | 20.158 kWh | 23.360 kWh |
+| Durchschnittsnutzer derselben Kategorie | 6.549 kWh | 8.584 kWh |
+| **Abweichung** | **+208 %** | +172 % |
+| je Quadratmeter | 364 kWh | 421 kWh |
+
+Üblich sind 130 bis 150 kWh je Quadratmeter und Jahr. Der Befund ist über zwei Jahre
+stabil und stammt nicht aus eigener Rechnung, sondern von Techem. Die 3.729,58 € für 2024
+sind also die Folge des Verbrauchs, nicht eines Rechenfehlers — aber die Ursache ist
+ungeklärt.
+
+Auf die Räume verteilt sich der Verbrauch sehr ungleich: Der Wohnzimmer-Heizkörper macht
+mit 5.794 von 10.821 Einheiten über die Hälfte aus.
+
+Mögliche Ursachen, in der Reihenfolge der Prüfung: falsch parametrierte
+Heizkostenverteiler (die Bewertungsfaktoren stehen nicht auf der Abrechnung), ungedämmte
+Steigleitungen durch die Wohnung — dann erlaubt § 7 Abs. 1 Satz 3 HeizkostenV eine
+Korrektur nach VDI 2077 —, defekte Thermostate, oder schlicht die Lage im obersten
+Geschoss. Ausführlich im Blatt „Heizkosten pruefen" der Abrechnungsdatei.
+
+**CO₂-Kosten.** Die Liegenschaft stößt 25,3 kg CO₂ je Quadratmeter und Jahr aus, Stufe
+22 bis 27. Davon trägt der Vermieter 30 Prozent: 2024 waren das **43,85 €**, die Sascha
+dem Mieter erstatten muss. Techem weist den Betrag aus, zieht ihn aber auf Wunsch der
+Verwaltung nicht von den Brennstoffkosten ab.
+
+## Aus der Eigentümerversammlung vom 20.07.2026
+
+- **Jahresabrechnung 2025 beschlossen**, Nachschüsse waren bis 03.08.2026 fällig.
+  Saschas Saldo: 192,37 € Nachzahlung.
+- **Neuer Verwaltervertrag ab 01.01.2027**, Laufzeit zwei Jahre. Neu: Teilnahme am
+  SEPA-Verfahren und Nutzung des Portals sind verpflichtend. Wer weiter überweist oder
+  Post statt Portal will, zahlt eine Gebühr. _(offen)_ — SEPA-Mandat erteilt?
+- Das Garagendach wurde erneuert, ordnungsgemäß und im Budget.
+- Die Eigentümer sollen ihre Mieter auf Mülltrennung und Hausordnung hinweisen.
+- Rücklagenbeiträge sind vollständig beglichen, keine Rückstände.
+
 ## Nächste Schritte
 
 - [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
@@ -135,7 +176,10 @@ Es fehlt allein die Summe der 2025 tatsächlich gezahlten Vorauszahlungen.
 - [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
 - [ ] **Abrechnung 2025 bis 31.12.2026 versenden** — Vorauszahlungssumme eintragen
 - [ ] Prüfen, ob der Vater für 2021 bis 2024 abgerechnet hat
-- [ ] Heizkosten hinterfragen: 60 € je qm und Jahr sind auffällig hoch
+- [ ] Techem-Abrechnung 2025 anfordern, dazu die Bewertungsfaktoren der Heizkostenverteiler
+- [ ] Rohrwärme prüfen: ungedämmte Steigleitungen in der Wohnung?
+- [ ] CO₂-Vermieteranteil in der Abrechnung abziehen (2024: 43,85 €)
+- [ ] SEPA-Mandat erteilen und Portalzugang einrichten, sonst Gebühren ab 2027
 
 ## Unterlagen
 

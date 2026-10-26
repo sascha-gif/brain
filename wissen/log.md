@@ -392,3 +392,19 @@ Die Fristen sind der kritische Punkt: Für 2021 bis 2024 ist die Abrechnungsfris
 Nachforderungen daraus sind verloren. Für 2025 läuft sie am 31.12.2026 ab. Die Abrechnung ist
 vorbereitet, es fehlt nur die Summe der tatsächlich gezahlten Vorauszahlungen.
 Quelle: Hausgeldabrechnungen Steinmann Immobilien, hochgeladen 26.10.2026.
+
+## [2026-10-26] kompilieren | Techem Alzey: Verbrauch dreifach über dem Vergleichswert
+
+Techem-Abrechnung 2024 ausgewertet. Die Verbrauchsanalyse weist den Verbrauch der Wohnung
+mit 20.158 kWh aus, den Durchschnittsnutzer mit 6.549 kWh — 208 % mehr, 2023 waren es
+172 %. Je Quadratmeter 364 kWh gegenüber üblichen 130 bis 150. Der Wohnzimmer-Heizkörper
+allein macht über die Hälfte des Wohnungsverbrauchs aus.
+
+Zu prüfen sind Bewertungsfaktoren der Heizkostenverteiler, Rohrwärme ungedämmter
+Steigleitungen (§ 7 Abs. 1 Satz 3 HeizkostenV erlaubt dann eine Korrektur nach VDI 2077),
+defekte Thermostate und die Lage im obersten Geschoss.
+
+Nebenbefund: Nach dem CO₂-Kostenaufteilungsgesetz trägt der Vermieter 30 % der CO₂-Abgabe,
+2024 waren das 43,85 €. Techem weist sie aus, zieht sie aber nicht ab — der Vermieter muss
+sie dem Mieter erstatten. Eine Zeile dafür ist in der Abrechnung ergänzt.
+Quelle: Techem-Abrechnung 0144.01.006.01 vom 22.02.2025.
