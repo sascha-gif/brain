@@ -422,3 +422,16 @@ damit endgültig. Mazineler zahlt durchgängig 720 €, die Aufteilung bleibt of
 Eingänge vom 30.04. und 30.05.2025 sind in der App rot markiert und könnten
 Rücklastschriften sein.
 Quelle: Banking-Screenshots Sascha, 26.10.2026.
+
+## [2026-10-26] output | Standbericht als PDF, offene Miete Alzey bestätigt
+
+Fünfseitiger Standbericht beider Wohnungen nach War, Ist, Soll, mit Kennzahlenvergleich und
+Priorisierung. Dazu eine dritte Mail an Techem als zweiter Schritt, falls die Verwaltung
+nicht liefert.
+
+Bestätigt: Die Eingänge vom 30.04. und 30.05.2025 in Alzey wurden zurückgebucht, unterm
+Strich fehlt die Miete Mai 2025 über 720 €. Schreiben dazu erstellt. Die Abrechnung 2025
+rechnet jetzt mit elf statt zwölf Monaten Vorauszahlung; je nach Aufteilung der 720 €
+ergibt sich eine Nachzahlung zwischen 1.008 und 2.328 €. Zusammen mit der offenen Miete
+kommen auf den Mieter 1.720 bis 3.050 € zu — Ratenzahlung von vornherein anbieten.
+Quelle: Angabe Sascha, 26.10.2026.

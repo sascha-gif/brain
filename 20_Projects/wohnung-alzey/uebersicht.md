@@ -4,9 +4,9 @@
 
 ## Kurz
 
-Eigentumswohnung Nr. 6, DG links, in der Langstraße 35 in Alzey. Sascha ist Eigentümer
-und seit 2025 auch Vermieter: Der Nießbrauch seines Vaters ist mit dessen Tod abgelöst,
-Notarvertrag liegt vor.
+Eigentumswohnung Nr. 6, 2. Obergeschoss links, in der Langstraße 35 in Alzey. Sascha ist
+Eigentümer und seit 2025 auch Vermieter: Der Nießbrauch seines Vaters ist mit dessen Tod
+abgelöst und im Grundbuch gelöscht.
 
 ## Eckdaten
 
@@ -15,7 +15,7 @@ Notarvertrag liegt vor.
 | Adresse | Langstraße 35, Wohneinheit 6, DG links, 55232 Alzey |
 | Grundbuch | Alzey Blatt 4850, Wohnungs- und Teileigentum |
 | Eigentümer | Sascha Elimar Coldewey, Auflassung 17.07.2013 |
-| Früherer Nießbrauch | Elimar Coldewey, geb. 28.04.1942, verstorben 2025 — abgelöst, Notarvertrag liegt vor |
+| Belastungen | keine. Der Nießbrauch für Elimar Coldewey (verstorben 2025) ist abgelöst und im Grundbuch gelöscht |
 | Miteigentumsanteil | 62 von 1.000 |
 | Teilungserklärung | 17.01.1974, Veräußerungsbeschränkung mit Ausnahmen für Verwandte |
 | Grundsteuer B | 123,04 € im Jahr, Messbetrag 32,38 € × Hebesatz 380 % |
@@ -44,9 +44,14 @@ Die Differenz von 120,00 € ist nicht erklärt — zwischenzeitliche Erhöhung 
 Vorauszahlung. _(offen)_, und zu klären, bevor das Mieterhöhungsverlangen rausgeht: Es
 nennt 360,00 € als bisherige Kaltmiete, und diese Angabe muss stimmen.
 
-Zwei Eingänge, **30.04.2025 und 30.05.2025**, sind in der Banking-App rot markiert. Waren
-das Rücklastschriften, hat Mazineler 2025 nicht zwölfmal gezahlt — und die offene Miete
-aus der Zahlungserinnerung vom März 2026 hätte hier ihren Ursprung. _(offen)_
+**Eine Miete aus 2025 ist offen.** Die Eingänge vom 30.04. und 30.05.2025 wurden
+zurückgebucht; unterm Strich fehlt eine Monatsmiete, die Mai 2025. Mazineler hat 2025
+also elfmal gezahlt, nicht zwölfmal — die Abrechnung rechnet entsprechend.
+
+Die offene Miete selbst ist eine eigene Forderung über 720,00 € und gehört nicht in die
+Nebenkostenabrechnung. Schreiben dazu:
+[`10_Output/2026-10-26-offene-miete-mazineler.docx`](../../10_Output/2026-10-26-offene-miete-mazineler.docx).
+Verjährung tritt erst Ende 2028 ein.
 
 Hausgeld an die WEG Langstraße 35+37: **450,00 € im Monat**, zuletzt 05.10.2026.
 
@@ -88,9 +93,8 @@ Zahlungserinnerung — kommen damit vom Richtigen.
 
 Zwei praktische Folgen:
 
-- Im Grundbuch wird der Nießbrauch nicht von selbst gelöscht, das braucht einen Antrag
-  mit Sterbeurkunde. Steht er noch drin, stört er spätestens bei Verkauf oder
-  Finanzierung. _(offen)_ — ob die Löschung schon beantragt ist, ist hier nicht vermerkt.
+- Die Löschung im Grundbuch ist beantragt und eingetragen. Die Wohnung ist damit
+  lastenfrei, der Grundbuchauszug vom 12.08.2025 bildet einen überholten Stand ab.
 - Die Mieteinnahmen fließen seit der Ablösung Sascha zu und gehören in seine Anlage V.
 
 ## Nebenkosten — die eigentliche Baustelle
@@ -171,9 +175,27 @@ Verwaltung nicht von den Brennstoffkosten ab.
 - Die Eigentümer sollen ihre Mieter auf Mülltrennung und Hausordnung hinweisen.
 - Rücklagenbeiträge sind vollständig beglichen, keine Rückstände.
 
+## Was auf Mazineler zukommt
+
+Beides zusammen ergibt eine erhebliche Summe:
+
+| | |
+|---|---|
+| Offene Miete Mai 2025 | 720,00 € |
+| Nachzahlung Nebenkosten 2025 | je nach Aufteilung 1.000 bis 2.330 € |
+| **Summe** | **1.720 bis 3.050 €** |
+
+Das ist das Zwei- bis Vierfache einer Monatsmiete. Ob Mazineler das aufbringen kann, ist
+offen — die zurückgegebene Lastschrift aus 2025 ist kein gutes Zeichen. Sinnvoll ist, die
+beiden Forderungen zeitlich zu trennen und bei der Nebenkostennachzahlung von vornherein
+eine Ratenzahlung anzubieten. Das Schreiben zur offenen Miete tut das bereits.
+
+Rechtlich: Ein Rückstand von zwei Monatsmieten berechtigt zur fristlosen Kündigung
+(§ 543 Abs. 2 Nr. 3 BGB). Eine einzelne alte Miete reicht dafür nicht, und eine
+Nebenkostennachforderung zählt nicht als Miete im Sinne dieser Vorschrift.
+
 ## Nächste Schritte
 
-- [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
 - [ ] Aufteilung der 720 € klären — Pflichtangabe im Mieterhöhungsverlangen
 - [ ] Drei Vergleichswohnungen benennen, dann versenden
       ([Entwurf](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx))
@@ -183,7 +205,7 @@ Verwaltung nicht von den Brennstoffkosten ab.
 - [ ] Mails an Hausverwaltung und Mazineler versenden ([Entwürfe](../../10_Output/2026-10-26-mails-alzey-heizkosten.md))
 - [ ] Ortstermin in der Wohnung, Zustand fotografieren
 - [ ] Aufteilung der 720 € aus den eigenen Unterlagen klären
-- [ ] Prüfen, ob die Eingänge vom 30.04. und 30.05.2025 zurückgebucht wurden
+- [ ] Schreiben zur offenen Miete Mai 2025 (720 €) an Mazineler versenden
 - [ ] Rohrwärme prüfen: ungedämmte Steigleitungen in der Wohnung?
 - [ ] CO₂-Vermieteranteil in der Abrechnung abziehen (2024: 43,85 €)
 - [ ] SEPA-Mandat erteilen und Portalzugang einrichten, sonst Gebühren ab 2027
