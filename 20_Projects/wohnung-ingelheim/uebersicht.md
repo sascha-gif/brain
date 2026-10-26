@@ -27,7 +27,8 @@ der Firmen.
 | Kaltmiete | **640,00 € seit 01.06.2026** (vorher 590,00 €), Erhöhung angenommen |
 | Ausstattung | 2 Zimmer, Küche, Bad, Diele, Keller, Balkon; Baujahr 1994 |
 | Vorauszahlung Nebenkosten | 300,00 € im Monat, 2024 und 2025 bestätigt — Senkung auf 185,00 € vorgeschlagen |
-| Hausgeld an die WEG | 380,00 € im Monat, Anpassung zum 01.09.2026 beschlossen |
+| Hausgeld an die WEG | **320,00 € im Monat seit Oktober 2026** (vorher 380,00 €), Anpassung aus dem Wirtschaftsplan 2026/2027 |
+| Mieteingang | **840,00 € brutto im Monat**, zuletzt 01.10.2026 |
 | Verwaltung | HCo Hausverwaltung GmbH, Bachweg 20A, 55411 Bingen am Rhein |
 | | verwalter.hco@gmx.de, Tel. 0170 3541349, Ansprechpartner Tim Poss |
 | Konto der WEG | Volksbank Darmstadt Mainz, IBAN DE77 5519 0000 0815 9340 13 |
@@ -48,6 +49,12 @@ Geschäftsführung gewechselt.
 Die Vorauszahlung ist seit Jahren etwa doppelt so hoch wie nötig. Vorschlag: auf 185 €
 senken (§ 560 Abs. 4 BGB).
 
+**Unstimmigkeit, noch zu klären.** Huber überweist 840,00 € brutto im Monat. Mit der seit
+Juni 2026 geltenden Kaltmiete von 640,00 € blieben davon 200,00 € Nebenkostenvorauszahlung
+— nicht die 300,00 €, die für 2024 und 2025 gelten und auf denen die Abrechnung 2025 fußt.
+Entweder wurde die Vorauszahlung 2026 bereits gesenkt, oder die Aufteilung ist eine andere.
+_(offen)_ — betrifft die Abrechnung 2026, nicht die für 2025.
+
 ## Wer ist Vermieter?
 
 Der Mietvertrag von 2018 nennt als Vermieter **Elimar Coldewey, Carl-Theodorstraße 11,
@@ -63,7 +70,7 @@ Vertrag ein anderer Name steht. Ein kurzer Nachtrag stellt es klar. _(offen)_
 
 - [ ] Abrechnung 2025 an die Mieter versenden, Guthaben 1.594,49 € überweisen
 - [ ] Abrechnungsfrist für 2025 endet am **31.12.2026** (§ 556 Abs. 3 BGB)
-- [ ] Vorauszahlung auf 185 € im Monat herabsetzen
+- [ ] Klären, wie sich die 840 € aufteilen — dann über die Vorauszahlung entscheiden
 - [ ] Bankverbindung an die Hausverwaltung melden, sonst kommt das Guthaben von 1.090,50 € nicht
 - [ ] Mit Frau Huber klären, dass Anliegen an den Vermieter gehen, nicht an die Verwaltung
 - [ ] Blumenkästen nach innen ausrichten lassen, Hausordnung

@@ -38,6 +38,14 @@ Vormieter von November 2017 bis zum Wechsel 2021.
 Ausstattung laut Vertrag: 2 Zimmer, Kammer, Küche, Korridor/Diele, Bad, Toilette, Balkon,
 Kellerraum. Mietverhältnis auf unbestimmte Zeit.
 
+**Tatsächlicher Mieteingang: 720,00 € brutto im Monat**, zuletzt 01.10.2026. Der Vertrag von
+2021 ergibt 600,00 € (360 + 40 + 200). Die Differenz von 120,00 € ist nicht erklärt —
+zwischenzeitliche Erhöhung, angepasste Vorauszahlung oder eine Ratenzahlung. _(offen)_,
+und zu klären, bevor das Mieterhöhungsverlangen rausgeht: Es nennt 360,00 € als bisherige
+Kaltmiete, und diese Angabe muss stimmen.
+
+Hausgeld an die WEG Langstraße 35+37: **450,00 € im Monat**, zuletzt 05.10.2026.
+
 ## Die Briefe vom 13.03.2026 gehen an den Vormieter
 
 Beide Schreiben sind an **Bükent Anlar** adressiert, der seit 2021 nicht mehr dort wohnt.
@@ -84,7 +92,8 @@ Zwei praktische Folgen:
 ## Nächste Schritte
 
 - [ ] Löschung des Nießbrauchs im Grundbuch beantragen, falls noch nicht geschehen
-- [ ] Drei Vergleichswohnungen für das Mieterhöhungsverlangen benennen, dann versenden
+- [ ] Aufteilung der 720 € klären — Pflichtangabe im Mieterhöhungsverlangen
+- [ ] Drei Vergleichswohnungen benennen, dann versenden
       ([Entwurf](../../10_Output/2026-10-26-mieterhoehung-mazineler-alzey.docx))
 - [ ] Offene Miete Mai 2025 prüfen, dann Zahlungserinnerung neu ausstellen
 - [ ] Nebenkostenabrechnung Langstraße 35: letzte vorliegende ist von 2020

@@ -359,3 +359,15 @@ frühestens zum 01.06.2027. Die Nebenkostenabrechnung 2025 bleibt unberührt.
 Dabei aufgefallen: Die Grundbuch- und Vertragsdaten waren bei einem früheren Durchlauf
 heute an einem Zitatzeichen gescheitert und fehlten in der Übersicht. Jetzt vollständig.
 Quelle: Angabe Sascha, 26.10.2026.
+
+## [2026-10-26] status | Tatsächliche Mieteingänge weichen von den Verträgen ab
+
+Kontoauszug Oktober 2026: Huber überweist 840,00 € brutto, Mazineler 720,00 €. Nach den
+Verträgen wären es 940,00 € (640 Kaltmiete plus 300 Vorauszahlung) und 600,00 €. Beide
+Abweichungen sind offen und in den Projektseiten vermerkt. Für Alzey ist das keine
+Nebensache: Das Mieterhöhungsverlangen nennt 360,00 € als bisherige Kaltmiete, und eine
+falsche Angabe dort macht es angreifbar.
+
+Nebenbei: Das Hausgeld Ingelheim ist zum Oktober 2026 von 380 auf 320 € gesunken, das für
+Alzey beträgt 450 € im Monat.
+Quelle: Kontoauszug Sascha, 26.10.2026.
