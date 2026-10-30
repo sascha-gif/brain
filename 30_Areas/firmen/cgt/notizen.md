@@ -2,6 +2,34 @@
 
 Neueste oben.
 
+## 2026-10-30 — Kontakte-Routine: Deville/GLOBUS
+
+Fünfzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Michelle Deville, Junioreinkäufer/Sortimentsmanager Wäsche, Strümpfe, Bade- &
+Babytextil, GLOBUS Markthallen Holding GmbH & Co. KG (St. Wendel), in Zeile 235. Firma stand
+schon drin (Zeilen 70, 71) — Schreibweise, Telefonformat `+49(6851)909 …` und Adresse
+„Leipziger Str. 8, St. Wendel 66606" von dort übernommen; alle drei GLOBUS-Zeilen zählen
+jetzt auf 3.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234).
+
+**Aufgefallen, nicht repariert:**
+
+- Die Signatur schreibt „Junioreinkaeufer", „Waesche", „Struempfe" ohne Umlaute. In die
+  Lasche mit Umlauten geschrieben — das ist die Schreibweise der Wörter, nicht eine Angabe
+  der Quelle.
+- In der Telefonzeile steckt ein Slack-Link, den `slack.py` nicht aufgelöst hat:
+  `<tel:%20+49(6851)909%201359|+49(6851)909 1359>` steht so im Feld `text`. Grund ist
+  offenbar das `%20` in der URL. Der Anzeigetext war eindeutig, also unkritisch — wenn das
+  öfter vorkommt, gehört die Auflösung in `slack.py` nachgebessert.
+- Keine Anrede in der Signatur, Spalte C bleibt leer, obwohl die beiden anderen GLOBUS-Zeilen
+  „Frau" tragen. Aus dem Vornamen wird nicht geraten.
+- Website aus der Signatur (`www.globus.de`); die Zeilen 70 und 71 tragen die längere
+  Unternehmens-URL. Kein Widerspruch, nur unterschiedlich lang.
+
 ## 2026-10-17 — Kontakte-Routine: Marschhausen/FITX
 
 Dreizehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.

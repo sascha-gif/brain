@@ -208,3 +208,12 @@ Neun Dubletten. Signatur stand in Versalien, auf normale Schreibweise gebracht; 
 Mobilnummer nach Regel H in Spalte Telefon. Beides vermerkt in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 17.10.2026.
+
+## [2026-10-30] ingest | Ein Kontakt aus #kontakte: Deville/GLOBUS
+
+Fünfzehn Slack-Nachrichten abgeglichen, eine war neu: Michelle Deville, GLOBUS Markthallen
+Holding GmbH & Co. KG, Zeile 235. Zwölf Dubletten. Schreibweise, Telefonformat und Adresse von
+den bestehenden GLOBUS-Zeilen übernommen; Umlaute in Position wiederhergestellt. Ein
+nicht aufgelöster `tel:`-Link in der Slack-Ausgabe vermerkt in
+`30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 30.10.2026.
