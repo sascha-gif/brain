@@ -2,6 +2,28 @@
 
 Neueste oben.
 
+## 2026-10-31 — Kontakte-Routine: Hilbrands/Bünting
+
+Sechzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Mirko Hilbrands, Category Manager, Bünting Category Management GmbH & Co. KG
+(Nortmoor), in Zeile 236. Mobilnummer beschriftet, also Spalte I; keine Festnetznummer in der
+Signatur.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235).
+
+**Aufgefallen, nicht repariert:**
+
+- Zeile 93 trägt die **J. Bünting Beteiligungs AG** (Marion Müller, Leer). Das ist eine andere
+  Gesellschaft als die Bünting Category Management GmbH & Co. KG in Nortmoor, auch wenn die
+  Mailadressen dieselbe Domain haben. Als eigene Firma angelegt, nicht zusammengeführt — wer
+  das anders sieht, entscheidet das in Pipedrive.
+- Keine Website in der Signatur. Aus der Mailadresse ließe sich `buenting.de` ableiten —
+  bewusst nicht getan, Spalte M bleibt leer.
+- Keine Anrede in der Signatur, Spalte C bleibt leer.
+
 ## 2026-10-30 — Kontakte-Routine: Deville/GLOBUS
 
 Fünfzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.

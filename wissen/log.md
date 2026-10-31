@@ -217,3 +217,11 @@ den bestehenden GLOBUS-Zeilen übernommen; Umlaute in Position wiederhergestellt
 nicht aufgelöster `tel:`-Link in der Slack-Ausgabe vermerkt in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 30.10.2026.
+
+## [2026-10-31] ingest | Ein Kontakt aus #kontakte: Hilbrands/Bünting
+
+Sechzehn Slack-Nachrichten abgeglichen, eine war neu: Mirko Hilbrands, Bünting Category
+Management GmbH & Co. KG, Zeile 236. Dreizehn Dubletten. Als eigene Firma angelegt, nicht mit
+der J. Bünting Beteiligungs AG (Zeile 93) zusammengeführt — Begründung in
+`30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 31.10.2026.
