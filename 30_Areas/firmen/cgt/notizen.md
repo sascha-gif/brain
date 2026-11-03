@@ -2,6 +2,28 @@
 
 Neueste oben.
 
+## 2026-11-03 — Kontakte-Routine: Koch/QVC
+
+Siebzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Isabel Koch, Manager Buying Home, QVC Handel S.à r.l. & Co. KG (Düsseldorf), in
+Zeile 237. Firma stand noch nicht in der Lasche.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235),
+Hilbrands (236).
+
+**Aufgefallen, nicht repariert:**
+
+- Die Nummer `+49 (0)151 19558341` ist in der Signatur mit `t` beschriftet, also nach Regel H
+  in Spalte Telefon — obwohl 0151 eine Mobilvorwahl ist. Das ist jetzt der dritte Fall nach
+  Burmeister (10.10.) und Marschhausen (17.10.). Wenn „unbeschriftete oder mit t/Telefon
+  beschriftete 015x/016x/017x gehört nach Mobil" gelten soll, gehört die Regel ins Runbook;
+  von sich aus entscheidet das die Routine nicht.
+- Guido Koch (K&P Brand Concept, Zeile 100) ist eine andere Person; kein Dublettentreffer.
+- Keine Website und keine Anrede in der Signatur, Spalten C und M bleiben leer.
+
 ## 2026-10-31 — Kontakte-Routine: Hilbrands/Bünting
 
 Sechzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.

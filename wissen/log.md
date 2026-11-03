@@ -225,3 +225,10 @@ Management GmbH & Co. KG, Zeile 236. Dreizehn Dubletten. Als eigene Firma angele
 der J. Bünting Beteiligungs AG (Zeile 93) zusammengeführt — Begründung in
 `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 31.10.2026.
+
+## [2026-11-03] ingest | Ein Kontakt aus #kontakte: Koch/QVC
+
+Siebzehn Slack-Nachrichten abgeglichen, eine war neu: Isabel Koch, QVC Handel S.à r.l. & Co.
+KG, Zeile 237. Vierzehn Dubletten. Dritter Fall einer Mobilvorwahl in Spalte Telefon, weil die
+Signatur sie als `t` führt — offene Regelfrage, vermerkt in `30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 03.11.2026.
