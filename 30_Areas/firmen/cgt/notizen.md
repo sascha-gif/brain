@@ -2,6 +2,24 @@
 
 Neueste oben.
 
+## 2026-11-04 — Kontakte-Routine: Listing/THE HAUS 360
+
+Achtzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Georg Listing, THE HAUS 360 GmbH (Berlin), in Zeile 238. Firma stand noch nicht in
+der Lasche.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235),
+Hilbrands (236), Koch (237).
+
+**Aufgefallen, nicht repariert:**
+
+- Die Signatur nennt weder Position noch Telefonnummer; Spalten F, H und I bleiben leer. Mehr
+  gibt die Quelle nicht her.
+- George Psipsikas (Nanobionic, Zeile 126) ist eine andere Person; kein Dublettentreffer.
+
 ## 2026-11-03 — Kontakte-Routine: Koch/QVC
 
 Siebzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.

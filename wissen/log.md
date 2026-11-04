@@ -232,3 +232,10 @@ Siebzehn Slack-Nachrichten abgeglichen, eine war neu: Isabel Koch, QVC Handel S.
 KG, Zeile 237. Vierzehn Dubletten. Dritter Fall einer Mobilvorwahl in Spalte Telefon, weil die
 Signatur sie als `t` führt — offene Regelfrage, vermerkt in `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 03.11.2026.
+
+## [2026-11-04] ingest | Ein Kontakt aus #kontakte: Listing/THE HAUS 360
+
+Achtzehn Slack-Nachrichten abgeglichen, eine war neu: Georg Listing, THE HAUS 360 GmbH,
+Zeile 238. Fünfzehn Dubletten. Die Signatur nennt weder Position noch Telefonnummer, die
+Spalten bleiben leer.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 04.11.2026.
