@@ -501,3 +501,11 @@ Handelsregister. Die Verflechtungen laufen quer — Holding zahlt Gehalt und str
 Reisekosten für CGT vor, Sascha stellt CGT als Dienstleister Rechnungen und verkauft der
 Holding ein Fahrrad.
 Quelle: 30_Areas/firmen/ und 20_Projects/wohnung-*.
+
+## [2026-11-05] ingest | Rechtsform und Sitz von fastable und Lykke nachgetragen
+
+fastable GmbH sitzt in Mainz, Lykke & You ist eine GmbH — Sitz Mainz nach der
+Projekt-CLAUDE.md, der Handelsregistereintrag ist bei beiden weiter offen. In den
+Steckbriefen, der Übersichtstabelle und der Zeichnung nachgezogen. Damit fehlen Rechtsform
+und Sitz nur noch bei helpingbrands und PaSa Ventures.
+Quelle: Angabe Sascha, 05.11.2026.

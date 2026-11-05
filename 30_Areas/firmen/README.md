@@ -17,8 +17,8 @@ auf Zuruf.
 | [CGT](cgt/steckbrief.md) | Inhaber, CEO | Thomas Goetz | UG, Wiesbaden |
 | [helpingbrands.de](helpingbrands/steckbrief.md) | Gründer, CEO | Patrick Birkicht | _(offen)_ |
 | [PaSa Ventures](pasa-ventures/steckbrief.md) | Gründer, CEO | Patrick Birkicht | _(offen)_ |
-| [Lykke & You](lykkeandyou/steckbrief.md) | Inhaber, CEO | — | _(offen)_ |
-| [fastable](fastable/steckbrief.md) | Gründer, Inhaber | — | GmbH, Sitz _(offen)_ |
+| [Lykke & You](lykkeandyou/steckbrief.md) | Inhaber, CEO | — | GmbH, Mainz |
+| [fastable](fastable/steckbrief.md) | Gründer, Inhaber | — | GmbH, Mainz |
 
 Die beiden Mietwohnungen gehören Sascha **privat**, nicht einer der Firmen:
 [Ingelheim](../../20_Projects/wohnung-ingelheim/uebersicht.md) und
@@ -26,7 +26,8 @@ Die beiden Mietwohnungen gehören Sascha **privat**, nicht einer der Firmen:
 
 ## Was beim Zeichnen auffiel
 
-- Bei vier von sechs Firmen fehlen Rechtsform, Sitz und Handelsregister.
+- Bei helpingbrands und PaSa Ventures fehlen Rechtsform und Sitz, bei allen
+  sechs der Handelsregistereintrag.
 - Die Verflechtungen laufen quer: Die Holding zahlt Sascha Gehalt und streckt
   Reisekosten für CGT vor, Sascha stellt CGT als Dienstleister Rechnungen und
   verkauft der Holding ein Fahrrad. Jeder dieser Vorgänge braucht einen eigenen

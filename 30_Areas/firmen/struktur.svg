@@ -2,7 +2,7 @@
 <defs><marker id="pf" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6B7B7B"/></marker></defs>
 <rect width="1500" height="1090" fill="#FFFFFF"/>
 <text x="60" y="56" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#2F4F4F" text-anchor="start" font-weight="600">Beteiligungen, Partner und Immobilien</text>
-<text x="60" y="82" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6B7B7B" text-anchor="start">Sascha Elimar Coldewey · Stand 26. Oktober 2026</text>
+<text x="60" y="82" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6B7B7B" text-anchor="start">Sascha Elimar Coldewey · Stand 5. November 2026</text>
 <line x1="60" y1="100" x2="1440" y2="100" stroke="#D8DEDE" stroke-width="1"/>
 <rect x="590" y="126" width="320" height="62" rx="8" fill="#2F4F4F" stroke="#2F4F4F" stroke-width="0"/>
 <text x="750" y="151" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="600">Sascha Elimar Coldewey</text>
@@ -22,15 +22,15 @@
 <text x="76" y="345" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">Im Zuckergarten 28, 55129 Mainz</text>
 <text x="76" y="362" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">zahlt Sascha Gehalt</text>
 <rect x="60" y="395" width="430" height="102" rx="6" fill="#E8F0F7" stroke="#1F4E79" stroke-width="1.5"/>
-<text x="76" y="421" font-family="Helvetica, Arial, sans-serif" font-size="14.5" fill="#1F4E79" text-anchor="start" font-weight="600">Lykke &amp; You</text>
+<text x="76" y="421" font-family="Helvetica, Arial, sans-serif" font-size="14.5" fill="#1F4E79" text-anchor="start" font-weight="600">Lykke &amp; You GmbH</text>
 <text x="76" y="441" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">Inhaber, CEO · lykkeandyou.de</text>
 <text x="76" y="458" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">konservierte Blumen, Mainz</text>
-<text x="76" y="481" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#C00000" text-anchor="start" font-weight="600">Rechtsform und Sitz offen</text>
+<text x="76" y="481" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#C00000" text-anchor="start" font-weight="600">Handelsregister offen</text>
 <rect x="60" y="511" width="430" height="102" rx="6" fill="#E8F0F7" stroke="#1F4E79" stroke-width="1.5"/>
 <text x="76" y="537" font-family="Helvetica, Arial, sans-serif" font-size="14.5" fill="#1F4E79" text-anchor="start" font-weight="600">fastable GmbH</text>
-<text x="76" y="557" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">Gründer, Inhaber</text>
+<text x="76" y="557" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">Gründer, Inhaber · Mainz</text>
 <text x="76" y="574" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">Marken-Aggregator auf Zalando</text>
-<text x="76" y="597" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#C00000" text-anchor="start" font-weight="600">Sitz und Handelsregister offen</text>
+<text x="76" y="597" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#C00000" text-anchor="start" font-weight="600">Handelsregister offen</text>
 <rect x="530" y="282" width="470" height="119" rx="6" fill="#EBF0E9" stroke="#4A6741" stroke-width="1.5"/>
 <text x="546" y="308" font-family="Helvetica, Arial, sans-serif" font-size="14.5" fill="#4A6741" text-anchor="start" font-weight="600">CGT UG</text>
 <text x="546" y="328" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="start">Inhaber, CEO · cg-trade.de</text>

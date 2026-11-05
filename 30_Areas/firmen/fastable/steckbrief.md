@@ -1,6 +1,6 @@
 # fastable
 
-**Stand:** 2026-09-11
+**Stand:** 2026-11-05
 
 ## Kurz
 
@@ -18,7 +18,8 @@ Gründer und Inhaber. _(offen: im Original „COE" — CEO gemeint?)_
 
 ## Eckdaten
 
-- Rechtsform, Sitz, Handelsregister: _(offen)_
+- Rechtsform und Sitz: fastable GmbH, Mainz
+- Handelsregister: _(offen)_
 - Gegründet: _(offen)_
 
 ## Laufende Projekte

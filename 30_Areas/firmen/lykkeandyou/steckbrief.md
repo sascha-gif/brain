@@ -1,6 +1,6 @@
 # lykkeandyou.de
 
-**Stand:** 2026-09-11
+**Stand:** 2026-11-05
 
 ## Kurz
 
@@ -18,7 +18,9 @@ Inhaber und CEO.
 
 ## Eckdaten
 
-- Rechtsform, Sitz, Handelsregister: _(offen)_
+- Rechtsform: Lykke & You GmbH
+- Sitz: Mainz _(aus der Projekt-CLAUDE.md, Handelsregistereintrag nicht geprüft)_
+- Handelsregister: _(offen)_
 - Gegründet: _(offen)_
 
 ## Laufende Projekte
