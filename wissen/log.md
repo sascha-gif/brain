@@ -544,3 +544,15 @@ Zinsen laufen. Ohne Vereinbarung kann der Gläubiger jederzeit den Gesamtbetrag 
 Nebenbefund: Saschas Absenderadresse in dem Verlauf war sascha.coldewey@p4markets.de. Die
 Firma hinter p4markets.de fehlt bisher im Brain.
 Quelle: Mail Svend Herlitzius vom 09.06.2025.
+
+## [2026-11-06] ingest | Arbeitsverhältnis Caronemo zum 30.04.2026 beendet
+
+Zur Ablage: Die Caronemo Operations GmbH aus Dreieich hat Sascha am 23.02.2026 ordentlich
+zum 30.04.2026 gekündigt, unterzeichnet von Geschäftsführer Thorben Keil. Kein Hinweis auf
+einen Konflikt, die Klagefrist ist ohnehin lange abgelaufen. Abgelegt unter
+`90_Archive/2026-04-30-arbeitsverhaeltnis-caronemo.md`.
+
+Praktisch bleibt davon: die Lohnsteuerbescheinigung für Januar bis April 2026 und ein
+möglicher Anspruch auf ein Arbeitszeugnis. Für 2026 gibt es damit zwei Lohnquellen,
+Caronemo und die Coldewey Holding.
+Quelle: Kündigungsschreiben vom 23.02.2026.
