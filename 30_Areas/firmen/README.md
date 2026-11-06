@@ -13,12 +13,13 @@ auf Zuruf.
 
 | Firma | Rolle | Partner | Rechtsform und Sitz |
 |---|---|---|---|
-| [Coldewey Holding](coldewey-holding/steckbrief.md) | Geschäftsführer | — | GmbH, Mainz |
+| [Coldewey Holding](coldewey-holding/steckbrief.md) | Geschäftsführer | — | GmbH, Mainz, HRB 49483 |
 | [CGT](cgt/steckbrief.md) | Inhaber, CEO | Thomas Goetz | UG, Wiesbaden |
 | [helpingbrands.de](helpingbrands/steckbrief.md) | Gründer, CEO | Patrick Birkicht | _(offen)_ |
 | [PaSa Ventures](pasa-ventures/steckbrief.md) | Gründer, CEO | Patrick Birkicht | _(offen)_ |
 | [Lykke & You](lykkeandyou/steckbrief.md) | Inhaber, CEO | — | GmbH, Mainz |
 | [fastable](fastable/steckbrief.md) | Gründer, Inhaber | — | GmbH, Mainz |
+| [MYSTERYBOX i. L.](mysterybox/steckbrief.md) | Liquidator | Supreme LB Deluxe GmbH | GmbH, Berlin, HRB 216183 B |
 
 Die beiden Mietwohnungen gehören Sascha **privat**, nicht einer der Firmen:
 [Ingelheim](../../20_Projects/wohnung-ingelheim/uebersicht.md) und

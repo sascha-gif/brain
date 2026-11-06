@@ -1,6 +1,6 @@
 # Coldewey Holding
 
-**Stand:** 2026-10-21
+**Stand:** 2026-11-06
 
 ## Kurz
 
@@ -20,8 +20,14 @@ Managing Director.
 
 - Rechtsform und Sitz: Coldewey Holding GmbH, Im Zuckergarten 28, 55129 Mainz
 - USt-IdNr.: DE278832927
-- Handelsregister: _(offen)_
+- Handelsregister: HRB 49483, Amtsgericht Mainz
 - Gegründet: _(offen)_
+
+## Beteiligungen
+
+| Gesellschaft | Anteil | Stand |
+|---|---|---|
+| [MYSTERYBOX GmbH i. L.](../mysterybox/steckbrief.md) | Geschäftsanteil Nr. 4, 1.250 € von 25.000 € | in Liquidation seit 26.08.2024 |
 
 ## Laufende Projekte
 

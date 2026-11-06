@@ -509,3 +509,23 @@ Projekt-CLAUDE.md, der Handelsregistereintrag ist bei beiden weiter offen. In de
 Steckbriefen, der Übersichtstabelle und der Zeichnung nachgezogen. Damit fehlen Rechtsform
 und Sitz nur noch bei helpingbrands und PaSa Ventures.
 Quelle: Angabe Sascha, 05.11.2026.
+
+## [2026-11-06] ingest | MYSTERYBOX GmbH i. L.: Gewerbeabmeldung und Steckbrief
+
+Neue Firma im Brain: Die Coldewey Holding hält über den Kauf- und Abtretungsvertrag vom
+25.07.2024 den Geschäftsanteil Nr. 4 (1.250 € von 25.000 €) an der MYSTERYBOX GmbH in
+Berlin, HRB 216183 B beim Amtsgericht Charlottenburg. Zweite Gesellschafterin ist die
+Supreme LB Deluxe GmbH aus Köln, ausgeschieden ist die BOB Design GmbH aus Trier.
+
+Die Gesellschaft ist seit dem 26.08.2024 aufgelöst, Sascha ist allein vertretungsberechtigter
+Liquidator. Begleitschreiben zur Gewerbeabmeldung erstellt, adressiert an das Ordnungsamt
+Friedrichshain-Kreuzberg unter dem Geschäftszeichen M/BE5971/042.
+
+Offen und zu klären: Das Ordnungsamt bestätigt eine Gewerbemeldung zum 01.11.2025 — über ein
+Jahr nach der Auflösung. Ob Ummeldung, Nachmeldung oder versehentliche Neuanmeldung, zeigt
+erst die Anmeldebestätigung. Vor der Abmeldung ansehen.
+
+Nebenbei aus dem Vertrag: Die Coldewey Holding GmbH ist unter **HRB 49483 beim Amtsgericht
+Mainz** eingetragen — das war im Steckbrief bisher offen.
+Quelle: Kauf- und Abtretungsvertrag UR MB 302/2024 und Eintragungsmitteilung des Amtsgerichts
+Charlottenburg vom 26.08.2024.
