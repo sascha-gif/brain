@@ -529,3 +529,18 @@ Nebenbei aus dem Vertrag: Die Coldewey Holding GmbH ist unter **HRB 49483 beim A
 Mainz** eingetragen — das war im Steckbrief bisher offen.
 Quelle: Kauf- und Abtretungsvertrag UR MB 302/2024 und Eintragungsmitteilung des Amtsgerichts
 Charlottenburg vom 26.08.2024.
+
+## [2026-11-06] ingest | Restforderung Herlitzius über 40.359,84 €
+
+Neues Projekt `20_Projects/restforderung-herlitzius/`. Svend Herlitzius bezifferte die
+Restforderung am 09.06.2025 auf 40.359,84 €, Sascha zahlt sie mit 500 € im Monat ab. Das
+sind 80 volle Raten und eine Schlussrate von 359,84 €, also rund sechs Jahre und acht
+Monate — bei Juli 2025 als Beginn bis etwa März 2032, und nur ohne Verzinsung.
+
+Offen ist fast alles Übrige: woraus die Forderung stammt, ob Sascha privat oder eine
+Gesellschaft schuldet, ob eine schriftliche Ratenzahlungsvereinbarung existiert und ob
+Zinsen laufen. Ohne Vereinbarung kann der Gläubiger jederzeit den Gesamtbetrag fordern.
+
+Nebenbefund: Saschas Absenderadresse in dem Verlauf war sascha.coldewey@p4markets.de. Die
+Firma hinter p4markets.de fehlt bisher im Brain.
+Quelle: Mail Svend Herlitzius vom 09.06.2025.
