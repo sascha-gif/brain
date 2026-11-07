@@ -239,3 +239,12 @@ Achtzehn Slack-Nachrichten abgeglichen, eine war neu: Georg Listing, THE HAUS 36
 Zeile 238. Fünfzehn Dubletten. Die Signatur nennt weder Position noch Telefonnummer, die
 Spalten bleiben leer.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 04.11.2026.
+
+## [2026-11-07] ingest | Zwei Kontakte aus #kontakte: Ell/NORMA, Platzer/Telekom
+
+Zwanzig Slack-Nachrichten abgeglichen, zwei waren neu: Katharina Ell (NORMA, Zeile 239) und
+David Platzer (Telekom Deutschland, Zeile 240). Sechzehn Dubletten. Zwei Auffälligkeiten
+vermerkt in `30_Areas/firmen/cgt/notizen.md`: NORMAs Adresse in der Signatur weicht von den
+bestehenden Zeilen ab, und beide Websites kamen als Outlook-Safelinks — genommen wurde der
+Anzeigetext.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 07.11.2026.

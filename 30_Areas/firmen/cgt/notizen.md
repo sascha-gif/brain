@@ -2,6 +2,39 @@
 
 Neueste oben.
 
+## 2026-11-07 — Kontakte-Routine: Ell/NORMA und Platzer/Telekom
+
+Zwanzig Nachrichten aus `#kontakte`, keine Bilder. Zwei waren neu — erster Lauf mit mehr als
+einem Neuzugang.
+
+**Neu:**
+
+- Katharina Ell, Assistenz Zentraleinkauf Food, NORMA Lebensmittelfilialbetrieb Stiftung &
+  Co. KG, in Zeile 239. Firma stand schon drin (132–140), Schreibweise von dort; die zehn
+  NORMA-Zeilen zählen jetzt auf 10.
+- David Platzer, Strategic Partnerships Magenta Moments & New Business, Telekom Deutschland
+  (Bonn), in Zeile 240. Firma war neu.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235),
+Hilbrands (236), Koch (237), Listing (238).
+
+**Aufgefallen, nicht repariert:**
+
+- **Adresse bei NORMA weicht ab.** Die neun bestehenden Zeilen tragen „Heisterstr. 4,
+  Nürnberg 90441", Ells Signatur nennt „Manfred-Roth-Straße 7, 90766 Fürth". Nach Regel L
+  steht in der neuen Zeile die Adresse aus der Signatur. Welche von beiden stimmt, entscheidet
+  ein Mensch in Pipedrive; bestehende Zeilen habe ich nicht angefasst.
+- **Beide Links kamen als Outlook-Safelinks.** Im Feld `text` steht die lange
+  `eur03.safelinks.protection.outlook.com/...`-URL, im Beleg `roh` der Anzeigetext
+  (`www.norma-online.de`, `www.telekom.com`). Nach der Regel für widersprüchliche Links habe
+  ich den Anzeigetext genommen. Wenn das häufiger vorkommt, sollte `slack.py` Safelinks
+  auspacken — die Ziel-URL steht im Parameter `url=`.
+- „TELEKOM DEUTSCHLAND" steht in der Signatur in Versalien; in die Lasche als „Telekom
+  Deutschland". Ein Rechtsformzusatz (GmbH) steht nicht in der Quelle und wurde nicht ergänzt.
+- Keine Anrede in beiden Signaturen, Spalte C bleibt leer.
+
 ## 2026-11-04 — Kontakte-Routine: Listing/THE HAUS 360
 
 Achtzehn Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
