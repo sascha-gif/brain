@@ -2,6 +2,31 @@
 
 Neueste oben.
 
+## 2026-11-10 — Kontakte-Routine: Clemens/REWE
+
+Einundzwanzig Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Tamara Clemens, Category Buyer Discount, Trockensortiment / Getränke (W D2 DT),
+Alkoholfreie Getränke, REWE Group Buying GmbH, in Zeile 241. Firma stand schon drin;
+die neun REWE-Zeilen zählen jetzt auf 9.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235),
+Hilbrands (236), Koch (237), Listing (238), Ell (239), Platzer (240).
+
+**Aufgefallen, nicht repariert:**
+
+- **Dünne Quelle.** Die Signatur nennt weder Mailadresse noch Telefonnummer; die Spalten G, H
+  und I bleiben leer. Ein Name reicht für einen Eintrag, aber diese Zeile ist ohne
+  Kontaktweg — wer sie brauchen kann, ergänzt sie in Pipedrive.
+- Auch keine Website in der Signatur, Spalte M bleibt leer, obwohl die anderen REWE-Zeilen
+  `www.rewe-group.com` tragen. Regel M sagt: aus der Signatur, sonst nichts.
+- Zweite Adresse wie schon bei Köller (09.10.): Firmensitz Domstraße 20, 50668 Köln, dazu
+  „Büroanschrift: Stolberger Straße 76-78 · 50933 Köln". Bei Köller hieß die Büroanschrift
+  noch Stolberger Straße **92** — zwei verschiedene Hausnummern in derselben Straße. In die
+  Lasche kam wie gehabt der Firmensitz, in der Schreibweise der bestehenden REWE-Zeilen.
+
 ## 2026-11-07 — Kontakte-Routine: Ell/NORMA und Platzer/Telekom
 
 Zwanzig Nachrichten aus `#kontakte`, keine Bilder. Zwei waren neu — erster Lauf mit mehr als

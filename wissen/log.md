@@ -248,3 +248,11 @@ vermerkt in `30_Areas/firmen/cgt/notizen.md`: NORMAs Adresse in der Signatur wei
 bestehenden Zeilen ab, und beide Websites kamen als Outlook-Safelinks — genommen wurde der
 Anzeigetext.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 07.11.2026.
+
+## [2026-11-10] ingest | Ein Kontakt aus #kontakte: Clemens/REWE
+
+Einundzwanzig Slack-Nachrichten abgeglichen, eine war neu: Tamara Clemens, REWE Group Buying
+GmbH, Zeile 241. Achtzehn Dubletten. Die Signatur nennt weder Mail noch Telefon — die Zeile
+steht ohne Kontaktweg; dazu eine zweite Büroanschrift, die von der bei Köller abweicht.
+Beides vermerkt in `30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 10.11.2026.
