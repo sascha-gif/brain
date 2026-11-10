@@ -556,3 +556,21 @@ Praktisch bleibt davon: die Lohnsteuerbescheinigung für Januar bis April 2026 u
 möglicher Anspruch auf ein Arbeitszeugnis. Für 2026 gibt es damit zwei Lohnquellen,
 Caronemo und die Coldewey Holding.
 Quelle: Kündigungsschreiben vom 23.02.2026.
+
+## [2026-11-10] ingest | Unstimmigkeitsmeldung Transparenzregister, Frist 22.12.2026
+
+Die registerführende Stelle beim Bundesanzeiger Verlag hat festgestellt, dass die
+wirtschaftlich Berechtigten im Transparenzregister nicht oder abweichend eingetragen sind.
+Sascha muss über die Eintragungsstrecke eine Berichtigung übermitteln, Referenznummer
+7XJCMC, Frist **22.12.2026**. Einzutragen ist er selbst mit 100 % und Gültigkeit ab
+17.03.2020, Angaben zeichengenau nach der Mail. Alles in
+`20_Projects/transparenzregister/`.
+
+Offen und zuerst zu klären: **welche Rechtseinheit** betroffen ist — die Mail nennt sie im
+vorliegenden Auszug nicht. Bei Nichtbefolgung droht ein Bußgeld nach § 56 GwG, und die
+Unstimmigkeit bleibt für jeden Einsichtnehmenden sichtbar.
+
+Zweitens: P4 Markets ist eine ehemalige Firma Saschas, Steckbrief unter
+`30_Areas/firmen/p4markets/`. Über `sascha.coldewey@p4markets.de` lief der Schriftwechsel
+zur Restforderung Herlitzius — ein Zusammenhang liegt nahe, ist aber nicht belegt.
+Quelle: Mail der registerführenden Stelle vom 10.11.2026 und Angabe Sascha.

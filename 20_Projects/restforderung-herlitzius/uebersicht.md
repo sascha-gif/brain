@@ -20,8 +20,11 @@ Die Mail antwortet auf eine Anfrage Saschas vom 19.05.2025 und beginnt mit einer
 Beileidsbekundung — zeitlich fällt sie mit dem Tod des Vaters zusammen. Ob die Forderung
 damit zusammenhängt, etwa aus dem Nachlass, ist nicht gesagt. _(offen)_
 
-Saschas Absenderadresse in dem Verlauf war `sascha.coldewey@p4markets.de`. Die Firma hinter
-**p4markets.de** taucht im Brain bisher nirgends auf. _(offen)_
+Saschas Absenderadresse in dem Verlauf war `sascha.coldewey@p4markets.de`. P4 Markets ist
+eine **ehemalige Firma** von Sascha, siehe
+[Steckbrief](../../30_Areas/firmen/p4markets/steckbrief.md). Dass der Schriftwechsel über
+diese Adresse lief, legt nahe, dass die Forderung aus dieser Zeit stammt — belegt ist es
+nicht. _(offen)_
 
 ## Tilgung
 
@@ -49,7 +52,7 @@ verlängert sich alles erheblich — bei 5 % wären es rund neun Jahre statt sie
       Gesamtbetrag fordern.
 - [ ] **Werden Zinsen berechnet?** Wenn ja, zu welchem Satz und ab wann?
 - [ ] **Seit wann läuft die Zahlung**, und wie viele Raten sind geflossen?
-- [ ] p4markets.de: welche Gesellschaft ist das, und gehört sie in die Firmenübersicht?
+- [ ] Stammt die Forderung aus der Zeit bei P4 Markets?
 
 ## Warum die Vereinbarung wichtig ist
 

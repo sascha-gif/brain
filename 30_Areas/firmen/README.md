@@ -20,6 +20,7 @@ auf Zuruf.
 | [Lykke & You](lykkeandyou/steckbrief.md) | Inhaber, CEO | — | GmbH, Mainz |
 | [fastable](fastable/steckbrief.md) | Gründer, Inhaber | — | GmbH, Mainz |
 | [MYSTERYBOX i. L.](mysterybox/steckbrief.md) | Liquidator | Supreme LB Deluxe GmbH | GmbH, Berlin, HRB 216183 B |
+| [P4 Markets](p4markets/steckbrief.md) | _(offen)_ | — | _(offen)_, ehemalige Firma |
 
 Die beiden Mietwohnungen gehören Sascha **privat**, nicht einer der Firmen:
 [Ingelheim](../../20_Projects/wohnung-ingelheim/uebersicht.md) und
