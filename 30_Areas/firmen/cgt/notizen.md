@@ -2,6 +2,38 @@
 
 Neueste oben.
 
+## 2026-11-12 — Kontakte-Routine: Shaikh/Commerzbank und Cheung/ALDI Buying Asia
+
+Dreiundzwanzig Nachrichten aus `#kontakte`, keine Bilder. Zwei waren neu.
+
+**Neu:**
+
+- Nasrin Shaikh, Bereichsleiterin Marketing, Commerzbank AG (Frankfurt am Main), in Zeile 242.
+- Nick Cheung, Manager Buying, ALDI Buying Asia (Hongkong), in Zeile 243. Erster Kontakt
+  außerhalb Europas seit Beginn der Routine.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235),
+Hilbrands (236), Koch (237), Listing (238), Ell (239), Platzer (240), Clemens (241).
+
+**Aufgefallen, nicht repariert:**
+
+- **Spalte Land bleibt bei Shaikh leer.** `laender.py` erkennt „Kaiserstraße 16, 60311
+  Frankfurt am Main" nicht, weil kein ausgeschriebener Landesname dasteht und die Signatur
+  keine Telefonnummer trägt. Nach Regel J entscheidet das Werkzeug, nicht die Routine — also
+  leer gelassen, obwohl ein Mensch hier sofort „Deutschland" schreibt. Behebbar, indem
+  `laender.py` eine fünfstellige Postleitzahl mit deutschem Ortsnamen als Beleg akzeptiert.
+- Die Commerzbank-Signatur nennt zwei Anschriften: „Postanschrift: 60261 Frankfurt am Main"
+  (Großkundenpostleitzahl, ohne Straße) und „Geschäftsräume: Kaiserstraße 16, 60311".
+  In die Lasche kam die Anschrift mit Straße.
+- Cheungs Signatur trägt eine **Faxnummer** (+852 3107 0779). Die Lasche hat dafür keine
+  Spalte, also fiel sie weg — wie am 16.09. schon bei Lambers.
+- Hongkong kennt keine Postleitzahlen; Spalte K bleibt bei Zeile 243 leer.
+- Zeile 6 trägt den Platzhalter „Andy (Aldi Süd aus Hongkong, Infos folgen)" bei ALDI SÜD.
+  Das ist eine andere Person und eine andere Gesellschaft als ALDI Buying Asia; nicht
+  zusammengeführt.
+
 ## 2026-11-10 — Kontakte-Routine: Clemens/REWE
 
 Einundzwanzig Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.

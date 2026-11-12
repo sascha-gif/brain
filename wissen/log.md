@@ -256,3 +256,11 @@ GmbH, Zeile 241. Achtzehn Dubletten. Die Signatur nennt weder Mail noch Telefon 
 steht ohne Kontaktweg; dazu eine zweite Büroanschrift, die von der bei Köller abweicht.
 Beides vermerkt in `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 10.11.2026.
+
+## [2026-11-12] ingest | Zwei Kontakte aus #kontakte: Shaikh/Commerzbank, Cheung/ALDI Buying Asia
+
+Dreiundzwanzig Slack-Nachrichten abgeglichen, zwei waren neu: Nasrin Shaikh (Commerzbank AG,
+Zeile 242) und Nick Cheung (ALDI Buying Asia, Hongkong, Zeile 243). Neunzehn Dubletten.
+Spalte Land bei Shaikh leer, weil `laender.py` eine deutsche Adresse ohne Landesnamen und ohne
+Telefonnummer nicht erkennt — Begründung und Vorschlag in `30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 12.11.2026.
