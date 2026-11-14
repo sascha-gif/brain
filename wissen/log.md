@@ -264,3 +264,11 @@ Zeile 242) und Nick Cheung (ALDI Buying Asia, Hongkong, Zeile 243). Neunzehn Dub
 Spalte Land bei Shaikh leer, weil `laender.py` eine deutsche Adresse ohne Landesnamen und ohne
 Telefonnummer nicht erkennt — Begründung und Vorschlag in `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 12.11.2026.
+
+## [2026-11-14] ingest | Ein Kontakt aus #kontakte: Freitag/SAGASSER
+
+Vierundzwanzig Slack-Nachrichten abgeglichen, eine war neu: Moritz Freitag, SAGASSER-Vertriebs
+GmbH, Zeile 244. Einundzwanzig Dubletten. Spalte Land zum zweiten Mal in drei Tagen leer, weil
+`laender.py` deutsche Adressen ohne Landesnamen und Nummern in nationaler Schreibweise nicht
+erkennt — Vorschlag in `30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 14.11.2026.

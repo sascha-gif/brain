@@ -2,6 +2,33 @@
 
 Neueste oben.
 
+## 2026-11-14 — Kontakte-Routine: Freitag/SAGASSER
+
+Vierundzwanzig Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
+
+**Neu:** Moritz Freitag, Einkauf Bier und AfG, SAGASSER-Vertriebs GmbH (Coburg), in Zeile 244.
+Firma stand noch nicht in der Lasche.
+
+**Dubletten (nichts geschrieben):** Ochsenkiel (35), van Dijk (191), Rausch (220),
+Wilcke (221), Lambers (227), Grunwald (228), Tifo Agency (229), Fleury (230),
+Burmeister (231), Köller (232), Fischer (233), Marschhausen (234), Deville (235),
+Hilbrands (236), Koch (237), Listing (238), Ell (239), Platzer (240), Clemens (241),
+Shaikh (242), Cheung (243).
+
+**Aufgefallen, nicht repariert:**
+
+- **Spalte Land bleibt wieder leer** — zweiter Fall nach Shaikh (12.11.). `laender.py`
+  erkennt „Gärtnersleite 5, 96450 Coburg" nicht, weil kein Landesname dasteht, und die
+  Nummern stehen in nationaler Schreibweise ohne `+49`, also greift auch die Vorwahlregel
+  nicht. Zwei Fälle in drei Tagen: Die Ergänzung von `laender.py` um die deutsche
+  fünfstellige PLZ und um nationale Nummern (`0…`) lohnt sich jetzt.
+- Zwei Nummern ohne Beschriftung: `09561 6490-081` (Coburger Festnetzvorwahl) als Telefon,
+  `0171 2123808` als Mobil. Nach Reihenfolge und Vorwahlen zugeordnet, wie am 16.10. bei
+  Fischer/SAGAFLOR. Beide in der Schreibweise der Quelle übernommen, also ohne `+49`.
+- Die Nachricht trägt Slack-Codeblock-Marken (```` ``` ````) mitten in der Signatur; `slack.py`
+  lässt sie im Feld `text` stehen. Hier ohne Folgen, weil sie außerhalb der übernommenen
+  Werte liegen.
+
 ## 2026-11-12 — Kontakte-Routine: Shaikh/Commerzbank und Cheung/ALDI Buying Asia
 
 Dreiundzwanzig Nachrichten aus `#kontakte`, keine Bilder. Zwei waren neu.
