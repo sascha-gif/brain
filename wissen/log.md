@@ -574,3 +574,17 @@ Zweitens: P4 Markets ist eine ehemalige Firma Saschas, Steckbrief unter
 `30_Areas/firmen/p4markets/`. Über `sascha.coldewey@p4markets.de` lief der Schriftwechsel
 zur Restforderung Herlitzius — ein Zusammenhang liegt nahe, ist aber nicht belegt.
 Quelle: Mail der registerführenden Stelle vom 10.11.2026 und Angabe Sascha.
+
+## [2026-11-16] status | Unstimmigkeitsmeldung betrifft die Coldewey Holding GmbH
+
+Nachtrag zum Eintrag vom 10.11.: Die offene Frage nach der Rechtseinheit ist beantwortet.
+Betroffen ist die **Coldewey Holding GmbH**, Meldungsnummer 260955006220,
+TREG-Ticket#11688285. Das passt zu den geforderten Angaben, denn Sascha hält die Holding
+zu 100 %. Projektseite entsprechend vervollständigt und aus dem Steckbrief der Holding
+verlinkt.
+
+Die Frist bleibt der 22.12.2026. Beim Bearbeiten lohnt der Blick auf die MYSTERYBOX GmbH i. L.:
+Dort wechselten 2024 die Gesellschafter, und solche Änderungen werden im Register häufig
+vergessen — die Löschung der Gesellschaft sollte erst angemeldet werden, wenn das Register
+stimmt.
+Quelle: Angabe Sascha, 16.11.2026.

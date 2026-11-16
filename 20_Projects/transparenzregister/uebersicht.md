@@ -1,16 +1,21 @@
 # Transparenzregister — Unstimmigkeitsmeldung
 
-**Stand:** 2026-11-10 · **Frist: 22.12.2026**
+**Stand:** 2026-11-16 · **Frist: 22.12.2026**
 
 ## Kurz
 
-Die registerführende Stelle (Bundesanzeiger Verlag) hat eine Unstimkeitsmeldung geprüft
-und festgestellt, dass die wirtschaftlich Berechtigten im Transparenzregister **nicht oder
-abweichend** eingetragen sind. Sascha muss eine Berichtigung übermitteln, sonst bleibt die
-Unstimmigkeit im Register vermerkt und es droht ein Bußgeld.
+Für die **Coldewey Holding GmbH** ist im Transparenzregister eine Unstimmigkeit nach
+§ 23a GwG vermerkt: Die wirtschaftlich Berechtigten sind dort nicht oder abweichend
+eingetragen. Sascha muss eine Berichtigung übermitteln, sonst bleibt die Unstimmigkeit
+sichtbar und es droht ein Bußgeld.
 
-**Welche Rechtseinheit betroffen ist, geht aus der Mail nicht hervor.** _(offen)_ — das ist
-vor allem anderen zu klären, siehe unten.
+| | |
+|---|---|
+| Rechtseinheit | Coldewey Holding GmbH, HRB 49483, Amtsgericht Mainz |
+| Meldungsnummer | 260955006220 |
+| Ticket | TREG-Ticket#11688285 |
+| Referenznummer für die Berichtigung | **7XJCMC** |
+| Frist | **22.12.2026** |
 
 ## Was einzutragen ist, genau so
 
@@ -50,26 +55,28 @@ greift er ebenfalls. Unabhängig davon bleibt die Unstimmigkeit im Register sich
 solange sie nicht aufgelöst ist. Banken, Notare und Vertragspartner sehen das bei jeder
 Einsichtnahme, und es führt regelmäßig zu Rückfragen oder blockierten Vorgängen.
 
-## Zuerst zu klären
+## Nächste Schritte
 
-- [ ] **Welche Rechtseinheit ist gemeint?** Die Mail nennt sie im vorliegenden Auszug
-      nicht. Sie steht im Betreff oder im früheren Schriftverkehr. In Frage kommen alle
-      Gesellschaften mit einer 100-%-Beteiligung Saschas ab 17.03.2020.
-- [ ] Prüfen, was aktuell eingetragen ist (Antrag auf Einsichtnahme)
+- [ ] Einsichtnahme beantragen, um zu sehen, was derzeit eingetragen ist
 - [ ] Berichtigung übermitteln, **bis 22.12.2026**
-- [ ] Bei den übrigen Gesellschaften gleich mitprüfen, ob dort alles stimmt — wenn bei
-      einer etwas fehlt, ist das oft bei mehreren so
+- [ ] Eingangsbestätigung aufbewahren, Auflösung der Unstimmigkeit nachverfolgen
+- [ ] Bei den übrigen Gesellschaften mitprüfen — wenn bei einer etwas fehlt, ist es
+      erfahrungsgemäß bei mehreren so. Besonders bei der
+      [MYSTERYBOX GmbH i. L.](../../30_Areas/firmen/mysterybox/steckbrief.md): Dort wechselten
+      2024 die Gesellschafter, und solche Änderungen werden im Register häufig vergessen.
+      Die Meldepflicht entfällt durch die Liquidation nicht, und die Löschung sollte erst
+      angemeldet werden, wenn das Register stimmt.
 
-## Sonderfall aufgelöste Gesellschaften
+## Warum 17.03.2020
 
-Steht eine Gesellschaft in Liquidation oder ist sie bereits gelöscht, entfällt die
-Meldepflicht für die Vergangenheit nicht. Betrifft die Meldung die
-[MYSTERYBOX GmbH i. L.](../../30_Areas/firmen/mysterybox/steckbrief.md), ist die
-Berichtigung trotzdem vorzunehmen; die Löschung der Gesellschaft sollte erst danach
-angemeldet werden. _(offen)_
+Das „Gültig von"-Datum bestimmt die registerführende Stelle, nicht Sascha. Es dürfte der
+Tag sein, an dem er die Anteile der Holding übernommen hat oder die Gesellschaft gegründet
+wurde. Übernimm es unverändert, auch wenn es ungewohnt erscheint — eine abweichende Angabe
+löst die Unstimmigkeit nicht auf.
 
 ## Quelle
 
 Mail der registerführenden Stelle, Bundesanzeiger Verlag GmbH, Abteilung
-Unstimmigkeitsmeldungen, Amsterdamer Str. 192, 50735 Köln. Eingegangen am 10.11.2026.
-Referenznummer 7XJCMC.
+Unstimmigkeitsmeldungen, Amsterdamer Str. 192, 50735 Köln, eingegangen am 10.11.2026,
+zur Unstimmigkeitsmeldung nach § 23a GwG, Meldungsnummer 260955006220, Coldewey Holding
+GmbH, TREG-Ticket#11688285.

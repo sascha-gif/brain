@@ -1,6 +1,6 @@
 # Coldewey Holding
 
-**Stand:** 2026-11-06
+**Stand:** 2026-11-16
 
 ## Kurz
 
@@ -22,6 +22,13 @@ Managing Director.
 - USt-IdNr.: DE278832927
 - Handelsregister: HRB 49483, Amtsgericht Mainz
 - Gegründet: _(offen)_
+
+## Offener Punkt mit Frist
+
+Im Transparenzregister ist für die Gesellschaft eine **Unstimmigkeit nach § 23a GwG**
+vermerkt (Meldungsnummer 260955006220). Die Berichtigung muss bis zum **22.12.2026**
+übermittelt werden. Alles dazu in
+[`20_Projects/transparenzregister/`](../../../20_Projects/transparenzregister/uebersicht.md).
 
 ## Beteiligungen
 
