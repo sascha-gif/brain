@@ -1,6 +1,6 @@
 # Transparenzregister — Unstimmigkeitsmeldung
 
-**Stand:** 2026-11-16 · **Frist: 22.12.2026**
+**Stand:** 2026-11-16 · **Berichtigung übermittelt, Frist gehalten**
 
 ## Kurz
 
@@ -55,11 +55,19 @@ greift er ebenfalls. Unabhängig davon bleibt die Unstimmigkeit im Register sich
 solange sie nicht aufgelöst ist. Banken, Notare und Vertragspartner sehen das bei jeder
 Einsichtnahme, und es führt regelmäßig zu Rückfragen oder blockierten Vorgängen.
 
+## Stand
+
+**Am 16.11.2026 übermittelt**, gut fünf Wochen vor Fristablauf. Eingangsbestätigung liegt
+bei Sascha. Eingetragen wurde er selbst als tatsächlich wirtschaftlich Berechtigter mit
+100 % der Kapitalanteile, gültig ab 17.03.2020 bis auf Weiteres.
+
 ## Nächste Schritte
 
-- [ ] Einsichtnahme beantragen, um zu sehen, was derzeit eingetragen ist
-- [ ] Berichtigung übermitteln, **bis 22.12.2026**
-- [ ] Eingangsbestätigung aufbewahren, Auflösung der Unstimmigkeit nachverfolgen
+- [ ] Kurze Antwort auf die Mail der registerführenden Stelle mit dem Hinweis, dass
+      berichtigt wurde
+- [ ] Nachverfolgen, ob die Unstimmigkeit aufgelöst wird. Kommt bis Mitte Dezember keine
+      Rückmeldung, nachfassen — die Frist ist zwar gewahrt, aber die Unstimmigkeit bleibt
+      bis zur Auflösung im Register sichtbar
 - [ ] Bei den übrigen Gesellschaften mitprüfen — wenn bei einer etwas fehlt, ist es
       erfahrungsgemäß bei mehreren so. Besonders bei der
       [MYSTERYBOX GmbH i. L.](../../30_Areas/firmen/mysterybox/steckbrief.md): Dort wechselten

@@ -23,12 +23,12 @@ Managing Director.
 - Handelsregister: HRB 49483, Amtsgericht Mainz
 - Gegründet: _(offen)_
 
-## Offener Punkt mit Frist
+## Transparenzregister
 
-Im Transparenzregister ist für die Gesellschaft eine **Unstimmigkeit nach § 23a GwG**
-vermerkt (Meldungsnummer 260955006220). Die Berichtigung muss bis zum **22.12.2026**
-übermittelt werden. Alles dazu in
-[`20_Projects/transparenzregister/`](../../../20_Projects/transparenzregister/uebersicht.md).
+Die Unstimmigkeit nach § 23a GwG (Meldungsnummer 260955006220) ist am **16.11.2026**
+berichtigt worden, fristgerecht. Eingetragen ist Sascha als tatsächlich wirtschaftlich
+Berechtigter mit 100 % ab 17.03.2020. Ob die Meldung damit aufgelöst ist, steht noch aus —
+siehe [`20_Projects/transparenzregister/`](../../../20_Projects/transparenzregister/uebersicht.md).
 
 ## Beteiligungen
 

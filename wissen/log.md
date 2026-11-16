@@ -588,3 +588,19 @@ Dort wechselten 2024 die Gesellschafter, und solche Änderungen werden im Regist
 vergessen — die Löschung der Gesellschaft sollte erst angemeldet werden, wenn das Register
 stimmt.
 Quelle: Angabe Sascha, 16.11.2026.
+
+## [2026-11-16] status | Transparenzregister: Berichtigung übermittelt
+
+Die Berichtigung für die Coldewey Holding GmbH ist raus, fünf Wochen vor Fristablauf.
+Eingetragen wurde Sascha als tatsächlich wirtschaftlich Berechtigter mit 100 % der
+Kapitalanteile nach § 19 Abs. 3 Nr. 1a GwG, gültig ab 17.03.2020 bis auf Weiteres.
+Eingangsbestätigung liegt vor.
+
+Offen bleibt die Auflösung der Unstimmigkeitsmeldung durch die registerführende Stelle.
+Bis dahin ist sie für jeden Einsichtnehmenden sichtbar. Kommt bis Mitte Dezember keine
+Rückmeldung, nachfassen.
+
+Beim Ausfüllen war die eine Stelle, an der es hätte schiefgehen können, die Wahl zwischen
+tatsächlich und fiktiv wirtschaftlich Berechtigten: Fiktiv wäre der Geschäftsführer, und
+das gilt nur, wenn niemand über 25 % hält. Bei 100 % ist es immer „tatsächlich".
+Quelle: Angabe Sascha, 16.11.2026.
