@@ -272,3 +272,13 @@ GmbH, Zeile 244. Einundzwanzig Dubletten. Spalte Land zum zweiten Mal in drei Ta
 `laender.py` deutsche Adressen ohne Landesnamen und Nummern in nationaler Schreibweise nicht
 erkennt — Vorschlag in `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 14.11.2026.
+
+## [2026-11-17] ingest | Elf Kontakte aus #kontakte, erster Lauf mit Bildern
+
+Achtunddreißig Slack-Nachrichten abgeglichen, vierzehn neu: elf Kontakte in die Zeilen
+245–255 geschrieben, drei Dubletten (Fleury, Traber, Pfeiffer). Darunter zwei
+Signatur-Bilder von Platinum Films — die Bilderkennung ist damit erstmals an echten Bildern
+gelaufen und hat beide gelesen; die Dateien blieben im Scratchpad. Entscheidungen zu einer
+aus der Mailadresse erschlossenen Firma (Lidl) und einer bewusst leeren Adresse (Authentic)
+in `30_Areas/firmen/cgt/notizen.md`.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 17.11.2026.

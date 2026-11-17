@@ -2,6 +2,60 @@
 
 Neueste oben.
 
+## 2026-11-17 — Kontakte-Routine: elf neue Kontakte, erster Lauf mit Bildern
+
+Achtunddreißig Nachrichten aus `#kontakte`, davon vierzehn neu seit gestern — Thomas hat am
+16.11. einen ganzen Schwung Signaturen nachgereicht. Elf Kontakte geschrieben, Zeilen 245–255.
+
+**Bilderkennung erstmals an echten Bildern gelaufen.** Zwei PNG-Signaturbanner von Platinum
+Films, beide lesbar, beide ausgewertet: Nigel Stone (CEO) und Megan Ramdenee (Executive
+Assistant to the CEO). Die Bilder blieben im Scratchpad, nichts davon im Repo. Damit ist die
+Grenze „Bilderkennung ungetestet" im Runbook erledigt.
+
+**Neu (Zeilen 245–255):**
+
+| Zeile | Person | Firma |
+|---|---|---|
+| 245 | Niklas Martin | ALDI Einkauf SE & Co. oHG |
+| 246 | Stephanie Köln | Difuzed |
+| 247 | Nigel Stone | Platinum Films *(Bild)* |
+| 248 | Husham Yousufi | Indus Home Limited |
+| 249 | Alphan Akgül | Eren Socks |
+| 250 | Abbie Burrows | Authentic |
+| 251 | Megan Ramdenee | Platinum Films *(Bild)* |
+| 252 | Charles McNally | ALDI International Services SE & Co. oHG |
+| 253 | Marc Baumgartner | Lidl Stiftung & Co. KG |
+| 254 | Michael Fleuch | O&B Private Label GmbH |
+| 255 | Federico Dal Maso | Branddesign SA |
+
+**Dubletten aus diesem Schwung:** Thomas Fleury (230), Benjamin Traber (2), Mareike
+Pfeiffer (5). Dazu die bekannten älteren Posts.
+
+**Entscheidungen und Auffälligkeiten:**
+
+- **Baumgartner/Lidl: Firma aus der Mailadresse erschlossen.** Die Signatur nennt keinen
+  Firmennamen, nur `marc.baumgartner@lidl.com`. Zeile 111 (Jens Thiele) trägt dieselbe Domain
+  unter „Lidl Stiftung & Co. KG"; diese Schreibweise übernommen, Adresse nach Regel L von dort.
+  Die Durchwahl `+4971329428…` passt zur Neckarsulmer Vorwahl, stützt also die Zuordnung.
+  Wenn Baumgartner zu einer anderen Lidl-Gesellschaft gehört, gehört das in Pipedrive
+  korrigiert.
+- **Burrows/Authentic: Adresse bewusst leer gelassen.** Regel L erlaubt, die Firmenadresse
+  aus der Lasche zu übernehmen — Zeile 10 trägt aber New York, und Burrows' Mobilnummer ist
+  britisch. Eine falsche Adresse ist schlechter als keine.
+- Zwei Signaturen stehen in Versalien (Burrows, Dal Maso); Positionen auf normale Schreibweise
+  gebracht, wie am 17.10. bei FITX. „BRANDDESIGN SA" als „Branddesign SA" geschrieben.
+- „i.V." (Martin) und „Mr." (Akgül) sind Signaturformeln: „i.V." fiel weg, „Mr." wurde zur
+  Anrede „Herr" — das ist die einzige Quelle, die eine Anrede überhaupt hergibt.
+- Yousufis Signatur trägt zwei Nummern, beschriftet mit „Call" und „Ph". Die
+  Mobilvorwahl +92 333 steht unter Mobil, die Festnetznummer unter Telefon.
+- McNallys Signatur wiederholt „International Buying" als Abteilungszeile unter dem
+  Firmennamen; in Spalte F steht nur die Positionszeile, nicht die Dopplung.
+- Baumgartners Signatur enthält eine abgeschnittene Website (`www.info.lidl`) und zwei
+  Exclaimer-Weiterleitungen; Spalte M bleibt leer. Burrows' und andere Links kamen wieder als
+  Outlook-Safelinks, der Anzeigetext wurde genommen.
+- Dal Masos Mailadresse ist eine Rollenadresse (`license@branddesignsa.ch`), keine persönliche
+  — so steht sie in der Quelle.
+
 ## 2026-11-14 — Kontakte-Routine: Freitag/SAGASSER
 
 Vierundzwanzig Nachrichten aus `#kontakte`, keine Bilder. Eine war neu.
