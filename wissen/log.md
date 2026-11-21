@@ -282,3 +282,10 @@ gelaufen und hat beide gelesen; die Dateien blieben im Scratchpad. Entscheidunge
 aus der Mailadresse erschlossenen Firma (Lidl) und einer bewusst leeren Adresse (Authentic)
 in `30_Areas/firmen/cgt/notizen.md`.
 Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 17.11.2026.
+
+## [2026-11-21] ingest | Ein Kontakt aus #kontakte: Jörg Frank (Dehner)
+
+Neununddreißig Slack-Nachrichten abgeglichen, eine neu: Jörg Frank (Dehner Gartencenter GmbH &
+Co. KG) in Zeile 256 der Lasche Kontakte. Alles andere war Dublette. Safelinks-Link in der
+Web-Zeile wieder über den Anzeigetext aufgelöst; Land über die Vorwahl abgeleitet.
+Quelle: Slack `#kontakte`, Tabelle CGT – Themenplanung, 21.11.2026.

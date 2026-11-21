@@ -2,6 +2,24 @@
 
 Neueste oben.
 
+## 2026-11-21 — Kontakte-Routine: ein neuer Kontakt (Dehner)
+
+Neununddreißig Nachrichten aus `#kontakte`, eine davon neu seit dem 17.11.: Martin Lindegger
+hat am 20.11. die Signatur von Jörg Frank gepostet. Ein Kontakt geschrieben, Zeile 256.
+
+**Neu (Zeile 256):** Jörg Frank, Category Manager Bereich ZOO, Dehner Gartencenter GmbH & Co. KG,
+joerg.frank@dehner.de, Telefon +49 9090 77-5105, Mobil +49 170-5858791, Donauwörther Straße 3-5,
+86641 Rain. Dehner stand bisher nicht in der Lasche, Spalte B zählt entsprechend 1.
+
+**Auffälligkeiten.** Die Web-Zeile der Signatur ist wieder ein Outlook-Safelinks-Link; in Spalte M
+steht der Anzeigetext `dehner.de`, nicht die Weiterleitungs-URL. Die Adresse nennt kein Land,
+Spalte J kommt über die Vorwahl +49 auf „Deutschland". „i. A." vor dem Namen ist kein Namensteil
+und steht nicht in Spalte D.
+
+**Weiter offen:** Zeile 253 (Marc Baumgartner, Lidl) — Saschas „nein ist marc.baumgartner@lidl.com"
+vom 18.11. ist noch nicht aufgelöst; die aus der Mail-Domain erschlossene Firma und die von Zeile 111
+übernommene Neckarsulmer Adresse stehen unverändert.
+
 ## 2026-11-17 — Kontakte-Routine: elf neue Kontakte, erster Lauf mit Bildern
 
 Achtunddreißig Nachrichten aus `#kontakte`, davon vierzehn neu seit gestern — Thomas hat am
